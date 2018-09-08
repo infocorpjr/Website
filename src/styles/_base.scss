@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  font-size: 1em;
+  text-decoration: none;
+  color: $dark-color;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 12px
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 13px
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 15px
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px
+  }
+}
