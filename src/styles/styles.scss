@@ -209,8 +209,7 @@
   width: 80%;
   height: 80%;
   content: '';
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.7) 10%, white);
-  // background: url("../images/digital-buddah-team.png") no-repeat right bottom;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3) 10%, white);
   position: absolute;
   z-index: -1;
 }
@@ -230,7 +229,7 @@
 .featured__title {
   margin: 0;
   font-weight: 100;
-  font-size: 4em;
+  font-size: 3em;
   background-color: rgba(255, 255, 255, 0.9);
   display: inline-block;
 }
@@ -355,6 +354,8 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .experience {
   margin: 2% auto;
   width: 90%;
@@ -390,7 +391,7 @@
 
 .experience__right__title {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .experience__right__description {
@@ -404,61 +405,157 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .service {
-  margin: 1% auto;
+  margin: 5% auto;
   width: 90%;
-}
-
-.service .swiper-wrapper {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.service .swiper-slide {
-  opacity: 0.5;
-  transition: all 0.2s ease-in-out;
-  transform: scale(0.5);
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
   position: relative;
+}
+
+.service:before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: lighten($color-black, 1%);
+  content: '';
+  position: absolute;
+}
+
+.service__left {
+  width: 45%;
+}
+
+.service__left__item__illustration {
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  display: block;
+}
+
+.service__right {
+  width: 45%;
+}
+
+.service__right__group__item {
+  // border-bottom: 1px solid lighten($color-black, 1%);;
+}
+
+.service__right__group__item:last-child {
+  border: none;
+}
+
+.service__right__group__item__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  background-color: white;
+  font-size: 1.5em;
+}
+
+.service__right__group__item__illustration {
+  width: 50%;
+  max-width: 200px;
+  display: inline-block;
+}
+
+.service__right__group__item__description {
+  width: 60%;
+  background-color: white;
+  font-size: 1em;
+  display: inline-block;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.team {
+  margin: 5% auto;
+  width: 90%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.team__left {
+  width: 40%;
+}
+
+.team__left__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 2em;
+  display: inline-block;
+  position: relative;
+}
+
+.team__left__title:before {
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 50%;
+  background-color: lighten($color-blue, 40%);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.team__left__subtitle {
+  font-weight: bold;
+}
+
+.team__right {
+  width: 50%;
+}
+
+.team__right__b {
+  width: 100%;
+  background-color: $color-white;
+  position: relative;
+}
+
+.team__right__b:after {
+  top: 50%;
+  left: 0;
+  margin-top: -30px;
+  margin-left: -30px;
+  width: 60px;
+  height: 60px;
+  background: white url("../images/pixels.png");
+  border: 5px solid lighten($color-black, 100%);
+  content: '';
+  position: absolute;
+}
+
+.team__right__b__image {
+  width: 100%;
+  filter: contrast(200%) brightness(150%);
+  opacity: 0.4;
+  display: block;
 }
 
 @media (max-width: 767px) {
-  .service .swiper-slide {
-    width: 90%;
+  .team__left {
+    width: 100%;
+  }
+  .team__right {
+    margin-top: 5%;
+    width: 100%;
   }
 }
 
-.service .swiper-slide-active {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.service .swiper-pagination {
-  position: relative;
-}
-
-.service__title {
-  margin-bottom: 5px;
-  background-color: white;
-  font-size: 2.5em;
-}
-
-.service__description {
-  margin-top: 0;
-  padding-top: 5%;
-  padding-right: 10%;
-  padding-left: 6%;
-  padding-bottom: 5px;
-  background-color: white;
-  font-size: 1em;
-  position: relative;
-}
-
-.service__description:before {
-  top: 0;
-  left: 0;
-  width: 1%;
-  height: 100%;
-  content: '';
-  background: url("../images/pixels.png");
-  position: absolute;
+@media (min-width: 768px) and (max-width: 991px) {
+  .team__left {
+    width: 100%;
+  }
+  .team__right {
+    margin-top: 5%;
+    width: 100%;
+  }
 }

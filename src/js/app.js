@@ -35,7 +35,7 @@ const Services = new Swiper('.swiper-container', {
     autoplay: {
         delay: 3000,
     },
-    slidesPerView: 2,
+    slidesPerView: 4,
     spaceBetween: 30,
     pagination: {
         el: '.swiper-pagination',
