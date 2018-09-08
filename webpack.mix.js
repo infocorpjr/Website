@@ -13,4 +13,4 @@ mix.webpackConfig({
     }
 });
 
-mix.disableNotifications();
+// mix.disableNotifications();
