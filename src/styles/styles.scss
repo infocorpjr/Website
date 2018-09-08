@@ -1,3 +1,15 @@
+/**
+ * Swiper 4.3.3
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * http://www.idangero.us/swiper/
+ *
+ * Copyright 2014-2018 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: June 5, 2018
+ */
+@import "~swiper/dist/css/swiper.css";
 @import "variable";
 @import "base";
 
@@ -188,7 +200,6 @@
   content: '';
   background: url("../images/pixels.png");
   position: absolute;
-  opacity: 0.3;
 }
 
 .featured__content {
@@ -221,7 +232,7 @@
   margin: 0;
   padding-left: 5%;
   font-size: 1.5em;
-  color: $color-green;
+  text-shadow: 0 0 5px black;
   position: relative;
 }
 
@@ -359,4 +370,38 @@
 
 .experience__right__illustration {
   width: 100%;
+}
+
+.service {
+  margin: 1% auto;
+  width: 90%;
+  box-shadow: 0 -50px 100px white inset;
+}
+
+.service .swiper-wrapper {
+
+}
+
+.service .swiper-slide {
+  padding-bottom: 5%;
+  min-height: 150px;
+  text-align: center;
+  transform: scale(0.5);
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.service .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .service .swiper-slide {
+    width: 90%;
+  }
+}
+
+.service__title {
+  font-size: 2.5em;
 }
