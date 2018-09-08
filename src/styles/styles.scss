@@ -164,12 +164,8 @@
 /// All //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.app {
-
-}
-
 .featured {
-
+  min-height: 50%;
 }
 
 .featured__content {
@@ -179,13 +175,13 @@
 }
 
 .featured__title {
-  margin: 7% 0 0 0;
+  margin: 0;
   font-weight: 100;
   font-size: 4em;
 }
 
 .featured__description {
-  margin: 0 0 7% 0;
+  margin: 0;
   padding-left: 5%;
   font-size: 1.5em;
   color: $color-green;
@@ -296,4 +292,34 @@
     opacity: 0;
     transform: translateY(20%);
   }
+}
+
+.experience {
+  margin: 2% auto;
+  width: 90%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.experience__left {
+  min-width: 300px;
+  width: 50%;
+
+}
+
+.experience__left__title {
+  margin: 0;
+  font-size: 2em;
+}
+
+.experience__right {
+  min-width: 300px;
+  width: 40%;
+}
+
+.experience__right__illustration {
+  width: 100%;
 }

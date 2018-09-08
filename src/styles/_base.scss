@@ -6,6 +6,10 @@ body {
   height: 100%;
 }
 
+body {
+  background-color: lighten($color-black, 99%);
+}
+
 a {
   font-size: 1em;
   text-decoration: none;
