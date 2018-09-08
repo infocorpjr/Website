@@ -5,8 +5,19 @@
 /// Infocorp /////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+@keyframes i {
+  from {
+    stroke-dasharray: 100, 50, 50, 50, 50;
+    stroke-opacity: 0.5;
+  }
+  to {
+    stroke-dasharray: 200, 100, 100, 100, 100;
+    stroke-opacity: 1;
+  }
+}
+
 .i, .n, .f, .o, .co, .r, .p {
-  fill: $color-black;
+  // fill: lighten($color-blue, 0%);
 }
 
 .i {
@@ -165,19 +176,45 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .featured {
-  min-height: 50%;
+  min-height: 400px;
+  height: 100%;
+}
+
+.featured .box__middle:before {
+  top: 10%;
+  right: 5%;
+  width: 80%;
+  height: 80%;
+  content: '';
+  background: url("../images/pixels.png");
+  position: absolute;
+  opacity: 0.3;
 }
 
 .featured__content {
   margin-right: auto;
   margin-left: auto;
   width: 90%;
+  position: relative;
+}
+
+.featured__title,
+.featured__description {
+
 }
 
 .featured__title {
   margin: 0;
   font-weight: 100;
   font-size: 4em;
+  background-color: white;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .featured__title {
+    font-size: 3em;
+  }
 }
 
 .featured__description {
@@ -312,7 +349,7 @@
 
 .experience__left__title {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .experience__right {
