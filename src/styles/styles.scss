@@ -200,6 +200,19 @@
   content: '';
   background: url("../images/pixels.png");
   position: absolute;
+  z-index: -2;
+}
+
+.featured .box__middle:after {
+  top: 10%;
+  right: 5%;
+  width: 80%;
+  height: 80%;
+  content: '';
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.7) 10%, white);
+  // background: url("../images/digital-buddah-team.png") no-repeat right bottom;
+  position: absolute;
+  z-index: -1;
 }
 
 .featured__content {
@@ -218,7 +231,7 @@
   margin: 0;
   font-weight: 100;
   font-size: 4em;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   display: inline-block;
 }
 
@@ -352,24 +365,44 @@
   display: flex;
 }
 
-.experience__left {
-  min-width: 300px;
-  width: 50%;
-
+.experience__left,
+.experience__right {
 }
 
-.experience__left__title {
+@media (max-width: 767px) {
+  .experience__left,
+  .experience__right {
+    width: 100%;
+  }
+}
+
+.experience__left {
+  width: 40%;
+}
+
+.experience__left__illustration {
+  width: 100%;
+}
+
+.experience__right {
+  width: 50%;
+}
+
+.experience__right__title {
   margin: 0;
   font-size: 2.5em;
 }
 
-.experience__right {
-  min-width: 300px;
-  width: 40%;
+.experience__right__description {
+  font-size: 1em;
 }
 
-.experience__right__illustration {
-  width: 100%;
+
+@media (max-width: 767px) {
+  .experience__left,
+  .experience__right {
+    width: 100%;
+  }
 }
 
 .service {
