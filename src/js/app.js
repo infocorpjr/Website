@@ -1,5 +1,8 @@
 require('./modernizr');
 
+
+import axios from 'axios';
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -14,8 +17,21 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app'
+
+const contact = new Vue({
+    el: '#contact',
+    data: {
+        form: {
+            name: 'Teste',
+            email: 'teste@email.com',
+            subject: 'asdf*asdf'
+        },
+    },
+    methods: {
+        submitForm() {
+            axios.post('', this.form);
+        }
+    }
 });
 
 /**
@@ -29,9 +45,9 @@ const app = new Vue({
  *
  * Released on: June 5, 2018
  */
-import Swiper from 'swiper';
+import swiper from 'swiper';
 
-const Services = new Swiper('.swiper-container', {
+const Services = new swiper('.swiper-container', {
     autoplay: {
         delay: 3000,
     },
@@ -48,3 +64,5 @@ const Services = new Swiper('.swiper-container', {
         },
     }
 });
+
+

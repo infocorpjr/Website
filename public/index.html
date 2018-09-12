@@ -9,9 +9,7 @@
     <!-- CSS -->
     <link href="app.css" rel="stylesheet">
 </head>
-<body id="app">
-
-
+<body>
 <div class="box featured">
     <div class="box__top">
         <div class="box__content">
@@ -76,46 +74,41 @@
 </div>
 
 
-<div class="experience">
-    <div class="experience__left">
-        <img class="experience__left__illustration" src="svg/ux.svg">
-    </div>
-    <div class="experience__right">
-        <p class="experience__right__title">Nosso foco é na experiência do usuário</p>
-        <p class="experience__right__description">
-            Somos uma equipe curiosa por inovação, de pensadores originais e comprometidos, loucos por inovar e
-            tornar a sua experiência excepcional.
-        </p>
-    </div>
-</div>
-
-
 <div class="service">
     <div class="service__left">
         <div class="service__left__item">
-            <img class="service__left__item__illustration" src="svg/339470-PAMQNE-61.svg">
-            <p class="service__left__item__title">Site</p>
+            <img class="service__left__item__illustration" src="svg/339828-PAJTL2-161.svg">
+            <p class="service__left__item__title">Nosso foco é na experiência do usuário</p>
             <p class="service__left__item__description">
-                Website para divulgar seu projeto ou negócio. Design inovador, de acordo
-                com a sua ideia. Impressionar os visitantes e impulsionar o marketing
-                são missões nossas.
+                Somos uma equipe curiosa por inovação, de pensadores originais e comprometidos, loucos por inovar e
+                tornar a sua experiência excepcional.
             </p>
         </div>
     </div>
     <div class="service__right">
+        <h1>Nossos serviços</h1>
         <div class="service__right__group">
             <div class="service__right__group__item">
-                <p class="service__right__group__item__title">Aplicativo mobile</p>
-                <img class="service__right__group__item__illustration" src="svg/339828-PAJTL2-161.svg">
+                <img class="service__right__group__item__illustration" src="svg/044-website-1.svg">
                 <p class="service__right__group__item__description">
+                    <span class="service__right__group__item__title">Site</span>
+                    Website para divulgar seu projeto ou negócio. Design inovador, de acordo
+                    com a sua ideia. Impressionar os visitantes e impulsionar o marketing
+                    são missões nossas.
+                </p>
+            </div>
+            <div class="service__right__group__item">
+                <img class="service__right__group__item__illustration" src="svg/043-redesign.svg">
+                <p class="service__right__group__item__description">
+                    <span class="service__right__group__item__title">Aplicativo mobile</span>
                     Aplicativo para iOS e Android, na palma da sua mão. Consistência e
                     segurança para o serviço a ser entregue ao cliente.
                 </p>
             </div>
             <div class="service__right__group__item">
-                <p class="service__right__group__item__title">Cursos e Consultoria</p>
-                <img class="service__right__group__item__illustration" src="svg/403894-PDWRIP-323.svg">
+                <img class="service__right__group__item__illustration" src="svg/040-diagram-1.svg">
                 <p class="service__right__group__item__description">
+                    <span class="service__right__group__item__title">Cursos e Consultoria</span>
                     Cursos na área de Tecnologia da Informação, abrangendo diversas
                     capacitações. Conhecimento e expertise no seu aprendizado e de sua
                     equipe.
@@ -129,14 +122,14 @@
 <div class="team">
     <div class="team__left">
         <p class="team__left__title">O membro</p>
-
         <p class="team__left__subtitle">O que pensamos?</p>
         <p class="team__left__subtitle">O que fazemos?</p>
         <p class="team__left__subtitle">Quem somos?</p>
-
-
-        Na Infocorp, cada membro tem um papel fundamental no desempenho geral da empresa para atingirmos um objetivo em
-        comum: O SUCESSO. E a nossa caminhada é cheia de desafios que nos ensinam a dar o melhor de si.
+        <p>
+            Na Infocorp, cada membro tem um papel fundamental no desempenho geral da empresa para atingirmos um objetivo
+            em
+            comum: O SUCESSO. E a nossa caminhada é cheia de desafios que nos ensinam a dar o melhor de si.
+        </p>
     </div>
 
     <div class="team__right">
@@ -146,8 +139,18 @@
     </div>
 </div>
 
+<div class="contact">
+    <form id="contact" class="contact__form">
+        <input class="contact_form_name" type="text" name="name" v-model="form.name">
+        <input class="contact_form_name" type="email" name="email" v-model="form.email">
+        <textarea name="about" v-model="form.subject"></textarea>
+        <button type="button" @click="submitForm">ENVIAR</button>
+    </form>
+</div>
+
 
 <!-- Scripts -->
 <script src="app.js"></script>
+
 </body>
 </html>

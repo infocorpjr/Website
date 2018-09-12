@@ -17,7 +17,8 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "laravel-mix": "^2.1.11",
-    "swiper": "^4.3.5",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "axios": "^0.18.0",
+    "swiper": "^4.3.5"
   }
 }
