@@ -22,9 +22,9 @@ const contact = new Vue({
     el: '#contact',
     data: {
         form: {
-            name: 'Teste',
-            email: 'teste@email.com',
-            subject: 'asdf*asdf'
+            name: '',
+            email: '',
+            subject: ''
         },
     },
     methods: {

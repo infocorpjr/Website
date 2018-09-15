@@ -50,3 +50,11 @@ body {
     font-size: 18px
   }
 }
+
+input, textarea {
+  font-family: 'Space Mono', monospace;
+}
+
+textarea {
+  width: 100%;
+}

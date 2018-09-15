@@ -679,6 +679,15 @@ body {
   }
 }
 
+input,
+textarea {
+  font-family: 'Space Mono', monospace;
+}
+
+textarea {
+  width: 100%;
+}
+
 @-webkit-keyframes i {
   from {
     stroke-dasharray: 100, 50, 50, 50, 50;
@@ -875,11 +884,14 @@ body {
   position: relative;
 }
 
+.featured__infocorp {
+  width: 40%;
+}
+
 .featured__title {
   margin: 0;
   font-weight: 100;
   font-size: 3em;
-  background-color: rgba(255, 255, 255, 0.9);
   display: inline-block;
 }
 
@@ -1329,5 +1341,100 @@ body {
     margin-top: 5%;
     width: 100%;
   }
+}
+
+.contact {
+  padding: 6% 5%;
+  background-color: #0f0f0f;
+  color: white;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__box {
+  width: 45%;
+}
+
+.contact__box__title {
+  font-size: 1.5em;
+}
+
+.contact__box__title__bold {
+  display: block;
+}
+
+.contact__form {
+  width: 100%;
+}
+
+.contact__form__input__group {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  display: table;
+}
+
+.contact__form__input__group__addon,
+.contact__form__input__group__field {
+  font-size: 1.3em;
+  color: white;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.contact__form__input__group__addon {
+  padding-right: 5px;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.contact__form__input__group__field {
+  background-color: transparent;
+  border: none;
+}
+
+.contact__form__input__group__field:focus {
+  outline: none;
+}
+
+.about {
+  height: 100%;
+  text-align: right;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__brand {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.about__description {
+  margin-top: 0;
+}
+
+.about__more {
+  font-style: italic;
 }
 
