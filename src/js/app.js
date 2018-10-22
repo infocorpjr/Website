@@ -45,7 +45,8 @@ const contact = new Vue({
  *
  * Released on: June 5, 2018
  */
-import swiper from 'swiper';
+
+/*import swiper from 'swiper';
 
 const Services = new swiper('.swiper-container', {
     autoplay: {
@@ -63,6 +64,6 @@ const Services = new swiper('.swiper-container', {
             slidesPerView: 1,
         },
     }
-});
+});*/
 
 

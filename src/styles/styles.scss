@@ -9,7 +9,19 @@
  *
  * Released on: June 5, 2018
  */
-@import "~swiper/dist/css/swiper.css";
+// @import "~swiper/dist/css/swiper.css";
+/**
+ * Bootstrap v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/utilities";
 /**
  * Variáveis
  */
@@ -195,6 +207,16 @@
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Footer component /////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.footer {
+  padding: 3% 5%;
+  background-color: #2f2f2f;
+  color: white;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// All //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -220,7 +242,7 @@
   width: 90%;
   height: 90%;
   content: '';
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 80%);
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 70%);
   position: absolute;
   z-index: -1;
 }
@@ -631,22 +653,26 @@
 /// Página nosso DNA /////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+.our_dna .featured {
+  height: 75%;
+  min-height: 600px;
+}
+
 .our_dna .featured .box__middle:before {
   background: url("../images/capa_dna.jpg");
   background-size: cover;
 }
 
-.our_dna__description,
-.our_dna__subtitle,
-.our_dna__text {
-  margin-right: auto;
-  margin-left: auto;
-  width: 90%;
+.our_dna .featured .featured__title {
+  font-weight: bold;
 }
 
 .our_dna__description {
   margin-top: 5%;
+  margin-right: auto;
   margin-bottom: 3%;
+  margin-left: auto;
+  width: 90%;
 }
 
 .our_dna__subtitle {
@@ -669,4 +695,92 @@
 
 .our_dna__text {
   margin-top: 0.2%;
+}
+
+.our_dna__row {
+  margin: 5% auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our_dna__row__col {
+  width: 49%;
+}
+
+.our_dna__workflow {
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .our_dna__row {
+    flex-direction: column;
+  }
+  .our_dna__row__col {
+    width: 100%;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Página nosso time ////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.our_team .featured {
+  height: 75%;
+  min-height: 600px;
+}
+
+.our_team .featured .box__middle:before {
+  background: url("../images/capa_time.jpg");
+  background-size: cover;
+}
+
+.our_team .featured .featured__title {
+  font-weight: bold;
+}
+
+.our_team__description {
+  margin: 5% auto 3% auto;
+  width: 90%;
+}
+
+.our_team__advantage {
+  margin-left: 5%;
+  padding: 5px;
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.our_team__advantages {
+  margin: 3% auto;
+  width: 90%;
+}
+
+.our_team__advantages__title {
+  padding-left: 15px;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: inline-block;
+  position: relative;
+}
+
+.our_team__advantages__title:before {
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 1px;
+  content: '';
+  position: absolute;
+}
+
+.our_team__advantages__title--green:before {
+  background-color: $color-green;
 }
