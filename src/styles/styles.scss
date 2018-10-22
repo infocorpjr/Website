@@ -10,7 +10,13 @@
  * Released on: June 5, 2018
  */
 @import "~swiper/dist/css/swiper.css";
+/**
+ * Variáveis
+ */
 @import "variable";
+/**
+ * Estilos para aplicação em tags
+ */
 @import "base";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -181,6 +187,11 @@
   background-color: $color-black;
   content: '';
   position: absolute;
+}
+
+.navbar__left__link.active,
+.navbar__right__link.active {
+  color: $color-blue;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -357,9 +368,7 @@
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Service section ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .service {
   margin: 5% auto;
@@ -435,7 +444,6 @@
 .service__right__group__item__illustration {
   padding: 2%;
   max-width: 150px;
-  background: url("../images/pixels.png");
 }
 
 .service__right__group__item__description {
@@ -617,4 +625,48 @@
 
 .about__more {
   font-style: italic;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Página nosso DNA /////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.our_dna .featured .box__middle:before {
+  background: url("../images/capa_dna.jpg");
+  background-size: cover;
+}
+
+.our_dna__description,
+.our_dna__subtitle,
+.our_dna__text {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
+.our_dna__description {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+.our_dna__subtitle {
+  margin-top: 2%;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.our_dna__subtitle:before {
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 50%;
+  background: linear-gradient(to right, #d5e9fa, white 50%);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.our_dna__text {
+  margin-top: 0.2%;
 }

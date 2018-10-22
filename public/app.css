@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);@import url(https://fonts.googleapis.com/css?family=Space+Mono:400,700&subset=latin-ext);/**
- * Swiper 4.3.5
+ * Swiper 4.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: July 31, 2018
+ * Released on: September 14, 2018
  */
 .swiper-container {
   margin: 0 auto;
@@ -74,7 +74,7 @@
   transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
-.swiper-invisible-blank-slide {
+.swiper-slide-invisible-blank {
   visibility: hidden;
 }
 /* Auto Height */
@@ -616,6 +616,8 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
 }
+@charset "UTF-8";
+
 /**
  * Swiper 4.3.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -628,7 +630,15 @@ button.swiper-pagination-bullet {
  * Released on: June 5, 2018
  */
 
+/**
+ * Variáveis
+ */
+
 /* COLORS UTILITIES */
+
+/**
+ * Estilos para aplicação em tags
+ */
 
 html,
 body {
@@ -848,6 +858,11 @@ textarea {
   background-color: #000000;
   content: '';
   position: absolute;
+}
+
+.navbar__left__link.active,
+.navbar__right__link.active {
+  color: #1E88E5;
 }
 
 .featured {
@@ -1230,7 +1245,6 @@ textarea {
 .service__right__group__item__illustration {
   padding: 2%;
   max-width: 150px;
-  background: url(/images/pixels.png?ee382bf051d877bd081796c655c85246);
 }
 
 .service__right__group__item__description {
@@ -1436,5 +1450,46 @@ textarea {
 
 .about__more {
   font-style: italic;
+}
+
+.our_dna .featured .box__middle:before {
+  background: url(/images/capa_dna.jpg?0b0abaea0ee298b59c33e766495f1cda);
+  background-size: cover;
+}
+
+.our_dna__description,
+.our_dna__subtitle,
+.our_dna__text {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
+.our_dna__description {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+.our_dna__subtitle {
+  margin-top: 2%;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.our_dna__subtitle:before {
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 50%;
+  background: -webkit-gradient(linear, left top, right top, from(#d5e9fa), color-stop(50%, white));
+  background: linear-gradient(to right, #d5e9fa, white 50%);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.our_dna__text {
+  margin-top: 0.2%;
 }
 
