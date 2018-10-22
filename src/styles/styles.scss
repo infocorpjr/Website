@@ -50,34 +50,6 @@
   fill: lighten($primary-color, 0%);
 }
 
-.i {
-
-}
-
-.n {
-
-}
-
-.f {
-
-}
-
-.o {
-
-}
-
-.co {
-
-}
-
-.r {
-
-}
-
-.p {
-
-}
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Box component ////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -571,7 +543,7 @@
 
 .contact {
   padding: 6% 5%;
-  background-color: #0f0f0f;
+  background-color: #2e2e2e;
   color: white;
   flex-direction: row;
   flex-wrap: wrap;
@@ -751,6 +723,7 @@
 
 .our_team__title {
   margin-left: 5%;
+  margin-right: 5%;
   padding: 5px;
   font-size: 1.5em;
   font-weight: bold;
@@ -759,12 +732,14 @@
   color: white;
 }
 
-.our_team__advantages {
+.our_team__advantages,
+.our_team__opportunities {
   margin: 3% auto;
   width: 90%;
 }
 
-.our_team__advantages__title {
+.our_team__advantages__title,
+.our_team__opportunities__title {
   padding-left: 15px;
   font-weight: bold;
   font-size: 1.2em;
@@ -772,7 +747,8 @@
   position: relative;
 }
 
-.our_team__advantages__title:before {
+.our_team__advantages__title:before,
+.our_team__opportunities__title:before {
   top: 50%;
   left: 0;
   width: 10px;
@@ -783,4 +759,12 @@
 
 .our_team__advantages__title--green:before {
   background-color: $color-green;
+}
+
+.our_team__opportunities {
+  margin-bottom: 5%;
+}
+
+.our_team__opportunities__title--amber:before {
+  background-color: $color-amber;
 }
