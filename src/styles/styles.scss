@@ -21,7 +21,7 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
-// @import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities";
 /**
  * Variáveis
  */
@@ -767,4 +767,33 @@
 
 .our_team__opportunities__title--amber:before {
   background-color: $color-amber;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Página nossos serviços ///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.our_services__box {
+  height: auto;
+}
+
+.our_services__box__cube {
+  width: 80px;
+}
+
+.our_services__box__title {
+  font-weight: bold;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+.our_services__more {
+  margin-left: auto;
+  width: 95%;
+}
+
+.our_services__more__illustration {
+  width: 100%;
+  background: #2f2f2f;
+  // background-size: cover;
 }
