@@ -20,9 +20,9 @@ $color-gray: #757575;
 $color-black: #000000;
 $color-white: #ffffff;
 
-
 // PALLETE
-$primary-color: #007aff;
+$primary: #2f2f2f !default;
+$primary-color: $primary;
 $secondary-color: $color-brown;
 
 $dark-color: #0f0f0f;
