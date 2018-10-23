@@ -32,26 +32,27 @@ const contact = new Vue({
         submitForm() {
             console.log("teste");
             // Mudar para api Selecioanada
-            axios.post('', this.form);
+            axios.post('http://lumen.infocorp.local/api/contato', this.form);
         },
-        checkForm: function (e) {
-            if (this.form.name && this.form.email && this.form.email) {
+        checkForm: function () {
+            if (this.form.name && this.form.email && this.form.subject) {
                 this.submitForm();
                 return true;
             }
 
-            this.form.errors = [];
+            this.form.errors = this.errorList;
+        }
+    },
+    computed: {
+        errorList() {
+            const errors = {};
+            if (!this.form.name) errors.name= "Nome é Obrigatório";
 
-            if (!this.form.name) {
-                this.form.errors.push('Nome é Obrigatório');
-            }
-            if (!this.form.email) {
-                this.form.errors.push('E-mail é Obrigatório');
-            }
-            if (!this.form.subject) {
-                this.form.errors.push('Assunto é Obrigatório');
-            }
+            if (!this.form.email) errors.email= "E-mail é Obrigatório";
 
+            if (!this.form.subject) errors.subject = "Assunto é Obrigatório";
+
+            return errors;
         }
     }
 });
