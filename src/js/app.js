@@ -30,10 +30,13 @@ const contact = new Vue({
     },
     methods: {
         submitForm() {
+            console.log("teste");
+            // Mudar para api Selecioanada
             axios.post('', this.form);
         },
         checkForm: function (e) {
             if (this.form.name && this.form.email && this.form.email) {
+                this.submitForm();
                 return true;
             }
 
@@ -49,8 +52,6 @@ const contact = new Vue({
                 this.form.errors.push('Assunto é Obrigatório');
             }
 
-            // Cancela evento submit
-            e.preventDefault();
         }
     }
 });

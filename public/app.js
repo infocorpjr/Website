@@ -1008,11 +1008,14 @@ var contact = new Vue({
     },
     methods: {
         submitForm: function submitForm() {
+            console.log("teste");
+            // Mudar para api Selecioanada
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('', this.form);
         },
 
         checkForm: function checkForm(e) {
             if (this.form.name && this.form.email && this.form.email) {
+                this.submitForm();
                 return true;
             }
 
@@ -1027,9 +1030,6 @@ var contact = new Vue({
             if (!this.form.subject) {
                 this.form.errors.push('Assunto é Obrigatório');
             }
-
-            // Cancela evento submit
-            e.preventDefault();
         }
     }
 });
