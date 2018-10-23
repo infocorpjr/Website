@@ -1,10 +1,9 @@
 let mix = require('laravel-mix');
 
-mix.js([
-    'src/js/app.js'
-], 'app.js');
+mix.setPublicPath('public');
 
-mix.sass('src/styles/styles.scss', 'app.css');
+mix.js('src/js/app.js', 'app.js')
+    .sass('src/styles/styles.scss', 'app.css');
 
 mix.webpackConfig({
     output: {

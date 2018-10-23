@@ -22,14 +22,35 @@ const contact = new Vue({
     el: '#contact',
     data: {
         form: {
-            name: '',
-            email: '',
-            subject: ''
+            errors: [],
+            name: null,
+            email: null,
+            subject: null
         },
     },
     methods: {
         submitForm() {
             axios.post('', this.form);
+        },
+        checkForm: function (e) {
+            if (this.form.name && this.form.email && this.form.email) {
+                return true;
+            }
+
+            this.form.errors = [];
+
+            if (!this.form.name) {
+                this.form.errors.push('Nome é Obrigatório');
+            }
+            if (!this.form.email) {
+                this.form.errors.push('E-mail é Obrigatório');
+            }
+            if (!this.form.subject) {
+                this.form.errors.push('Assunto é Obrigatório');
+            }
+
+            // Cancela evento submit
+            e.preventDefault();
         }
     }
 });
