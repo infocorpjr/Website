@@ -623,7 +623,21 @@
   background-size: cover;
 }
 
+.featured .box__middle:after {
+  background: none;
+}
+
+.our_dna .featured__illustration {
+  top: 5%;
+  left: 10%;
+  height: 90%;
+  position: absolute;
+  z-index: -1;
+}
+
 .our_dna .featured .featured__title {
+  padding: 3px 10px;
+  background-color: white;
   font-weight: bold;
 }
 
@@ -696,11 +710,33 @@
 }
 
 .our_team .featured .box__middle:before {
-  background: url("../images/capa_time.jpg");
+  background: none;
   background-size: cover;
 }
 
+.featured .box__middle:after {
+  background: none;
+}
+
+.our_team .featured__illustration {
+  top: 5%;
+  right: 0;
+  height: 90%;
+  position: absolute;
+  background: #2f2f2f url("../images/_MG_6408.jpg") no-repeat center top;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .our_team .featured__illustration {
+    background: none;
+  }
+}
+
 .our_team .featured .featured__title {
+  padding: 3px 10px;
+  background-color: white;
   font-weight: bold;
 }
 
@@ -803,7 +839,7 @@
 
 .our_services__more__illustration {
   width: 100%;
-  background: #2f2f2f;
+  background: #2f2f2f
   // background-size: cover;
 }
 
