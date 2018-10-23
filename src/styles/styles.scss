@@ -1,15 +1,11 @@
 /**
- * Swiper 4.3.3
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://www.idangero.us/swiper/
- *
- * Copyright 2014-2018 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: June 5, 2018
+ * Variáveis
  */
-// @import "~swiper/dist/css/swiper.css";
+@import "variable";
+/**
+ * Estilos para aplicação em tags
+ */
+@import "base";
 /**
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -22,14 +18,6 @@
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/utilities";
-/**
- * Variáveis
- */
-@import "variable";
-/**
- * Estilos para aplicação em tags
- */
-@import "base";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Infocorp /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -777,14 +765,35 @@
   height: auto;
 }
 
+@keyframes our_services__box__cube {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .our_services__box__cube {
   width: 80px;
+  animation-name: our_services__box__cube;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .our_services__box__title {
   font-weight: bold;
   font-size: 1.6em;
   text-transform: uppercase;
+}
+
+.our_services__services {
+  margin: 5% auto;
+  width: 85%;
+}
+
+.our_services__services__item__title {
+  font-size: 2em;
 }
 
 .our_services__more {
@@ -797,3 +806,4 @@
   background: #2f2f2f;
   // background-size: cover;
 }
+
