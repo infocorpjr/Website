@@ -70,3 +70,12 @@ Mais detalhes sobre políticas específicas de execução podem ser postados sep
 A equipe do projeto que não seguem ou aplicam o Código de Conduta de boa fé 
 podem enfrentar repercussões temporárias ou permanentes, conforme determinado por outros
  membros da liderança do projeto.
+ 
+ #### Atribuição
+ Este código de conduta é uma adaptação do [Contributor Covenant][homepage], versão 1.4,
+disponível em https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+ 
+ [homepage]: https://www.contributor-covenant.org
+ 
+Para respostas a perguntas comuns sobre este código de conduta, consulte
+ https://www.contributor-covenant.org/faq
