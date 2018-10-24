@@ -41,10 +41,9 @@ const contact = new Vue({
             axios.post('http://lumen.infocorp.local/api/contato', this.form)
                 .then((response) => {
                     this.form.successful = "Enviado com sucesso!";
+
                 })
                 .catch((error) => {
-                    console.log(error.response.data)
-
                     this.form.errors = this.errorListServer(error);
                 })
         },
@@ -110,10 +109,9 @@ const brief = new Vue({
             axios.post('http://lumen.infocorp.local/api/brief', this.form)
                 .then((response) => {
                     this.form.successful = "Enviado com sucesso!";
+                    document.getElementById("top_header").scrollIntoView();
                 })
                 .catch((error) => {
-                    console.log(error.response.data)
-
                     this.form.errors = this.errorListServer(error);
                 })
         },

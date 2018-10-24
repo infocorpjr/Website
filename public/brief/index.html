@@ -10,7 +10,7 @@
     <link href="/app.css" rel="stylesheet">
 </head>
 <body class="brief">
-<div class="box featured">
+<div id="top_header" class="box featured">
     <div class="box__top">
         <div class="box__content">
             <nav class="navbar">
@@ -72,11 +72,13 @@
 </div>
 <!-- Formulários -->
 <div class="callBrief">
-    <div class="row align-items-center">
-        <p class="callBrief__title">Primeiramente, gostaríamos de te conhecer.</p>
-    </div>
     <form id="conte_sua_ideia" class="callBrief__form" method="post" v-on:submit.prevent="checkForm">
-
+        <p v-if="form.successful" id="form_successful" class="contact__form_successful callBrief__title">
+            {{ form.successful }}
+        </p>
+        <div class="row align-items-center">
+            <p class="callBrief__title">Primeiramente, gostaríamos de te conhecer.</p>
+        </div>
         <!-- Name -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
@@ -114,7 +116,8 @@
         <!-- Telefone -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
-            <input v-mask="['(##) ####-####', '(##) #####-####']"  class="callBrief__form__group__input" type="text" name="telefone"
+            <input v-mask="['(##) ####-####', '(##) #####-####']" class="callBrief__form__group__input" type="text"
+                   name="telefone"
                    placeholder="Qual seu telefone para contato?"
                    v-model.trim="form.telefone">
         </div>
@@ -199,9 +202,6 @@
                v-model.file="form.file">-->
         <br>
         <br>
-        <p v-if="form.successful" class="contact__form_successful">
-            {{ form.successful }}
-        </p>
         <button type="submit" value="submit">ENVIAR</button>
     </form>
 </div>
