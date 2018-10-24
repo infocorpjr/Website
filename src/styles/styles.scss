@@ -747,3 +747,133 @@
   // background-size: cover;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Página BRIEF /////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.brief .featured {
+  height: 75%;
+  min-height: 600px;
+}
+
+.brief .featured .box__middle:before {
+  background: url("../images/capa_dna.jpg");
+  background-size: cover;
+}
+
+.featured .box__middle:after {
+  background: none;
+}
+
+.brief .featured__illustration {
+  top: 5%;
+  left: 10%;
+  height: 90%;
+  position: absolute;
+  z-index: -1;
+}
+
+.brief .featured .featured__title {
+  padding: 3px 10px;
+  background-color: white;
+  font-weight: bold;
+}
+
+.brief {
+  &__description {
+    margin-top: 5%;
+    margin-right: auto;
+    margin-bottom: 3%;
+    margin-left: auto;
+    width: 90%;
+  }
+  &__subtitle {
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: relative;
+  }
+  &__subtitle:before {
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 50%;
+    background: linear-gradient(to right, #d5e9fa, white 50%);
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  &__text {
+    margin-top: 0.2%;
+  }
+  &__row {
+    margin: 5% auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__col {
+      width: 49%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .brief__row {
+    flex-direction: column;
+  }
+  .brief__row__col {
+    width: 100%;
+  }
+}
+
+.callBrief {
+  margin: 5% auto;
+  width: 90%;
+  &__form {
+    width: 100%;
+      &__group {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      width: 100%;
+      border-bottom: 1px solid #2d2d2d;
+      display: table;
+      &__addon {
+        font-size: 1.3em;
+        color: #2d2d2d;
+        vertical-align: middle;
+        display: table-cell;
+        padding-right: 5px;
+        width: 1px;
+        white-space: nowrap;
+      }
+      &__input {
+        width: 100%;
+        font-size: 1.3em;
+        color: #2d2d2d;
+        vertical-align: middle;
+        display: table-cell;
+        background-color: transparent;
+        border: none;
+        &--is_error {
+          color: $color-red;
+        }
+        &--is_success {
+          color: $color-green;
+        }
+      }
+      &__input:focus {
+        outline: none;
+      }
+    }
+  }
+  &__title {
+    font-size: 1.7em;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 1.3em;
+    text-align: center;
+  }
+}
