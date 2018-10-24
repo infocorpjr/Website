@@ -67,6 +67,16 @@
   position: relative;
 }
 
+.box__middle:before {
+  top: 5%;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  content: '';
+  position: absolute;
+  z-index: -2;
+}
+
 // Modernizr, no flexbox available.
 .no-flexbox .box__top,
 .no-flexbox .box__middle,
@@ -191,10 +201,24 @@
 
 /*
 |--------------------------------------------------------------------------
+| UTILIDADES
+|--------------------------------------------------------------------------
+|
+|  Reaproveitamento de código =)
+|
+*/
+
+%container {
+  margin: 5% auto;
+  width: 90%;
+}
+
+/*
+|--------------------------------------------------------------------------
 | PÁGINA INICIAL
 |--------------------------------------------------------------------------
 |
-|  Abaixo estão as propriedades referentes a página inicial do site
+|  Abaixo estão as classes referentes a página inicial do site
 |
 */
 
@@ -237,16 +261,6 @@
       position: absolute;
     }
   }
-}
-
-.featured .box__middle:before {
-  top: 5%;
-  right: 0;
-  width: 90%;
-  height: 90%;
-  content: '';
-  position: absolute;
-  z-index: -2;
 }
 
 .featured .box__middle:after {
@@ -508,94 +522,62 @@
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// Página nosso DNA /////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+|--------------------------------------------------------------------------
+| PÁGINA NOSSO DNA
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as classes referentes a página nosso DNA do site
+|
+*/
 
-.our_dna .featured {
-  height: 75%;
-  min-height: 600px;
-}
-
-.our_dna .featured .box__middle:before {
-  background: url("../images/capa_dna.jpg");
-  background-size: cover;
-}
-
-.featured .box__middle:after {
-  background: none;
-}
-
-.our_dna .featured__illustration {
-  top: 5%;
-  left: 10%;
-  height: 90%;
-  position: absolute;
-  z-index: -1;
-}
-
-.our_dna .featured .featured__title {
-  padding: 3px 10px;
-  background-color: white;
-  font-weight: bold;
-}
-
-.our_dna__description {
-  margin-top: 5%;
-  margin-right: auto;
-  margin-bottom: 3%;
-  margin-left: auto;
-  width: 90%;
-}
-
-.our_dna__subtitle {
-  margin-top: 2%;
-  font-weight: bold;
-  font-size: 1.5em;
-  position: relative;
-}
-
-.our_dna__subtitle:before {
-  bottom: 0;
-  left: 0;
-  width: 80%;
-  height: 50%;
-  background: linear-gradient(to right, #d5e9fa, white 50%);
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-.our_dna__text {
-  margin-top: 0.2%;
-}
-
-.our_dna__row {
-  margin: 5% auto;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.our_dna__row__col {
-  width: 49%;
-}
-
-.our_dna__workflow {
-  margin-right: auto;
-  margin-left: auto;
-  width: 80%;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .our_dna__row {
-    flex-direction: column;
+.our_dna {
+  &__featured {
+    height: 75%;
+    min-height: 600px;
+    &__box_middle:before {
+      background: url("../images/capa_dna.jpg");
+      background-size: cover;
+    }
+    &__illustration {
+      top: 5%;
+      left: 10%;
+      height: 90%;
+      position: absolute;
+      z-index: -1;
+    }
+    &__title {
+      padding: 10px 15px;
+      background-color: white;
+      font-weight: bold;
+      font-size: 2.5em;
+      display: inline-block;
+    }
   }
-  .our_dna__row__col {
-    width: 100%;
+  &__description {
+    @extend %container;
+    &__subtitle {
+      margin-top: 2%;
+      font-weight: bold;
+      font-size: 1.5em;
+      position: relative;
+    }
+    &__subtitle:before {
+      bottom: 0;
+      left: 0;
+      width: 80%;
+      height: 50%;
+      background: linear-gradient(to right, #d5e9fa, white 50%);
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+    &__workflow {
+      margin-right: auto;
+      margin-left: auto;
+      width: 80%;
+      display: block;
+    }
   }
 }
 
