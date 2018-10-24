@@ -111,11 +111,10 @@
         <p v-if="form.errors.email" class="contact__form_error">
             {{ form.errors.email }}
         </p>
-
         <!-- Telefone -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
-            <input class="callBrief__form__group__input" type="text" name="telefone"
+            <input v-mask="['(##) ####-####', '(##) #####-####']"  class="callBrief__form__group__input" type="text" name="telefone"
                    placeholder="Qual seu telefone para contato?"
                    v-model.trim="form.telefone">
         </div>

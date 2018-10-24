@@ -17,6 +17,11 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+// Global
+import VueTheMask from 'vue-the-mask';
+window.Vue.use(VueTheMask);
+
+
 
 const contact = new Vue({
     el: '#contact',
@@ -32,6 +37,7 @@ const contact = new Vue({
     methods: {
         submitForm() {
             // Mudar para api Selecioanada
+            // TODO: Alterar api para futura aplicação
             axios.post('http://lumen.infocorp.local/api/contato', this.form)
                 .then((response) => {
                     this.form.successful = "Enviado com sucesso!";
@@ -100,6 +106,7 @@ const brief = new Vue({
     methods: {
         submitForm() {
             // Mudar para api Selecioanada
+            // TODO: Alterar api para futura aplicação
             axios.post('http://lumen.infocorp.local/api/brief', this.form)
                 .then((response) => {
                     this.form.successful = "Enviado com sucesso!";
@@ -133,6 +140,11 @@ const brief = new Vue({
 
             return log;
 
+        },
+
+        validEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
         }
     },
     computed: {
@@ -142,7 +154,11 @@ const brief = new Vue({
 
             if (!this.form.trabalho) errors.trabalho = "Instituição é Obrigatório";
 
-            if (!this.form.email) errors.email = "E-mail é Obrigatório";
+            if (!this.form.email) {
+                errors.email = "E-mail é Obrigatório";
+            } else if (!this.validEmail(this.form.email)) {
+                errors.email = "E-mail inválido";
+            }
 
             if (!this.form.telefone) errors.telefone = "Telefone é Obrigatório";
 
