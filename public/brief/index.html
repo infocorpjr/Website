@@ -80,31 +80,31 @@
         <!-- Name -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
-            <input class="callBrief__form__group__input" type="text" name="name" placeholder="Qual seu nome?"
-                   v-model.trim="form.name">
+            <input class="callBrief__form__group__input" type="text" name="nome" placeholder="Qual seu nome?"
+                   v-model.trim="form.nome">
         </div>
         <!-- Validação -->
-        <p v-if="form.errors.name" class="contact__form_error">
-            {{ form.errors.name }}
+        <p v-if="form.errors.nome" class="contact__form_error">
+            {{ form.errors.nome }}
         </p>
 
         <!-- Instituição -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
-            <input class="callBrief__form__group__input" type="text" name="instituicao"
+            <input class="callBrief__form__group__input" type="text" name="trabalho"
                    placeholder="Instituição em que trabalha?"
-                   v-model.trim="form.instituicao">
+                   v-model.trim="form.trabalho">
         </div>
         <!-- Validação -->
-        <p v-if="form.errors.instituicao" class="contact__form_error">
-            {{ form.errors.instituicao }}
+        <p v-if="form.errors.trabalho" class="contact__form_error">
+            {{ form.errors.trabalho }}
         </p>
 
         <!-- email -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
             <input class="callBrief__form__group__input" type="email" name="email"
-                   placeholder="Qual seu E-mail para contato"
+                   placeholder="Qual seu e-mail para contato"
                    v-model.trim="form.email">
         </div>
         <!-- Validação -->
@@ -115,13 +115,13 @@
         <!-- Telefone -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
-            <input class="callBrief__form__group__input" type="text" name="phone"
+            <input class="callBrief__form__group__input" type="text" name="telefone"
                    placeholder="Qual seu telefone para contato?"
-                   v-model.trim="form.phone">
+                   v-model.trim="form.telefone">
         </div>
         <!-- Validação -->
-        <p v-if="form.errors.phone" class="contact__form_error">
-            {{ form.errors.phone }}
+        <p v-if="form.errors.telefone" class="contact__form_error">
+            {{ form.errors.telefone }}
         </p>
         <!-- TEXTO -->
         <div class="row align-items-center">
@@ -132,8 +132,8 @@
         <!-- explain-ajuda -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
-            <textarea class="callBrief__form__group__input" name="explain-ajuda" placeholder=". . ." rows="2"
-                      v-model.trim="form.explain_ajuda"></textarea>
+            <textarea class="callBrief__form__group__input" name="problema" placeholder=". . ." rows="2"
+                      v-model.trim="form.problema"></textarea>
         </div>
         <!-- TEXTO -->
         <div class="row align-items-center">
@@ -158,8 +158,8 @@
         <!-- beneficios -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
-            <textarea class="callBrief__form__group__input" name="beneficios" placeholder=". . ." rows="2"
-                      v-model.trim="form.publico_alvo"></textarea>
+            <textarea class="callBrief__form__group__input" name="publicoAlvo" placeholder=". . ." rows="2"
+                      v-model.trim="form.publicoAlvo"></textarea>
         </div>
         <!-- TEXTO -->
         <div class="row align-items-center">
@@ -167,13 +167,13 @@
         </div>
         <!-- checkbox -->
         <div class="callBrief__form--checkbox">
-            <label for="website">
-                <input id="website" type="checkbox" v-model="form.website" name="website">
+            <label for="site">
+                <input id="site" type="checkbox" v-model="form.site" name="site">
                 Web Site
             </label>
             <br>
-            <label for="mobile">
-                <input id="mobile" type="checkbox" v-model="form.mobile" name="mobile">
+            <label for="aplicativoMovel">
+                <input id="aplicativoMovel" type="checkbox" v-model="form.aplicativoMovel" name="aplicativoMovel">
                 Aplicativo Móvel
             </label>
             <br>

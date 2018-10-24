@@ -83,14 +83,14 @@ const brief = new Vue({
         form: {
             errors: {},
             successful: '',
-            name: null,
-            instituicao: null,
+            nome: null,
+            trabalho: null,
             email: null,
-            phone: null,
-            explain_ajuda: null,
+            telefone: null,
+            problema: null,
             beneficios: null,
-            publico_alvo: null,
-            website: false,
+            publicoAlvo: null,
+            site: false,
             mobile: false,
             sistemaWeb: false,
             sistemasDesktop: false,
@@ -100,7 +100,7 @@ const brief = new Vue({
     methods: {
         submitForm() {
             // Mudar para api Selecioanada
-            axios.post('http://lumen.infocorp.local/api/contato', this.form)
+            axios.post('http://lumen.infocorp.local/api/brief', this.form)
                 .then((response) => {
                     this.form.successful = "Enviado com sucesso!";
                 })
@@ -113,7 +113,7 @@ const brief = new Vue({
         checkForm: function () {
             this.form.errors = this.errorList;
 
-            if (this.form.name && this.form.email && this.form.subject) {
+            if (this.form.nome && this.form.trabalho && this.form.email && this.form.telefone) {
                 this.submitForm();
                 return true;
             }
@@ -123,13 +123,13 @@ const brief = new Vue({
         errorListServer(error) {
             const log = {};
 
-            if (error.response.data.name) log.name = error.response.data.name[0];
+            if (error.response.data.nome) log.nome = error.response.data.nome[0];
 
-            if (error.response.data.instituicao) log.instituicao = error.response.instituicao.email[0];
+            if (error.response.data.trabalho) log.trabalho = error.response.data.trabalho[0];
 
             if (error.response.data.email) log.email = error.response.data.email[0];
 
-            if (error.response.data.phone) log.phone = error.response.data.phone[0];
+            if (error.response.data.telefone) log.telefone = error.response.data.telefone[0];
 
             return log;
 
@@ -138,13 +138,13 @@ const brief = new Vue({
     computed: {
         errorList() {
             const errors = {};
-            if (!this.form.name) errors.name = "Nome é Obrigatório";
+            if (!this.form.nome) errors.nome = "Nome é Obrigatório";
 
-            if (!this.form.instituicao) errors.instituicao = "Instituição é Obrigatório";
+            if (!this.form.trabalho) errors.trabalho = "Instituição é Obrigatório";
 
             if (!this.form.email) errors.email = "E-mail é Obrigatório";
 
-            if (!this.form.phone) errors.phone = "Telefone é Obrigatório";
+            if (!this.form.telefone) errors.telefone = "Telefone é Obrigatório";
 
             return errors;
         }
