@@ -1,15 +1,11 @@
 /**
- * Swiper 4.3.3
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://www.idangero.us/swiper/
- *
- * Copyright 2014-2018 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: June 5, 2018
+ * Variáveis
  */
-// @import "~swiper/dist/css/swiper.css";
+@import "variable";
+/**
+ * Estilos para aplicação em tags
+ */
+@import "base";
 /**
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -21,15 +17,7 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
-// @import "~bootstrap/scss/utilities";
-/**
- * Variáveis
- */
-@import "variable";
-/**
- * Estilos para aplicação em tags
- */
-@import "base";
+@import "~bootstrap/scss/utilities";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Infocorp /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -130,52 +118,65 @@
   display: flex;
   // End flexbox
   position: relative;
-}
-
-.navbar__brand {
-
-}
-
-.navbar__infocorp {
-  width: 180px;
-}
-
-.navbar__left,
-.navbar__right {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: inline-block;
-}
-
-.navbar__left__item,
-.navbar__right__item {
-  display: inline-block;
-}
-
-.navbar__left__link,
-.navbar__right__link {
-  margin-left: 10px;
-  padding: 10px 0 10px 15px;
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
-}
-
-.navbar__left__link:before,
-.navbar__right__link:before {
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 1px;
-  background-color: $color-black;
-  content: '';
-  position: absolute;
-}
-
-.navbar__left__link.active,
-.navbar__right__link.active {
-  color: $color-blue;
+  &__infocorp {
+    width: 180px;
+  }
+  &__left {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    &__item {
+      display: inline-block;
+      &__link {
+        margin-left: 10px;
+        padding: 10px 0 10px 15px;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+      }
+      &__link:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-black;
+        content: '';
+        position: absolute;
+      }
+      &__link:active {
+        color: $color-blue;
+      }
+    }
+  }
+  &__right {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    &__item {
+      display: inline-block;
+      &__link {
+        margin-left: 10px;
+        padding: 10px 0 10px 15px;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+      }
+      &__link:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-black;
+        content: '';
+        position: absolute;
+      }
+      &__link:active {
+        color: $color-blue;
+      }
+    }
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -188,13 +189,54 @@
   color: white;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// All //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+|--------------------------------------------------------------------------
+| PÁGINA INICIAL
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as propriedades referentes a página inicial do site
+|
+*/
 
 .featured {
   min-height: 400px;
   height: 100%;
+  &__content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    position: relative;
+    &__infocorp {
+      width: 40%;
+    }
+    &__title {
+      margin: 0;
+      font-weight: 100;
+      font-size: 3em;
+      display: block;
+    }
+    @media (max-width: 767px) {
+      &__title {
+        font-size: 1.5em;
+      }
+    }
+    &__description {
+      margin: 0;
+      padding-left: 5%;
+      font-size: 1.5em;
+      color: lighten($primary-color, 0%);;
+      position: relative;
+    }
+    &__description:before {
+      top: 50%;
+      left: 0;
+      width: 4%;
+      height: 2px;
+      background-color: $color-black;
+      content: '';
+      position: absolute;
+    }
+  }
 }
 
 .featured .box__middle:before {
@@ -203,7 +245,6 @@
   width: 90%;
   height: 90%;
   content: '';
-  background: url("../images/pixels.png");
   position: absolute;
   z-index: -2;
 }
@@ -217,53 +258,6 @@
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 70%);
   position: absolute;
   z-index: -1;
-}
-
-.featured__content {
-  margin-right: auto;
-  margin-left: auto;
-  width: 90%;
-  position: relative;
-}
-
-.featured__infocorp {
-  width: 40%;
-}
-
-.featured__title,
-.featured__description {
-
-}
-
-.featured__title {
-  margin: 0;
-  font-weight: 100;
-  font-size: 3em;
-  display: inline-block;
-}
-
-@media (max-width: 767px) {
-  .featured__title {
-    font-size: 3em;
-  }
-}
-
-.featured__description {
-  margin: 0;
-  padding-left: 5%;
-  font-size: 1.5em;
-  color: lighten($primary-color, 0%);;
-  position: relative;
-}
-
-.featured__description:before {
-  top: 50%;
-  left: 0;
-  width: 4%;
-  height: 2px;
-  background-color: $color-black;
-  content: '';
-  position: absolute;
 }
 
 .switch {
@@ -362,180 +356,70 @@
   }
 }
 
-/// Service section ////////////////////////////////////////////////////////////////////////////////////////////////////
+// Seção de serviços da página inicial.
 
-.service {
+.services {
   margin: 5% auto;
   width: 90%;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  display: flex;
-  position: relative;
-}
-
-.service:before {
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background-color: #0f0f0f;
-  content: '';
-  position: absolute;
-}
-
-.service__left,
-.service__right {
-  width: 45%;
-}
-
-@media (max-width: 767px) {
-  .service:before {
-    display: none;
+  &__illustration {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    display: block;
   }
-  .service__left,
-  .service__right {
-    width: 100%;
+  &__title {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  &__description {
+    text-align: center;
+  }
+  &__group {
+    &__illustration {
+      width: 100%;
+    }
+    &__title {
+      margin: 0;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    &__description {
+
+    }
   }
 }
 
-.service__left__item__illustration {
-  margin-right: auto;
-  margin-left: auto;
-  width: 90%;
-  display: block;
-}
-
-.service__left__item__title {
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.service__left__item__description {
-  text-align: center;
-}
-
-.service__right__group__item {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  border-bottom: 1px solid;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.service__right__group__item:last-child {
-  border: none;
-}
-
-.service__right__group__item__title {
-  margin: 0;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.service__right__group__item__illustration {
-  padding: 2%;
-  max-width: 150px;
-}
-
-.service__right__group__item__description {
-  margin: 2%;
-  font-size: 1em;
-  color: #0e67aa;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Seção de nosso timo na página inicial
 
 .team {
   margin: 5% auto;
   width: 90%;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  display: flex;
-}
-
-.team__left {
-  width: 40%;
-}
-
-.team__left__title {
-  margin: 0;
-  font-weight: bold;
-  font-size: 2em;
-  display: inline-block;
-  position: relative;
-}
-
-.team__left__subtitle {
-  display: inline-block;
-}
-
-.team__left__title:before {
-  bottom: 0;
-  left: 0;
-  width: 80%;
-  height: 50%;
-  background-color: lighten($color-blue, 40%);
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-.team__left__subtitle {
-  font-weight: bold;
-}
-
-.team__right {
-  width: 50%;
-}
-
-.team__right__b {
-  width: 100%;
-  background-color: $color-white;
-  position: relative;
-}
-
-.team__right__b:after {
-  top: 0;
-  left: 0;
-  margin-top: -30px;
-  margin-left: -30px;
-  width: 60px;
-  height: 60px;
-  background: white url("../images/pixels.png");
-  border: 5px solid lighten($color-black, 100%);
-  content: '';
-  position: absolute;
-}
-
-.team__right__b__image {
-  width: 100%;
-  filter: contrast(200%) brightness(150%);
-  opacity: 0.8;
-  display: block;
-}
-
-@media (max-width: 767px) {
-  .team__left {
-    width: 100%;
+  &__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 2em;
+    display: inline-block;
+    position: relative;
   }
-  .team__right {
-    margin-top: 5%;
-    width: 100%;
+  &__title:before {
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 50%;
+    background-color: lighten($color-blue, 40%);
+    content: '';
+    position: absolute;
+    z-index: -1;
   }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .team__left {
-    width: 100%;
+  &__subtitle {
+    font-weight: bold;
+    display: inline-block;
   }
-  .team__right {
-    margin-top: 5%;
+  &__image {
     width: 100%;
+    filter: contrast(200%) brightness(150%);
+    opacity: 0.8;
+    display: block;
   }
 }
 
@@ -643,7 +527,21 @@
   background-size: cover;
 }
 
+.featured .box__middle:after {
+  background: none;
+}
+
+.our_dna .featured__illustration {
+  top: 5%;
+  left: 10%;
+  height: 90%;
+  position: absolute;
+  z-index: -1;
+}
+
 .our_dna .featured .featured__title {
+  padding: 3px 10px;
+  background-color: white;
   font-weight: bold;
 }
 
@@ -716,11 +614,33 @@
 }
 
 .our_team .featured .box__middle:before {
-  background: url("../images/capa_time.jpg");
+  background: none;
   background-size: cover;
 }
 
+.featured .box__middle:after {
+  background: none;
+}
+
+.our_team .featured__illustration {
+  top: 5%;
+  right: 0;
+  height: 90%;
+  position: absolute;
+  background: #2f2f2f url("../images/_MG_6408.jpg") no-repeat center top;
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .our_team .featured__illustration {
+    background: none;
+  }
+}
+
 .our_team .featured .featured__title {
+  padding: 3px 10px;
+  background-color: white;
   font-weight: bold;
 }
 
@@ -776,3 +696,54 @@
 .our_team__opportunities__title--amber:before {
   background-color: $color-amber;
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Página nossos serviços ///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.our_services__box {
+  height: auto;
+}
+
+@keyframes our_services__box__cube {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.our_services__box__cube {
+  width: 80px;
+  animation-name: our_services__box__cube;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.our_services__box__title {
+  font-weight: bold;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+.our_services__services {
+  margin: 5% auto;
+  width: 85%;
+}
+
+.our_services__services__item__title {
+  font-size: 2em;
+}
+
+.our_services__more {
+  margin-left: auto;
+  width: 95%;
+}
+
+.our_services__more__illustration {
+  width: 100%;
+  background: #2f2f2f
+  // background-size: cover;
+}
+
