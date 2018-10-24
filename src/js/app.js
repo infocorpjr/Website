@@ -77,6 +77,80 @@ const contact = new Vue({
     }
 });
 
+const brief = new Vue({
+    el: '#conte_sua_ideia',
+    data: {
+        form: {
+            errors: {},
+            successful: '',
+            name: null,
+            instituicao: null,
+            email: null,
+            phone: null,
+            explain_ajuda: null,
+            beneficios: null,
+            publico_alvo: null,
+            website: false,
+            mobile: false,
+            sistemaWeb: false,
+            sistemasDesktop: false,
+            curso: false
+        },
+    },
+    methods: {
+        submitForm() {
+            // Mudar para api Selecioanada
+            axios.post('http://lumen.infocorp.local/api/contato', this.form)
+                .then((response) => {
+                    this.form.successful = "Enviado com sucesso!";
+                })
+                .catch((error) => {
+                    console.log(error.response.data)
+
+                    this.form.errors = this.errorListServer(error);
+                })
+        },
+        checkForm: function () {
+            this.form.errors = this.errorList;
+
+            if (this.form.name && this.form.email && this.form.subject) {
+                this.submitForm();
+                return true;
+            }
+
+            document.getElementById("conte_sua_ideia").scrollIntoView();
+        },
+        errorListServer(error) {
+            const log = {};
+
+            if (error.response.data.name) log.name = error.response.data.name[0];
+
+            if (error.response.data.instituicao) log.instituicao = error.response.instituicao.email[0];
+
+            if (error.response.data.email) log.email = error.response.data.email[0];
+
+            if (error.response.data.phone) log.phone = error.response.data.phone[0];
+
+            return log;
+
+        }
+    },
+    computed: {
+        errorList() {
+            const errors = {};
+            if (!this.form.name) errors.name = "Nome é Obrigatório";
+
+            if (!this.form.instituicao) errors.instituicao = "Instituição é Obrigatório";
+
+            if (!this.form.email) errors.email = "E-mail é Obrigatório";
+
+            if (!this.form.phone) errors.phone = "Telefone é Obrigatório";
+
+            return errors;
+        }
+    }
+});
+
 /**
  * Swiper 4.3.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions

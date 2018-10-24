@@ -75,13 +75,19 @@
     <div class="row align-items-center">
         <p class="callBrief__title">Primeiramente, gostaríamos de te conhecer.</p>
     </div>
-    <form id="conte-sua-ideia" class="callBrief__form" method="post" v-on:submit.prevent="">
+    <form id="conte_sua_ideia" class="callBrief__form" method="post" v-on:submit.prevent="checkForm">
+
         <!-- Name -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
             <input class="callBrief__form__group__input" type="text" name="name" placeholder="Qual seu nome?"
                    v-model.trim="form.name">
         </div>
+        <!-- Validação -->
+        <p v-if="form.errors.name" class="contact__form_error">
+            {{ form.errors.name }}
+        </p>
+
         <!-- Instituição -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
@@ -89,6 +95,11 @@
                    placeholder="Instituição em que trabalha?"
                    v-model.trim="form.instituicao">
         </div>
+        <!-- Validação -->
+        <p v-if="form.errors.instituicao" class="contact__form_error">
+            {{ form.errors.instituicao }}
+        </p>
+
         <!-- email -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
@@ -96,6 +107,11 @@
                    placeholder="Qual seu E-mail para contato"
                    v-model.trim="form.email">
         </div>
+        <!-- Validação -->
+        <p v-if="form.errors.email" class="contact__form_error">
+            {{ form.errors.email }}
+        </p>
+
         <!-- Telefone -->
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
@@ -103,6 +119,10 @@
                    placeholder="Qual seu telefone para contato?"
                    v-model.trim="form.phone">
         </div>
+        <!-- Validação -->
+        <p v-if="form.errors.phone" class="contact__form_error">
+            {{ form.errors.phone }}
+        </p>
         <!-- TEXTO -->
         <div class="row align-items-center">
             <p class="callBrief__title">Agora vamos entender sua ideia.</p>
@@ -113,7 +133,7 @@
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
             <textarea class="callBrief__form__group__input" name="explain-ajuda" placeholder=". . ." rows="2"
-                      v-model.trim="form.explain-ajuda"></textarea>
+                      v-model.trim="form.explain_ajuda"></textarea>
         </div>
         <!-- TEXTO -->
         <div class="row align-items-center">
@@ -139,9 +159,8 @@
         <div class="callBrief__form__group">
             <div class="callBrief__form__group__addon"></div>
             <textarea class="callBrief__form__group__input" name="beneficios" placeholder=". . ." rows="2"
-                      v-model.trim="form.beneficios"></textarea>
+                      v-model.trim="form.publico_alvo"></textarea>
         </div>
-
         <!-- TEXTO -->
         <div class="row align-items-center">
             <p class="callBrief__title">Qual solução melhor atende suas necessidades?</p>
@@ -149,42 +168,44 @@
         <!-- checkbox -->
         <div class="callBrief__form--checkbox">
             <label for="website">
-                <input id="website" type="checkbox" v-model="website" name="website" value="1">
+                <input id="website" type="checkbox" v-model="form.website" name="website">
                 Web Site
             </label>
             <br>
             <label for="mobile">
-                <input id="mobile" type="checkbox" v-model="mobile" name="mobile" value="1">
+                <input id="mobile" type="checkbox" v-model="form.mobile" name="mobile">
                 Aplicativo Móvel
             </label>
             <br>
             <label for="sistemaWeb">
-                <input id="sistemaWeb" type="checkbox" v-model="sistemaWeb" name="sistemaWeb" value="1">
+                <input id="sistemaWeb" type="checkbox" v-model="form.sistemaWeb" name="sistemaWeb">
                 Sistema Web
             </label><br>
             <label for="sistemasDesktop">
-                <input id="sistemasDesktop" type="checkbox" v-model="sistemasDesktop" name="sistemasDesktop" value="1">
+                <input id="sistemasDesktop" type="checkbox" v-model="form.sistemasDesktop" name="sistemasDesktop">
                 Sistema Descktop
             </label><br>
             <label for="curso">
-                <input id="curso" type="checkbox" v-model="curso" name="curso" value="1">
+                <input id="curso" type="checkbox" v-model="form.curso" name="curso">
                 Curso
             </label>
         </div>
-        <!-- TEXTO -->
+        <!--&lt;!&ndash; TEXTO &ndash;&gt;
         <div class="row align-items-center">
             <p class="callBrief__title" style="text-align: left">Há algum arquivo que auxilie no entendimento da ideia
                 que deseja compartilhar
                 conosco? (planilha, diagrama, texto, gráfico)</p>
         </div>
-        <input class="callBrief__form__group__input--file" type="file" name="file"
-               v-model.file="form.email">
+        <input class="callBrief__form__group__input&#45;&#45;file" type="file" name="file"
+               v-model.file="form.file">-->
         <br>
         <br>
+        <p v-if="form.successful" class="contact__form_successful">
+            {{ form.successful }}
+        </p>
         <button type="submit" value="submit">ENVIAR</button>
     </form>
 </div>
-
 
 
 <!-- Footer -->
