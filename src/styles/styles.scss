@@ -389,7 +389,7 @@
   }
 }
 
-// Seção de nosso timo na página inicial
+// Seção de nosso time da página inicial
 
 .team {
   margin: 5% auto;
@@ -423,72 +423,73 @@
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Seção de contato e rodapé da página incial
 
 .contact {
   padding: 6% 5%;
   background-color: #2e2e2e;
   color: white;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  display: flex;
+  &__title {
+    font-size: 1.5em;
+  }
+  &__subtitle {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  &__form {
+    width: 100%;
+    &__group {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      width: 100%;
+      border-bottom: 1px solid white;
+      display: table;
+      &__addon {
+        font-size: 1.3em;
+        color: white;
+        vertical-align: middle;
+        display: table-cell;
+        padding-right: 5px;
+        width: 1px;
+        white-space: nowrap;
+      }
+      &__input {
+        width: 100%;
+        font-size: 1.3em;
+        color: white;
+        vertical-align: middle;
+        display: table-cell;
+        background-color: transparent;
+        border: none;
+        &--is_error {
+          color: $color-red;
+        }
+        &--is_success {
+          color: $color-green;
+        }
+      }
+      &__input:focus {
+        outline: none;
+      }
+    }
+    &__send {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      &__icon {
+        width: 50px;
+      }
+      &__icon:hover path {
+        fill: $color-blue;
+      }
+    }
+    &__send:focus {
+      outline: none;
+    }
+  }
 }
 
-.contact__box {
-  width: 45%;
-}
-
-.contact__box__title {
-  font-size: 1.5em;
-}
-
-.contact__box__title__bold {
-  display: block;
-}
-
-.contact__form {
-  width: 100%;
-}
-
-.contact__form__input__group {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  width: 100%;
-  border-bottom: 1px solid $color-white;
-  display: table;
-}
-
-.contact__form__input__group__addon,
-.contact__form__input__group__field {
-  font-size: 1.3em;
-  color: white;
-  vertical-align: middle;
-  display: table-cell;
-}
-
-.contact__form__input__group__addon {
-  padding-right: 5px;
-  width: 1px;
-  white-space: nowrap;
-}
-
-.contact__form__input__group__field {
-  background-color: transparent;
-  border: none;
-}
-
-.contact__form__input__group__field:focus {
-  outline: none;
-}
-
-.contact__form_error {
-  color: #e85600;
-}
-
-.contact__form_successful {
-  color: #32b643;
-}
+// Seção sobre da página inicial
 
 .about {
   height: 100%;
@@ -496,21 +497,15 @@
   flex-direction: column;
   justify-content: space-between;
   display: flex;
-}
-
-.about__brand {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.about__description {
-  margin-top: 0;
-}
-
-.about__more {
-  font-style: italic;
+  &__brand {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  &__more {
+    font-style: italic;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
