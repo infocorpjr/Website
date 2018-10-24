@@ -77,6 +77,17 @@
   z-index: -2;
 }
 
+/*.box__middle:after {
+  top: 5%;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  content: '';
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 70%);
+  position: absolute;
+  z-index: -1;
+}*/
+
 // Modernizr, no flexbox available.
 .no-flexbox .box__top,
 .no-flexbox .box__middle,
@@ -261,17 +272,6 @@
       position: absolute;
     }
   }
-}
-
-.featured .box__middle:after {
-  top: 5%;
-  right: 0;
-  width: 90%;
-  height: 90%;
-  content: '';
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 70%);
-  position: absolute;
-  z-index: -1;
 }
 
 .switch {
@@ -546,12 +546,18 @@
       position: absolute;
       z-index: -1;
     }
-    &__title {
-      padding: 10px 15px;
-      background-color: white;
-      font-weight: bold;
-      font-size: 2.5em;
-      display: inline-block;
+    &__content {
+      margin-right: auto;
+      margin-left: auto;
+      width: 90%;
+      text-align: right;
+      &__title {
+        padding: 10px 15px;
+        background-color: white;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+      }
     }
   }
   &__description {
@@ -581,97 +587,99 @@
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// Página nosso time ////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+|--------------------------------------------------------------------------
+| PÁGINA NOSSO TIME
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as classes referentes a página nosso time do site
+|
+*/
 
-.our_team .featured {
-  height: 75%;
-  min-height: 600px;
-}
-
-.our_team .featured .box__middle:before {
-  background: none;
-  background-size: cover;
-}
-
-.featured .box__middle:after {
-  background: none;
-}
-
-.our_team .featured__illustration {
-  top: 5%;
-  right: 0;
-  height: 90%;
-  position: absolute;
-  background: #2f2f2f url("../images/_MG_6408.jpg") no-repeat center top;
-  background-size: cover;
-  z-index: -1;
-}
-
-@media (max-width: 1024px) {
-  .our_team .featured__illustration {
-    background: none;
+.our_team {
+  &__featured {
+    height: 75%;
+    min-height: 600px;
+    @media (max-width: 1024px) {
+      min-height: 400px;
+    }
+    &__illustration {
+      top: 5%;
+      right: 0;
+      height: 90%;
+      background: #2f2f2f url("../images/_MG_6408.jpg") no-repeat center top;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
+    &__content {
+      margin-right: auto;
+      margin-left: auto;
+      width: 90%;
+      &__title {
+        padding: 10px 15px;
+        background-color: white;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+      }
+    }
   }
-}
-
-.our_team .featured .featured__title {
-  padding: 3px 10px;
-  background-color: white;
-  font-weight: bold;
-}
-
-.our_team__description {
-  margin: 5% auto 3% auto;
-  width: 90%;
-}
-
-.our_team__title {
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 5px;
-  font-size: 1.5em;
-  font-weight: bold;
-  display: inline-block;
-  background-color: #2e2e2e;
-  color: white;
-}
-
-.our_team__advantages,
-.our_team__opportunities {
-  margin: 3% auto;
-  width: 90%;
-}
-
-.our_team__advantages__title,
-.our_team__opportunities__title {
-  padding-left: 15px;
-  font-weight: bold;
-  font-size: 1.2em;
-  display: inline-block;
-  position: relative;
-}
-
-.our_team__advantages__title:before,
-.our_team__opportunities__title:before {
-  top: 50%;
-  left: 0;
-  width: 10px;
-  height: 1px;
-  content: '';
-  position: absolute;
-}
-
-.our_team__advantages__title--green:before {
-  background-color: $color-green;
-}
-
-.our_team__opportunities {
-  margin-bottom: 5%;
-}
-
-.our_team__opportunities__title--amber:before {
-  background-color: $color-amber;
+  &__description {
+    margin: 5% auto 3% auto;
+    width: 90%;
+  }
+  &__title {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block;
+    background: linear-gradient(to left, #2e2e2e, #5e5e5e);
+    color: white;
+  }
+  &__advantages {
+    @extend %container;
+    &__title {
+      padding-left: 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      display: inline-block;
+      position: relative;
+      &:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-green;
+        content: '';
+        position: absolute;
+      }
+    }
+  }
+  &__opportunities {
+    @extend %container;
+    &__title {
+      padding-left: 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      display: inline-block;
+      position: relative;
+      &:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-amber;
+        content: '';
+        position: absolute;
+      }
+    }
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
