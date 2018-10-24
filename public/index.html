@@ -180,26 +180,42 @@
             Tem alguma ideia ou sugestão?
             <b class="contact__box__title__bold">Converse conosco</b>
         </p>
-        <form id="contact" class="contact__form">
+        <form id="contact" class="contact__form" v-on:submit.prevent="checkForm" method="post">
+            <p v-if="form.successful" class="contact__form_successful">
+                {{ form.successful }}
+            </p>
             <!-- Name -->
             <div class="contact__form__input__group">
                 <div class="contact__form__input__group__addon">Qual seu nome?</div>
-                <input class="contact__form__input__group__field" type="text" name="name" placeholder="..."
-                       v-model="form.name">
+                <input class="contact__form__input__group__field" type="text" name="3" placeholder="..."
+                       v-model.trim="form.name">
             </div>
+            <!-- Validação -->
+            <p v-if="form.errors.name" class="contact__form_error">
+                {{ form.errors.name }}
+            </p>
+
             <!-- Email -->
             <div class="contact__form__input__group">
                 <div class="contact__form__input__group__addon">Qual seu email?</div>
                 <input class="contact__form__input__group__field" type="email" name="email" placeholder="..."
-                       v-model="form.email">
+                       v-model.trim="form.email">
             </div>
+            <!-- Validação -->
+            <p v-if="form.errors.email" class="contact__form_error">
+                {{ form.errors.email }}
+            </p>
             <!-- Subject -->
             <div class="contact__form__input__group">
                 <div class="contact__form__input__group__addon">Assunto</div>
-                <textarea class="contact__form__input__group__field" name="email" placeholder="..." rows="3"
-                          v-model="form.subject"></textarea>
+                <textarea class="contact__form__input__group__field" name="subject" placeholder="..." rows="3"
+                          v-model.trim="form.subject"></textarea>
             </div>
-            <button type="button" @click="submitForm">ENVIAR</button>
+            <!-- Validação -->
+            <p v-if="form.errors.subject" class="contact__form_error">
+                {{ form.errors.subject }}
+            </p>
+            <button type="submit" value="submit">ENVIAR</button>
         </form>
     </div>
     <div class="contact__box">
