@@ -22,7 +22,7 @@
   align-items: center;
   display: flex;
   // End flexbox
-  position: relative;
+  position: sticky;
   &__infocorp {
     width: 180px;
   }
@@ -168,7 +168,7 @@
   display: table-cell;
 }
 
-// Footer component 
+// Footer component
 
 .footer {
   padding: 3% 5%;
