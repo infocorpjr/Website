@@ -1,0 +1,177 @@
+/**
+ * Moa Componentes v0.0.0 (https://github.com/infocorpjr/website/)
+ * Copyright 2018 Infocorp
+ * Licensed under MIT (https://github.com/infocorpjr/website/blob/master/LICENSE)
+ */
+
+// Infocorp brand
+
+.i, .n, .f, .o, .co, .r, .p {
+  fill: lighten($secondary-color, 0%);
+}
+
+// Navbar component
+
+.navbar {
+  margin: 1.5% auto 0 auto;
+  width: 90%;
+  // Flexbox
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  // End flexbox
+  position: relative;
+  &__infocorp {
+    width: 180px;
+  }
+  &__left {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    &__item {
+      display: inline-block;
+      &__link {
+        margin-left: 10px;
+        padding: 10px 0 10px 15px;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+      }
+      &__link:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-black;
+        content: '';
+        position: absolute;
+      }
+      &__link:active {
+        color: $color-blue;
+      }
+    }
+  }
+  &__right {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    &__item {
+      display: inline-block;
+      &__link {
+        margin-left: 10px;
+        padding: 10px 0 10px 15px;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+      }
+      &__link:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-black;
+        content: '';
+        position: absolute;
+      }
+      &__link:active {
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+// Box
+
+.box {
+  width: 100%;
+  height: 100%;
+  // Flexbox
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  // End flexbox
+  position: relative;
+}
+
+// Modernizr, no flexbox available.
+.no-flexbox .box {
+  display: table;
+  table-layout: fixed;
+}
+
+.box__top,
+.box__middle,
+.box__bottom {
+  width: 100%;
+  position: relative;
+}
+
+.box__middle:before {
+  top: 5%;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  content: '';
+  position: absolute;
+  z-index: -2;
+}
+
+/*.box__middle:after {
+  top: 5%;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  content: '';
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 70%);
+  position: absolute;
+  z-index: -1;
+}*/
+
+// Modernizr, no flexbox available.
+.no-flexbox .box__top,
+.no-flexbox .box__middle,
+.no-flexbox .box__bottom {
+  display: table-row;
+}
+
+.box__top--larger,
+.box__middle--larger,
+.box__bottom--larger {
+  flex: 1;
+}
+
+// Modernizr, no flexbox available.
+.no-flexbox .box__top--larger,
+.no-flexbox .box__middle--larger,
+.no-flexbox .box__bottom--larger {
+  height: 100%;
+}
+
+.box__content {
+  height: 100%;
+  // Flexbox
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  // End flexbox
+}
+
+// Modernizr, no flexbox available.
+.no-flexbox .box__content {
+  height: auto;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+// Footer component 
+
+.footer {
+  padding: 3% 5%;
+  background-color: #2f2f2f;
+  color: white;
+}

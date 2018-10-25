@@ -1,221 +1,14 @@
-/**
- * Variáveis
- */
 @import "variable";
-/**
- * Estilos para aplicação em tags
- */
+@import "bootstrap";
 @import "base";
-/**
- * Bootstrap v4.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/utilities";
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// Infocorp /////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-@keyframes i {
-  from {
-    stroke-dasharray: 100, 50, 50, 50, 50;
-    stroke-opacity: 0.5;
-  }
-  to {
-    stroke-dasharray: 200, 100, 100, 100, 100;
-    stroke-opacity: 1;
-  }
-}
-
-.i, .n, .f, .o, .co, .r, .p {
-  fill: lighten($primary-color, 0%);
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// Box component ////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-.box {
-  width: 100%;
-  height: 100%;
-  // Flexbox
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  // End flexbox
-  position: relative;
-}
-
-// Modernizr, no flexbox available.
-.no-flexbox .box {
-  display: table;
-  table-layout: fixed;
-}
-
-.box__top,
-.box__middle,
-.box__bottom {
-  width: 100%;
-  position: relative;
-}
-
-.box__middle:before {
-  top: 5%;
-  right: 0;
-  width: 90%;
-  height: 90%;
-  content: '';
-  position: absolute;
-  z-index: -2;
-}
-
-/*.box__middle:after {
-  top: 5%;
-  right: 0;
-  width: 90%;
-  height: 90%;
-  content: '';
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 70%);
-  position: absolute;
-  z-index: -1;
-}*/
-
-// Modernizr, no flexbox available.
-.no-flexbox .box__top,
-.no-flexbox .box__middle,
-.no-flexbox .box__bottom {
-  display: table-row;
-}
-
-.box__top--larger,
-.box__middle--larger,
-.box__bottom--larger {
-  flex: 1;
-}
-
-// Modernizr, no flexbox available.
-.no-flexbox .box__top--larger,
-.no-flexbox .box__middle--larger,
-.no-flexbox .box__bottom--larger {
-  height: 100%;
-}
-
-.box__content {
-  height: 100%;
-  // Flexbox
-  align-items: center;
-  justify-content: left;
-  display: flex;
-  // End flexbox
-}
-
-// Modernizr, no flexbox available.
-.no-flexbox .box__content {
-  height: auto;
-  vertical-align: middle;
-  display: table-cell;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// Navbar component /////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-.navbar {
-  margin: 1.5% auto 0 auto;
-  width: 90%;
-  // Flexbox
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  // End flexbox
-  position: relative;
-  &__infocorp {
-    width: 180px;
-  }
-  &__left {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: inline-block;
-    &__item {
-      display: inline-block;
-      &__link {
-        margin-left: 10px;
-        padding: 10px 0 10px 15px;
-        font-weight: bold;
-        position: relative;
-        display: inline-block;
-      }
-      &__link:before {
-        top: 50%;
-        left: 0;
-        width: 10px;
-        height: 1px;
-        background-color: $color-black;
-        content: '';
-        position: absolute;
-      }
-      &__link:active {
-        color: $color-blue;
-      }
-    }
-  }
-  &__right {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: inline-block;
-    &__item {
-      display: inline-block;
-      &__link {
-        margin-left: 10px;
-        padding: 10px 0 10px 15px;
-        font-weight: bold;
-        position: relative;
-        display: inline-block;
-      }
-      &__link:before {
-        top: 50%;
-        left: 0;
-        width: 10px;
-        height: 1px;
-        background-color: $color-black;
-        content: '';
-        position: absolute;
-      }
-      &__link:active {
-        color: $color-blue;
-      }
-    }
-  }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// Footer component /////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-.footer {
-  padding: 3% 5%;
-  background-color: #2f2f2f;
-  color: white;
-}
+@import "components";
 
 /*
 |--------------------------------------------------------------------------
 | UTILIDADES
 |--------------------------------------------------------------------------
 |
-|  Reaproveitamento de código =)
+|  Reaproveitamento de código, =)
 |
 */
 
@@ -683,15 +476,16 @@
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// Página nossos serviços ///////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+|--------------------------------------------------------------------------
+| PÁGINA NOSSOS SERVIÇOS
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as classes referentes a página nossos serviços do site
+|
+*/
 
-.our_services__box {
-  height: auto;
-}
-
-@keyframes our_services__box__cube {
+@keyframes rotate {
   from {
     transform: rotate(0);
   }
@@ -700,36 +494,36 @@
   }
 }
 
-.our_services__box__cube {
-  width: 80px;
-  animation-name: our_services__box__cube;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
-.our_services__box__title {
-  font-weight: bold;
-  font-size: 1.6em;
-  text-transform: uppercase;
-}
-
-.our_services__services {
-  margin: 5% auto;
-  width: 85%;
-}
-
-.our_services__services__item__title {
-  font-size: 2em;
-}
-
-.our_services__more {
-  margin-left: auto;
-  width: 95%;
-}
-
-.our_services__more__illustration {
-  width: 100%;
-  background: #2f2f2f
-  // background-size: cover;
+.our_services {
+  &__featured {
+    height: auto;
+    &__cube {
+      width: 80px;
+      animation-name: rotate;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: 1.6em;
+      text-transform: uppercase;
+    }
+    &__description {
+    }
+  }
+  &__services {
+    @extend %container;
+    &__title {
+      font-size: 2em;
+    }
+  }
+  &__more {
+    margin-left: auto;
+    width: 95%;
+    &__illustration {
+      width: 100%;
+      background: #2f2f2f
+    }
+  }
 }
 
