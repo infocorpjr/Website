@@ -1,4 +1,5 @@
 @import "variable";
+@import "animations";
 @import "bootstrap";
 @import "base";
 @import "components";
@@ -42,6 +43,7 @@
       font-weight: 100;
       font-size: 3em;
       display: block;
+      animation: tracking-in-expand-fwd 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
     @media (max-width: 767px) {
       &__title {
