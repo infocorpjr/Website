@@ -1,81 +1,48 @@
-## Contribuindo
-Nos amamos quando alguém quer contribuir com nossos projetos, seja para reportar bugs
-ou solicitar novas funcionalidades. Para contribuir com este repositório, primeiro dicute
-as mundanças necessárias via issue (
-[criar issue](https://github.com/infocorpjr/website/issues) ), 
-antes de fazer uma modificação.
+## Como contribuir com o projeto
 
-### Processo para Pull Request
+### Você encontrou um bug ?
 
-1. Executar `npm run prod` para antes de fazer o commit
+* **Não abra uma issue caso o bug seja uma vulnerabilidade de segurança**, ao invés disso, envie um email para suporte@infocorp.ic.ufmt.br.
+* **Assegure-se de que o bug já não tenha sido relatado**, procurando nas [issues](https://github.com/infocorpjr/website/issues)
+* Caso não tenha encontrado uma issue aberta resolvendo este problema, **abra uma nova**. Certifique-se de inserir um título e uma descrição clara, contendo a maior quantidade de informações possíveis relevantes, e um exemplo de código demonstrando o comportamento esperado.
+* Caso seja uma mudança puramente estética, que não adiciona nada à estabilidade, funcionalidade ou testabilidade do projeto, a mudança não será aceita.
 
-### Código de conduta
+### Escreveu algo para consertar um bug?
 
-##### Nosso compromisso
+* Crie um Pull Request e **certifique de que a branch esteja de acordo com as regras de nomenclaturas de branch utilizadas no Git Flow**.
+* Certifique-se de que **o problema e a solução** estejam descritos **claramente** e caso necessário, utilize imagens.
 
-Com o interesse em promover um ambiente aberto e acolhedor, nós membros e consultores da Infocorp,
-comprometemos a tornar a participação em nossos projetos uma experiência 
-livre de assédios para todos, independente do nível de conhecimento, idade, deficiência,
-etnia, expressão de gênero, raça e orientação sexual.
+### Pretende adicionar um recurso ou alterar um existente?
 
-##### Nossos padrões
+* **Verifique nas [issues](https://github.com/infocorpjr/website/issues) se alguém já não propôs uma solução**. Se ainda não há solução, crie uma [issue](https://github.com/infocorpjr/website/issues/new) para obter respostas em relação ao que você pretende fazer.
+* Certifique-se de seguir as regras de [nomenclatura de classes utilizadas](https://medium.com/trainingcenter/utilizando-o-fluxo-git-flow-e63d5e0d5e04) do Git Flow. Caso contrário, **não será aceito**.
 
-Exemplos de comportamento que contribuem para criar um ambiente positivo:
+### Abordagem para escrever um Pull Request
 
-* Usar linguagem acolhedora e inclusiva
-* Ser respeitoso os diferentes pontos de vistas
-* Aceitar de maneira graciosa críticas construtivas
-* Concentrar-se no que é melhor para a comunidade
-* Mostrar empatia em relação a outros membros da comunidade
+* **Incluir o propósito do Pull Request**. Ex: _Isto adiciona a funcionalidade x_, _isso simplifica a forma como a imagem é exibida_, _aquilo corrige o erro que permitia mostrar a senha de …_ 
+* Descreva **com clareza o que está sendo feito e o porquê da solicitação** (Pull Request), não faça solicitações como: “_isso foi para resolver o problema da issue x_” ou “_fiz por que me pediram_”
+* Lembre-se que duas ou mais pessoas irão ler a sua solicitação (Pull Request) e **analisar os arquivos que foram adicionados e alterados**
+* Se deseja um feedback, **seja claro e objetivo**: use um trecho do código, faça uma discussão sobre uma abordagem técnica ou uma crítica ao design, entre outros
+* Se deseja **envolver um ou mais indivíduos na discussão**, utilize o **@mention**
 
-Exemplos de comportamento inaceitável pelos participantes incluem:
+### Oferecendo um feedback
 
-* O uso de linguagem ou imagens sexualizadas e atenção sexual indesejada
-* Trolling, insultos / comentários depreciativos e ataques pessoais ou políticos
-* Assédio público ou privado
-* Publicação de informações privadas de outras pessoas, como endereço físico ou eletrônico, sem permissão explícita
-* Outra conduta que poderia razoavelmente ser considerada inadequada em um ambiente profissional
+* **Familiarize-se com o contexto da issue** e o motivo ao qual está sendo feito o Pull Request
+* Caso discorde fortemente, **pense alguns minutos antes de responder**, fique atento à sua reação
+* **Seja humilde** (“Não tenho certeza, vamos tentar...”)
+* **Evite hipérboles** ("Nunca faça…")
+* **Pergunte, não mande**, (“O que você acha de tentar?”) ao invés de (“Não faça isso...”)
+* Explique as razões **pelas quais o código deve ser alterado**, (Não está de acordo com o guia de estilo?, Preferência pessoal ?)
 
-#### Nossas Responsabilidades
+### Respondendo o feedback
 
-Os Membros Diretores da Infocorp são responsáveis por esclarecer os padrões de comportamento
-aceitável e devem tomar medidas corretivas apropriadas e justas em resposta a
-quaisquer casos de comportamento inaceitável.
+* Se houver dúvidas, **peça esclarecimentos** (“Eu não entendo, pode esclarecer?”)
+* **Ofereça esclarecimentos**, explique as decisões tomadas **para chegar a uma solução do problema** em questão.
+* Tente **responder a todos** os comentários.
+* Caso exista uma **discussão crescente e confusa**, pense se a palavra escrita ainda é a melhor forma de comunicação.
 
-Os membros da Infocorp, responsáveis pelo projeto têm o direito e a responsabilidade de remover, editar 
-ou rejeitar comentários, commits, códigos, edições da wiki, questões e outras 
-contribuições que não estejam alinhadas a este Código de Conduta, ou 
-banir temporariamente ou permanentemente qualquer colaborador por outros 
-comportamentos que julgam inapropriado, ameaçador, ofensivo ou prejudicial. 
+### Atribuição
 
-#### Escopo
+Essas diretrizes foram inspiradas pelo guia **“How to write the perfect pull request”** disponivel em [blog Github](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/).
 
-Este Código de Conduta se aplica tanto nos espaços do projeto quanto nos espaços 
-públicos quando um indivíduo está representando o projeto ou sua comunidade. 
-Exemplos de representação de um projeto ou comunidade incluem o uso de um endereço
- de e-mail oficial do projeto, postagem por meio de uma conta oficial de mídia 
- social ou a atuação como um representante nomeado em um evento on-line ou off-line. 
- A representação de um projeto pode ser definida e esclarecida pelos responsáveis 
- do projeto.
- 
- #### Aplicação
-
-Instâncias de comportamento abusivo, ofensivo ou inaceitável podem ser relatadas
-entrando em contato com a equipe do projeto em **suporte@infocorp.ic.ufmt.br**. 
-Todas as reclamações serão analisadas e investigadas e resultarão em 
-uma resposta considerada necessária e apropriada às circunstâncias. A equipe do 
-projeto é obrigada a manter a confidencialidade em relação ao relator de um incidente.
-Mais detalhes sobre políticas específicas de execução podem ser postados separadamente.
-
-A equipe do projeto que não seguem ou aplicam o Código de Conduta de boa fé 
-podem enfrentar repercussões temporárias ou permanentes, conforme determinado por outros
- membros da liderança do projeto.
- 
- #### Atribuição
- Este código de conduta é uma adaptação do [Contributor Covenant][homepage], versão 1.4,
-disponível em https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
- 
- [homepage]: https://www.contributor-covenant.org
- 
-Para respostas a perguntas comuns sobre este código de conduta, consulte
- https://www.contributor-covenant.org/faq
+Equipe de desenvolvedores da Infocorp :heart:
