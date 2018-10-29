@@ -1,74 +1,64 @@
-# Project Title
+# Infocorp Website
 
-One Paragraph of project description goes here
+Website para a EJ de ciência da computação Infocorp.
 
-## Getting Started
+## Começando 🔥
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Essas instruções vão exemplificar como construir um ambiente de desenvolvimento
+e de testes para o projeto.
 
-### Prerequisites
+### Pré-requisitos
 
-What things you need to install the software and how to install them
+Ferramentas necessárias para construir o website
 
+* [NodeJS](https://nodejs.org/en/) versão 8 ou superior
+* Parcel (Bundler)
+* npm ou [Yarn](https://yarnpkg.com/en/)
+* git
+
+### Instalando
+
+Neste documento usarei o [Yarn](https://yarnpkg.com/en/) para gerenciar os pacotes.
+
+Clone o repositório
+
+Exemplo usando a linha de comando:
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+git clone https://github.com/infocorpjr/website.git
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+Entre no diretório do projeto:
 ```
-Give an example
+cd website
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+Dentro do diretório execute o comando yarn para garantir que
+os todos os pacotes sejam instalados
 ```
-Give an example
+yarn
 ```
 
-## Deployment
+Para iniciar um servidor de desenvolvimento usando o parcel
+```
+parcel src\index.html --open
+```
 
-Add additional notes about how to deploy this on a live system
+Caso ele não encontre algumas dependências espere ele instalar cancele o comando
+e execute novamente.
 
-## Built With
+Para gerar uma build de produção do site
+```
+parcel build src\index.html --no-minify -d public
+```
+O build deve estar dentro da pasta `public`
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+## Contribuindo
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Leia [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
@@ -76,9 +66,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
+## Licença
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes. 
 
 ## Acknowledgments
 
