@@ -361,18 +361,8 @@
     &__subtitle {
       margin-top: 2%;
       font-weight: bold;
-      font-size: 1.5em;
-      position: relative;
-    }
-    &__subtitle:before {
-      bottom: 0;
-      left: 0;
-      width: 80%;
-      height: 50%;
-      background: linear-gradient(to right, #d5e9fa, white 50%);
-      content: '';
-      position: absolute;
-      z-index: -1;
+      font-size: 2em;
+      color: lighten($primary-color, 50%);
     }
     &__workflow {
       margin-right: auto;
@@ -432,11 +422,11 @@
     margin-left: 5%;
     margin-right: 5%;
     padding: 5px;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     display: inline-block;
-    background: linear-gradient(to left, #2e2e2e, #5e5e5e);
-    color: white;
+    color: lighten($primary-color, 50%);
+    position: relative;
   }
   &__advantages {
     @extend %container;
@@ -487,21 +477,12 @@
 |
 */
 
-@keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 .our_services {
   &__featured {
     height: auto;
     &__cube {
       width: 80px;
-      animation-name: rotate;
+      animation-name: rotate-center;
       animation-duration: 5s;
       animation-iteration-count: infinite;
     }
@@ -516,7 +497,9 @@
   &__services {
     @extend %container;
     &__title {
+      font-weight: bold;
       font-size: 2em;
+      color: lighten($primary-color, 50%);
     }
   }
   &__more {
