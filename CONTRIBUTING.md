@@ -45,4 +45,4 @@
 
 Essas diretrizes foram inspiradas pelo guia “How to write the perfect pull request” disponivel em [blog Github](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/).
 
-Equipe de desenvolvedores da Infocorp :heart:
+Equipe de desenvolvedores da Infocorp :heart:   
