@@ -1,24 +1,23 @@
 # Infocorp Website
 
-Website para a EJ de ciência da computação Infocorp.
+Website da Infocorp, empresa Júnior do Instituto de Computação, UFMT
 
 ## Começando 🔥
 
-Essas instruções vão exemplificar como construir um ambiente de desenvolvimento
-e de testes para o projeto.
+Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
 
 ### Pré-requisitos
 
 Ferramentas necessárias para construir o website
 
 * [NodeJS](https://nodejs.org/en/) versão 8 ou superior
-* Parcel (Bundler)
-* npm ou [Yarn](https://yarnpkg.com/en/)
+* npm ou [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
+* [Parcel](https://parceljs.org/getting_started.html)
 * git
 
 ### Instalando
 
-Neste documento usarei o [Yarn](https://yarnpkg.com/en/) para gerenciar os pacotes.
+Neste documento será usado [Yarn](ttps://yarnpkg.com/lang/en/docs/install/#debian-stable) para gerenciar as dependências.
 
 Clone o repositório
 
@@ -27,13 +26,12 @@ Exemplo usando a linha de comando:
 git clone https://github.com/infocorpjr/website.git
 ```
 
-Entre no diretório do projeto:
+Mude para o diretório do projeto:
 ```
 cd website
 ```
 
-Dentro do diretório execute o comando yarn para garantir que
-os todos os pacotes sejam instalados
+No diretório execute o comando yarn para instalar as dependêcias.
 ```
 yarn
 ```
