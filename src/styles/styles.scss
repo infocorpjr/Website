@@ -13,6 +13,30 @@
 |
 */
 
+.bd {
+  @each $key, $color in $colorss {
+    &__#{$key} {
+      border-color: $color !important;
+    }
+  }
+}
+
+.bg {
+  @each $key, $color in $colorss {
+    &__#{$key} {
+      background-color: $color !important;
+    }
+  }
+}
+
+.color {
+  @each $key, $color in $colorss {
+    &__#{$key} {
+      color: $color !important;
+    }
+  }
+}
+
 %container {
   margin: 5% auto;
   width: 90%;
@@ -498,7 +522,7 @@
     @extend %container;
     &__title {
       font-weight: bold;
-      font-size: 2em;
+      font-size: 1.5em;
       color: lighten($primary-color, 50%);
     }
   }
