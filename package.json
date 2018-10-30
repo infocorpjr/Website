@@ -10,9 +10,12 @@
   "bugs": {
     "url": "https://github.com/infocorpjr/Infocorp-website/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "vue": "^2.5.17"
+  },
   "devDependencies": {
-    "bootstrap": "4.1.3",
     "cssnano": "^4.1.7",
     "parcel": "^1.10.3",
     "rimraf": "^2.6.2",
