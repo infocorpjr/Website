@@ -1,0 +1,53 @@
+/* COLORS UTILITIES */
+$color-red: #E53935;
+$color-pink: #D81B60;
+$color-purple: #8E24AA;
+$color-deep-purple: #5E35B1;
+$color-indigo: #3949AB;
+$color-blue: #1E88E5;
+$color-light-blue: #0288D1;
+$color-cyan: #00ACC1;
+$color-teal: #00897B;
+$color-green: #43A047;
+$color-light-green: #7CB342;
+$color-lime: #C0CA33;
+$color-yellow: #FDD835;
+$color-amber: #FFB300;
+$color-orange: #FB8C00;
+$color-deep-orange: #F4511E;
+$color-brown: #6D4C41;
+$color-gray: #757575;
+$color-black: #000000;
+$color-white: #ffffff;
+
+// PALLETE
+$primary: #2f2f2f !default;
+$primary-color: $primary;
+$secondary-color: $color-blue;
+
+$dark-color: #0f0f0f;
+$light-color: white;
+
+//
+$colorss: (
+        red: #E53935,
+        pink: #D81B60,
+        purple: #8E24AA,
+        deep-purple: #5E35B1,
+        indigo: #3949AB,
+        blue: #1E88E5,
+        light-blue: #0288D1,
+        cyan: #00ACC1,
+        teal: #00897B,
+        green: #43A047,
+        light-green: #7CB342,
+        lime: #C0CA33,
+        yellow: #FDD835,
+        amber: #FFB300,
+        orange: #FB8C00,
+        deep-orange: #F4511E,
+        brown: #6D4C41,
+        gray: #757575,
+        black: #000000,
+        white: #ffffff
+);

@@ -1,25 +1,28 @@
 {
-  "name": "new",
-  "version": "",
-  "description": "",
-  "main": "",
-  "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "watch-poll": "npm run watch -- --watch-poll",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-  },
-  "author": "",
+  "name": "infocorp-website",
+  "description": "Website da Infocorp, empresa Júnior do Instituto de Computação, UFMT",
   "license": "MIT",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:infocorpjr/Infocorp-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infocorpjr/Infocorp-website/issues"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
-    "cross-env": "^5.2.0",
-    "laravel-mix": "^2.1.11",
-    "swiper": "^4.3.5",
     "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.7",
+    "parcel": "^1.10.3",
+    "rimraf": "^2.6.2",
+    "sass": "^1.14.3"
+  },
+  "scripts": {
+    "build": "rimraf public && parcel build src/index.html --out-dir public --public-url ./",
+    "start": "rimraf public && parcel src/*.html --out-dir public"
   }
 }

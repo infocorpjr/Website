@@ -1,3 +1,7 @@
 /node_modules
+/.cache
 /.idea
+/public
 
+yarn-debug.log
+yarn-error.log

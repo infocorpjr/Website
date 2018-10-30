@@ -1,0 +1,514 @@
+@import "variable";
+@import "animations";
+@import "bootstrap";
+@import "base";
+@import "components";
+
+/*
+|--------------------------------------------------------------------------
+| UTILIDADES
+|--------------------------------------------------------------------------
+|
+|  Reaproveitamento de código, =)
+|
+*/
+
+%container {
+  margin: 5% auto;
+  width: 90%;
+}
+
+/*
+|--------------------------------------------------------------------------
+| PÁGINA INICIAL
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as classes referentes a página inicial do site
+|
+*/
+
+.featured {
+  min-height: 400px;
+  height: 100%;
+  &__content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    position: relative;
+    &__infocorp {
+      width: 40%;
+    }
+    &__title {
+      margin: 0;
+      font-weight: 100;
+      font-size: 3em;
+      display: block;
+      animation: tracking-in-expand-fwd 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    @media (max-width: 767px) {
+      &__title {
+        font-size: 1.5em;
+      }
+    }
+    &__description {
+      margin: 0;
+      padding-left: 5%;
+      font-size: 1.5em;
+      color: lighten($primary-color, 0%);;
+      position: relative;
+    }
+    &__description:before {
+      top: 50%;
+      left: 0;
+      width: 4%;
+      height: 2px;
+      background-color: $color-black;
+      content: '';
+      position: absolute;
+    }
+  }
+}
+
+.switch {
+  position: relative;
+}
+
+.switch__item {
+  opacity: 0;
+  position: absolute;
+}
+
+.switch__item--one {
+  animation: switch__one 6s infinite;
+  // color: #FF7700;
+  opacity: 1;
+}
+
+@keyframes switch__one {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  33.33% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+}
+
+.switch__item--two {
+  animation: switch__two 6s infinite;
+  // color: #C3B000;
+  opacity: 0;
+}
+
+@keyframes switch__two {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  33.33% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  66.66% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+}
+
+.switch__item--three {
+  animation: switch__three 6s infinite;
+  // color: #E10000;
+  opacity: 0;
+}
+
+@keyframes switch__three {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  66.66% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+}
+
+// Seção de serviços da página inicial.
+
+.services {
+  margin: 5% auto;
+  width: 90%;
+  &__illustration {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    display: block;
+  }
+  &__title {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  &__description {
+    text-align: center;
+  }
+  &__group {
+    &__illustration {
+      width: 100%;
+      opacity: 0.7;
+    }
+    &__title {
+      margin: 0;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    &__description {
+
+    }
+  }
+}
+
+// Seção de nosso time da página inicial
+
+.team {
+  margin: 5% auto;
+  width: 90%;
+  &__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 2em;
+    display: inline-block;
+    position: relative;
+  }
+  &__title:before {
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 50%;
+    background-color: lighten($color-blue, 40%);
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  &__subtitle {
+    font-weight: bold;
+    display: inline-block;
+  }
+  &__image {
+    width: 100%;
+    filter: contrast(200%) brightness(100%);
+    opacity: 0.8;
+    display: block;
+  }
+}
+
+// Seção de contato e rodapé da página incial
+
+.contact {
+  padding: 6% 5%;
+  background-color: #2e2e2e;
+  color: white;
+  &__title {
+    font-size: 1.5em;
+  }
+  &__subtitle {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  &__form {
+    width: 100%;
+    &__group {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      width: 100%;
+      border-bottom: 1px solid white;
+      display: table;
+      &__addon {
+        font-size: 1.3em;
+        color: white;
+        vertical-align: middle;
+        display: table-cell;
+        padding-right: 5px;
+        width: 1px;
+        white-space: nowrap;
+      }
+      &__input {
+        width: 100%;
+        font-size: 1.3em;
+        color: white;
+        vertical-align: middle;
+        display: table-cell;
+        background-color: transparent;
+        border: none;
+        &--is_error {
+          color: $color-red;
+        }
+        &--is_success {
+          color: $color-green;
+        }
+      }
+      &__input:focus {
+        outline: none;
+      }
+    }
+    &__send {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      &__icon {
+        width: 50px;
+      }
+      &__icon:hover path {
+        fill: $color-blue;
+      }
+    }
+    &__send:focus {
+      outline: none;
+    }
+  }
+}
+
+// Seção sobre da página inicial
+
+.about {
+  height: 100%;
+  text-align: right;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  &__brand {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  &__more {
+    font-style: italic;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| PÁGINA NOSSOS SERVIÇOS
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as classes referentes a página nossos serviços do site
+|
+*/
+
+.our_services {
+  &__featured {
+    height: auto;
+    &__cube {
+      width: 80px;
+      animation-name: rotate-center;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: 1.6em;
+      text-transform: uppercase;
+    }
+    &__description {
+    }
+  }
+  &__services {
+    @extend %container;
+    &__title {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: lighten($primary-color, 50%);
+    }
+  }
+  &__more {
+    margin-left: auto;
+    width: 95%;
+    &__illustration {
+      width: 100%;
+      background: #2f2f2f
+    }
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| PÁGINA NOSSO DNA
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as classes referentes a página nosso DNA do site
+|
+*/
+
+.our_dna {
+  &__featured {
+    height: 75%;
+    min-height: 600px;
+    &__box_middle:before {
+      background: url("../../images/capa_dna.jpg");
+      background-size: cover;
+    }
+    &__illustration {
+      top: 5%;
+      left: 10%;
+      height: 90%;
+      position: absolute;
+      z-index: -1;
+    }
+    &__content {
+      margin-right: auto;
+      margin-left: auto;
+      width: 90%;
+      text-align: right;
+      &__title {
+        padding: 10px 15px;
+        background-color: white;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+      }
+    }
+  }
+  &__description {
+    @extend %container;
+    &__subtitle {
+      margin-top: 2%;
+      font-weight: bold;
+      font-size: 2em;
+      color: lighten($primary-color, 50%);
+    }
+    &__workflow {
+      margin-right: auto;
+      margin-left: auto;
+      width: 80%;
+      display: block;
+    }
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| PÁGINA NOSSO TIME
+|--------------------------------------------------------------------------
+|
+|  Abaixo estão as classes referentes a página nosso time do site
+|
+*/
+
+.our_team {
+  &__featured {
+    height: 75%;
+    min-height: 600px;
+    @media (max-width: 1024px) {
+      min-height: 400px;
+    }
+    &__illustration {
+      top: 5%;
+      right: 0;
+      height: 90%;
+      background: #2f2f2f url("../../images/_MG_6408.jpg") no-repeat center top;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      @media (max-width: 700px) {
+        display: none;
+      }
+    }
+    &__content {
+      margin-right: auto;
+      margin-left: auto;
+      width: 90%;
+      &__title {
+        padding: 10px 15px;
+        background-color: white;
+        font-weight: bold;
+        font-size: 2.5em;
+        display: inline-block;
+      }
+    }
+  }
+  &__description {
+    margin: 5% auto 3% auto;
+    width: 90%;
+  }
+  &__title {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    color: lighten($primary-color, 50%);
+    position: relative;
+  }
+  &__advantages {
+    @extend %container;
+    &__title {
+      padding-left: 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      display: inline-block;
+      position: relative;
+      &:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-green;
+        content: '';
+        position: absolute;
+      }
+    }
+  }
+  &__opportunities {
+    @extend %container;
+    &__title {
+      padding-left: 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      display: inline-block;
+      position: relative;
+      &:before {
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: $color-amber;
+        content: '';
+        position: absolute;
+      }
+    }
+  }
+}
+
