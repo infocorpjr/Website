@@ -1,14 +1,14 @@
 # Infocorp Website
 
-Website da Infocorp, empresa Júnior do Instituto de Computação, UFMT
+Aqui, lhe ajudaremos com os primeiros passos para poder ajudar a desenvolver o website da Infocorp, a empresa Júnior do Instituto de Computação da UFMT.
 
 ## Começando 🔥
 
-Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. 
+As instruções abaixo farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
 ### Pré-requisitos
 
-Ferramentas necessárias para construir o website
+As ferramentas necessárias para o desenvolvimento do website são:
 
 * [NodeJS](https://nodejs.org/en/) versão 8 ou superior
 * npm ou [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
@@ -17,27 +17,27 @@ Ferramentas necessárias para construir o website
 
 ### Instalando :computer:
 
-Clone o repositório
+Primeiro, clone o repositório:
 
 Exemplo usando a linha de comando:
 
-HTTP:
+* HTTP:
 ```
 git clone https://github.com/infocorpjr/website.git
 ```
 **ou**
 
-SSH
+* SSH
 ```
 git clone git@github.com:infocorpjr/Infocorp-website.git
 ```
 
-Mude para o diretório do projeto:
+Depois, mude para o diretório do projeto:
 ```
 cd website
 ```
 
-No diretório execute um dos comendos abaixo para instalar as dependências.
+No diretório execute um dos comandos abaixo para instalar as dependências:
 ```
 yarn
 ```
@@ -46,7 +46,7 @@ yarn
 npm install
 ```
 
-Execute o comendo abaixo para iniciar o servidor embutido.
+Então, execute o comando abaixo para iniciar o servidor embutido:
 ```
 yarn run server
 ```
@@ -55,7 +55,7 @@ yarn run server
 npm run server
 ```
 
-Caso queira gerar uma build de produção do site, execute o comando abaixo.
+Caso queira gerar uma build de produção do site, execute o comando abaixo:
 ```
 yarn run build
 ```
@@ -63,28 +63,22 @@ yarn run build
 ```
 npm run build
 ```
-O build será gerado dentro da pasta `public`
+Com isso, a build será gerada dentro da pasta `public`
 
 ## Você quer contribuir com o projeto?
 
-Por favor leia [contribuindo para com o projeto](CONTRIBUTING.md).
+Por favor, leia [contribuindo para com o projeto](CONTRIBUTING.md) para mais informações.
 
 ## Versão
 
-Nós usamos o [SemVer](http://semver.org/) para controle de versão. Para ver as versão disponíveis, veja [tags neste repositório](https://github.com/infocorpjr/Infocorp-website/tags).
+Nós usamos o [SemVer](http://semver.org/) para o controle de versões. Para ver todas as versões disponíveis, veja [as tags neste repositório](https://github.com/infocorpjr/Infocorp-website/tags).
 
 ## Autores
 
 * **Time de desenvolvimento da Infocorp** - *projeto inicial* - [Development Team](https://dev.infocorpjr.com/)
 
-Veja também a lista de [contribuidores](https://github.com/infocorpjr/Infocorp-website/graphs/contributors) que participam deste projeto.
+Veja também a lista dos [contribuidores](https://github.com/infocorpjr/Infocorp-website/graphs/contributors) participantes deste projeto.
 
 ## Licença
 
-Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes. 
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes. 
