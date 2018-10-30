@@ -15,7 +15,7 @@ Ferramentas necessárias para construir o website
 * [Parcel](https://parceljs.org/getting_started.html)
 * Git
 
-### Instalando
+### Instalando :computer:
 
 Clone o repositório
 
@@ -25,11 +25,11 @@ HTTP:
 ```
 git clone https://github.com/infocorpjr/website.git
 ```
-ou
+**ou**
 
 SSH
 ```
-git@github.com:infocorpjr/Infocorp-website.git
+git clone git@github.com:infocorpjr/Infocorp-website.git
 ```
 
 Mude para o diretório do projeto:
@@ -41,7 +41,7 @@ No diretório execute um dos comendos abaixo para instalar as dependências.
 ```
 yarn
 ```
-ou 
+**ou**
 ```
 npm install
 ```
@@ -50,7 +50,7 @@ Execute o comendo abaixo para iniciar o servidor embutido.
 ```
 yarn run server
 ```
-ou 
+**ou**
 ```
 npm run server
 ```
@@ -59,7 +59,7 @@ Caso queira gerar uma build de produção do site, execute o comando abaixo.
 ```
 yarn run build
 ```
-ou
+**ou**
 ```
 npm run build
 ```
@@ -75,7 +75,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Time de desenvolvimento da Infocorp** - *projeto inicial* - [Development Team](https://dev.infocorpjr.com/)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
