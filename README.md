@@ -4,7 +4,7 @@ Website da Infocorp, empresa Júnior do Instituto de Computação, UFMT
 
 ## Começando 🔥
 
-Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
+Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. 
 
 ### Pré-requisitos
 
@@ -65,19 +65,19 @@ npm run build
 ```
 O build será gerado dentro da pasta `public`
 
-## Contribuindo
+## Você quer contribuir com o projeto?
 
-Leia [CONTRIBUTING.md](CONTRIBUTING.md).
+Por favor leia [contribuindo para com o projeto](CONTRIBUTING.md).
 
-## Versioning
+## Versão
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+Nós usamos o [SemVer](http://semver.org/) para controle de versão. Para ver as versão disponíveis, veja [tags neste repositório](https://github.com/infocorpjr/Infocorp-website/tags).
 
-## Authors
+## Autores
 
 * **Time de desenvolvimento da Infocorp** - *projeto inicial* - [Development Team](https://dev.infocorpjr.com/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Veja também a lista de [contribuidores](https://github.com/infocorpjr/Infocorp-website/graphs/contributors) que participam deste projeto.
 
 ## Licença
 
