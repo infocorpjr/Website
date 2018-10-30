@@ -1,4 +1,15 @@
 {
+  "name": "infocorp-website",
+  "description": "Website da Infocorp, empresa Júnior do Instituto de Computação, UFMT",
+  "license": "MIT",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:infocorpjr/Infocorp-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infocorpjr/Infocorp-website/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "4.1.3",
