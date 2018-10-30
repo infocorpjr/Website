@@ -3,7 +3,5 @@
 /.idea
 /public
 
-package-lock.json
-yarn.lock
 yarn-debug.log
 yarn-error.log
