@@ -13,17 +13,23 @@ Ferramentas necessárias para construir o website
 * [NodeJS](https://nodejs.org/en/) versão 8 ou superior
 * npm ou [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 * [Parcel](https://parceljs.org/getting_started.html)
-* git
+* Git
 
 ### Instalando
-
-Neste documento será usado [Yarn](ttps://yarnpkg.com/lang/en/docs/install/#debian-stable) para gerenciar as dependências.
 
 Clone o repositório
 
 Exemplo usando a linha de comando:
+
+HTTP:
 ```
 git clone https://github.com/infocorpjr/website.git
+```
+ou
+
+SSH
+```
+git@github.com:infocorpjr/Infocorp-website.git
 ```
 
 Mude para o diretório do projeto:
@@ -31,24 +37,33 @@ Mude para o diretório do projeto:
 cd website
 ```
 
-No diretório execute o comando yarn para instalar as dependêcias.
+No diretório execute um dos comendos abaixo para instalar as dependências.
 ```
 yarn
 ```
+ou 
+```
+npm install
+```
 
-Para iniciar um servidor de desenvolvimento usando o parcel
+Execute o comendo abaixo para iniciar o servidor embutido.
 ```
-parcel src\index.html --open
+yarn run server
+```
+ou 
+```
+npm run server
 ```
 
-Caso ele não encontre algumas dependências espere ele instalar cancele o comando
-e execute novamente.
-
-Para gerar uma build de produção do site
+Caso queira gerar uma build de produção do site, execute o comando abaixo.
 ```
-parcel build src\index.html --no-minify -d public
+yarn run build
 ```
-O build deve estar dentro da pasta `public`
+ou
+```
+npm run build
+```
+O build será gerado dentro da pasta `public`
 
 ## Contribuindo
 
