@@ -4,10 +4,11 @@
     "bootstrap": "4.1.3",
     "cssnano": "^4.1.7",
     "parcel": "^1.10.3",
+    "rimraf": "^2.6.2",
     "sass": "^1.14.3"
   },
   "scripts": {
-    "build": "rm -rf public && parcel build src/index.html --out-dir public --public-url ./",
-    "start": "parcel src/*.html --out-dir public"
+    "build": "rimraf public && parcel build src/index.html --out-dir public --public-url ./",
+    "start": "rimraf public && parcel src/*.html --out-dir public"
   }
 }
