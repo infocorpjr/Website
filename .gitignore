@@ -2,8 +2,7 @@
 /.cache
 /.idea
 /public
+/dist
 
-package-lock.json
-yarn.lock
 yarn-debug.log
 yarn-error.log
