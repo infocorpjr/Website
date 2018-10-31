@@ -6,7 +6,7 @@
     "sass": "^1.14.3"
   },
   "scripts": {
-    "build": "rm -rf public && parcel build src/index.html --out-dir 'public' --public-url './'",
-    "start": "parcel src/*.html"
+    "build": "rm -rf public && parcel build src/*.html --out-dir 'public' --public-url './'",
+    "serve": "parcel src/index.html"
   }
 }
