@@ -37,6 +37,11 @@
     position: relative;
     &__infocorp {
       width: 40%;
+      background: black url("../../images/bg5.jpg") no-repeat center center;
+      background-size: 100%;
+      &__path {
+
+      }
     }
     &__title {
       margin: 0;
