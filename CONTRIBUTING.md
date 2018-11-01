@@ -1,5 +1,9 @@
 ## Como contribuir com o projeto
 
+### Código de Conduta
+
+Este projeto e todos os participantes nele são regidos pelo [Código de Conduta](CODE_OF_CONDUCT.md). Ao participar, espera-se que você mantenha este código. Por favor, comunique um comportamento inaceitável a suporte@infocorp.ic.ufmt.br.
+
 ### Você encontrou um bug ?
 
 * **Não abra uma issue caso o bug seja uma vulnerabilidade de segurança**, ao invés disso, envie um email para suporte@infocorp.ic.ufmt.br.

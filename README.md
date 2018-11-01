@@ -1,87 +1,84 @@
-# Project Title
+# Infocorp Website
 
-One Paragraph of project description goes here
+Aqui, lhe ajudaremos com os primeiros passos para poder ajudar a desenvolver o website da Infocorp, a empresa Júnior do Instituto de Computação da UFMT.
 
-## Getting Started
+## Começando 🔥
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+As instruções abaixo farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
 
-### Prerequisites
+### Pré-requisitos
 
-What things you need to install the software and how to install them
+As ferramentas necessárias para o desenvolvimento do website são:
 
+* [NodeJS](https://nodejs.org/en/) versão 8 ou superior
+* npm ou [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
+* [Parcel](https://parceljs.org/getting_started.html)
+* Git
+
+### Instalando :computer:
+
+Primeiro, clone o repositório:
+
+Exemplo usando a linha de comando:
+
+* HTTP:
 ```
-Give examples
+git clone https://github.com/infocorpjr/website.git
 ```
+**ou**
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+* SSH
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+git clone git@github.com:infocorpjr/Infocorp-website.git
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+Depois, mude para o diretório do projeto:
 ```
-Give an example
+cd website
 ```
 
-## Deployment
+No diretório execute um dos comandos abaixo para instalar as dependências:
+```
+yarn
+```
+**ou**
+```
+npm install
+```
 
-Add additional notes about how to deploy this on a live system
+Então, execute o comando abaixo para iniciar o servidor embutido:
+```
+yarn run server
+```
+**ou**
+```
+npm run server
+```
 
-## Built With
+Caso queira gerar uma build de produção do site, execute o comando abaixo:
+```
+yarn run build
+```
+**ou**
+```
+npm run build
+```
+Com isso, a build será gerada dentro da pasta `public`
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+## Você quer contribuir com o projeto?
 
-## Contributing
+Por favor, leia [contribuindo para com o projeto](CONTRIBUTING.md) para mais informações.
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## Versão
 
-## Versioning
+Nós usamos o [SemVer](http://semver.org/) para o controle de versões. Para ver todas as versões disponíveis, veja [as tags neste repositório](https://github.com/infocorpjr/Infocorp-website/tags).
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+## Autores
 
-## Authors
+* **Time de desenvolvimento da Infocorp** - *projeto inicial* - [Development Team](https://dev.infocorpjr.com/)
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+Veja também a lista dos [contribuidores](https://github.com/infocorpjr/Infocorp-website/graphs/contributors) participantes deste projeto.
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## Licença
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes. 
