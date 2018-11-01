@@ -125,8 +125,8 @@
 }
 
 .bg-pan-top {
-  -webkit-animation: bg-pan-top 80s infinite reverse ease-in-out;
-  animation: bg-pan-top 80s infinite reverse ease-in-out;
+  -webkit-animation: bg-pan-top 80s infinite reverse cubic-bezier(0, 0, 1, 1);
+  animation: bg-pan-top 80s infinite reverse cubic-bezier(0, 0, 1, 1);
 }
 
 
