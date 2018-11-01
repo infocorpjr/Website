@@ -31,7 +31,7 @@ const contact = new Vue({
     methods: {
         submitForm() {
             // TODO: Mudar para api selecionada
-            axios.post('http://api.infocorpjr.com/api/contato', this.form)
+            axios.post('https://api.infocorpjr.com/api/contato', this.form)
                 .then((response) => {
                     this.form.successful = "Enviado com sucesso!";
                 })
