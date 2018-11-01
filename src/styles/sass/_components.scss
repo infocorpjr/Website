@@ -175,3 +175,54 @@
   background-color: #2f2f2f;
   color: white;
 }
+
+// Form component
+.form {
+  width: 100%;
+  &__group {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: table;
+    &__addon {
+      font-size: 1.3em;
+      vertical-align: middle;
+      display: table-cell;
+      padding-right: 5px;
+      width: 1px;
+      white-space: nowrap;
+    }
+    &__input {
+      width: 100%;
+      font-size: 1.3em;
+      vertical-align: middle;
+      display: table-cell;
+      background-color: transparent;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      &--is_error {
+        color: $color-red;
+      }
+      &--is_success {
+        color: $color-green;
+      }
+    }
+  }
+  &__send {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &__icon {
+      width: 50px;
+    }
+    &:hover path {
+      fill: $color-blue;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
