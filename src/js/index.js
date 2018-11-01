@@ -36,8 +36,6 @@ const contact = new Vue({
                     this.form.successful = "Enviado com sucesso!";
                 })
                 .catch((error) => {
-                    console.log(error.response.data)
-
                     this.form.errors = this.errorListServer(error);
                 })
         },
