@@ -2,6 +2,7 @@
 /.cache
 /.idea
 /public
+/dist
 
 yarn-debug.log
 yarn-error.log

@@ -23,6 +23,6 @@
   },
   "scripts": {
     "build": "rimraf public && parcel build src/index.html --out-dir public --public-url ./",
-    "start": "rimraf public && parcel src/*.html --out-dir public"
+    "server": "rimraf public && parcel src/index.html --out-dir public --public-url ./"
   }
 }
