@@ -31,13 +31,11 @@ const contact = new Vue({
     methods: {
         submitForm() {
             // TODO: Mudar para api selecionada
-            axios.post('http://lumen.infocorp.local/api/contato', this.form)
+            axios.post('https://api.infocorpjr.com/api/contato', this.form)
                 .then((response) => {
                     this.form.successful = "Enviado com sucesso!";
                 })
                 .catch((error) => {
-                    console.log(error.response.data)
-
                     this.form.errors = this.errorListServer(error);
                 })
         },
