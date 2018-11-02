@@ -39,9 +39,6 @@
       width: 40%;
       background: black url("../../images/bg5.jpg") no-repeat center center;
       background-size: 100%;
-      &__path {
-
-      }
     }
     &__title {
       margin: 0;
@@ -198,9 +195,6 @@
       font-size: 1.5em;
       font-weight: bold;
     }
-    &__description {
-
-    }
   }
 }
 
@@ -346,8 +340,6 @@
       font-size: 1.6em;
       text-transform: uppercase;
     }
-    &__description {
-    }
   }
   &__services {
     @extend %container;
@@ -381,7 +373,7 @@
     height: 75%;
     min-height: 600px;
     &__box_middle:before {
-      background: url("../../images/capa_dna.jpg");
+      background:#2f2f2f url("../../images/capa_dna.jpg");
       background-size: cover;
     }
     &__illustration {
