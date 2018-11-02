@@ -22,7 +22,7 @@
     "sass": "^1.14.3"
   },
   "scripts": {
-    "build": "rimraf public && parcel build src/index.html --out-dir public --public-url ./",
-    "server": "rimraf public && parcel src/index.html --out-dir public --public-url ./"
+    "build": "rimraf public && rimraf dist && parcel build src/index.html --out-dir public --public-url ./",
+    "server": "rimraf public && rimraf dist && parcel src/index.html"
   }
 }

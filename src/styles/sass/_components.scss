@@ -169,11 +169,15 @@
 }
 
 // Footer component
-
 .footer {
   padding: 3% 5%;
   background-color: #2f2f2f;
   color: white;
+  &__about {
+    &__brand {
+      font-size: 1.4em
+    }
+  }
 }
 
 // Form component
