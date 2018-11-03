@@ -13,8 +13,11 @@
 // Navbar component
 
 .navbar {
-  margin: 1.5% auto 0 auto;
-  width: 90%;
+  margin-top: 1.5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  width: 100%;
+  background-color: rgba(255,255,255,0.90);
   // Flexbox
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,7 +25,6 @@
   align-items: center;
   display: flex;
   // End flexbox
-  position: sticky;
   &__infocorp {
     width: 180px;
   }
@@ -96,19 +98,24 @@
   display: flex;
   // End flexbox
   position: relative;
-}
-
-// Modernizr, no flexbox available.
-.no-flexbox .box {
-  display: table;
-  table-layout: fixed;
-}
-
-.box__top,
-.box__middle,
-.box__bottom {
-  width: 100%;
-  position: relative;
+  &__top,
+  &__middle,
+  &__bottom {
+    width: 100%;
+    overflow: hidden;
+    &--larger {
+      flex: 1;
+    }
+  }
+  &__content {
+    height: 100%;
+    // Flexbox
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    // End flexbox
+    position: relative;
+  }
 }
 
 .box__middle:before {
@@ -121,54 +128,8 @@
   z-index: -2;
 }
 
-/*.box__middle:after {
-  top: 5%;
-  right: 0;
-  width: 90%;
-  height: 90%;
-  content: '';
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), white 70%);
-  position: absolute;
-  z-index: -1;
-}*/
-
-// Modernizr, no flexbox available.
-.no-flexbox .box__top,
-.no-flexbox .box__middle,
-.no-flexbox .box__bottom {
-  display: table-row;
-}
-
-.box__top--larger,
-.box__middle--larger,
-.box__bottom--larger {
-  flex: 1;
-}
-
-// Modernizr, no flexbox available.
-.no-flexbox .box__top--larger,
-.no-flexbox .box__middle--larger,
-.no-flexbox .box__bottom--larger {
-  height: 100%;
-}
-
-.box__content {
-  height: 100%;
-  // Flexbox
-  align-items: center;
-  justify-content: left;
-  display: flex;
-  // End flexbox
-}
-
-// Modernizr, no flexbox available.
-.no-flexbox .box__content {
-  height: auto;
-  vertical-align: middle;
-  display: table-cell;
-}
-
 // Footer component
+
 .footer {
   padding: 3% 5%;
   background-color: #2f2f2f;
@@ -181,6 +142,7 @@
 }
 
 // Form component
+
 .form {
   width: 100%;
   &__group {
