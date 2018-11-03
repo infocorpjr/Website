@@ -70,4 +70,5 @@ const contact = new Vue({
             return errors;
         }
     }
+
 });
