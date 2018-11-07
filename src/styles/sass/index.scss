@@ -171,7 +171,9 @@
 
 .services {
   margin: 5% auto;
-  width: 90%;
+  padding: 2% 5%;
+  width: 100%;
+  background-color: lighten($color-black, 98%);
   &__illustration {
     margin-right: auto;
     margin-left: auto;
