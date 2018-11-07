@@ -346,7 +346,9 @@
     &__title {
       font-weight: bold;
       font-size: 1.5em;
-      color: lighten($primary-color, 50%);
+      // color: lighten($primary-color, 50%);
+      color: $color-blue;
+      text-transform: uppercase;
     }
   }
   &__more {
