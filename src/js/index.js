@@ -1,19 +1,80 @@
+/*
+|--------------------------------------------------------------------------
+| SCROLL REVEAL
+|--------------------------------------------------------------------------
+|
+|  
+|
+*/
+
+import ScrollReveal from 'scrollreveal';
+
+let config = {
+    delay: 0,
+    distance: '0px',
+    duration: 0,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 0,
+    opacity: 0,
+    origin: 'bottom',
+    rotate: {
+        x: 0,
+        y: 0,
+        z: 0,
+    },
+    scale: 1,
+    cleanup: true,
+    container: document.documentElement,
+    desktop: true,
+    mobile: true,
+    reset: true,
+    useDelay: 'always',
+    viewFactor: 0.0,
+    viewOffset: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+    },
+    afterReset: function (el) {
+        el.classList.remove('is__visible');
+        el.classList.add('is__hidden');
+    },
+    afterReveal: function (el) {
+        el.classList.remove('is__hidden');
+        el.classList.add('is__visible');
+    },
+    beforeReset: function (el) {
+
+    },
+    beforeReveal: function (el) {
+
+    },
+}
+
+
+
+ScrollReveal().reveal('section', config);
+
+/*
+|--------------------------------------------------------------------------
+| AXIOS
+|--------------------------------------------------------------------------
+|
+|  
+|
+*/
 const axios = require('axios');
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
+/*
+|--------------------------------------------------------------------------
+| VUE
+|--------------------------------------------------------------------------
+|
+|  
+|
+*/
 window.Vue = require('vue/dist/vue.min');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 
 const contact = new Vue({
     el: '#contact',
