@@ -18,6 +18,18 @@
   width: 90%;
 }
 
+@each $name, $color in $colors {
+  .bg__#{$name} {
+    background-color: $color;
+  }
+  .bd__#{$name} {
+    border-color: $color !important;
+  }
+  .text__#{$name} {
+    color: $color;
+  }
+}
+
 /*
 |--------------------------------------------------------------------------
 | PÁGINA INICIAL
@@ -39,13 +51,18 @@
       width: 40%;
       background: black url("../../images/bg5.jpg") no-repeat center center;
       background-size: 100%;
+      -webkit-animation: bg-pan-bottom 80s infinite both;
+      animation: bg-pan-bottom 80s infinite both;
     }
     &__title {
       margin: 0;
       font-weight: 100;
       font-size: 3em;
       display: block;
-      animation: tracking-in-expand-fwd 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      -webkit-animation: tracking-in-expand 0.7s
+        cubic-bezier(0.215, 0.61, 0.355, 1) both;
+      animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+        both;
     }
     @media (max-width: 767px) {
       &__title {
@@ -56,17 +73,17 @@
       margin: 0;
       padding-left: 5%;
       font-size: 1.5em;
-      color: lighten($primary-color, 0%);;
+      color: lighten($primary-color, 0%);
       position: relative;
-    }
-    &__description:before {
-      top: 50%;
-      left: 0;
-      width: 4%;
-      height: 2px;
-      background-color: $color-black;
-      content: '';
-      position: absolute;
+      &:before {
+        top: 50%;
+        left: 0;
+        width: 4%;
+        height: 2px;
+        background-color: $color-black;
+        content: "";
+        position: absolute;
+      }
     }
   }
 }
@@ -87,7 +104,8 @@
 }
 
 @keyframes switch__one {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: translateY(-20%);
   }
@@ -116,7 +134,8 @@
 }
 
 @keyframes switch__two {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: translateY(-20%);
   }
@@ -145,7 +164,8 @@
 }
 
 @keyframes switch__three {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: translateY(-20%);
   }
@@ -208,23 +228,16 @@
   &__title {
     margin: 0;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 2.5em;
     display: inline-block;
     position: relative;
-  }
-  &__title:before {
-    bottom: 0;
-    left: 0;
-    width: 80%;
-    height: 50%;
-    background-color: lighten($color-blue, 40%);
-    content: '';
-    position: absolute;
-    z-index: -1;
   }
   &__subtitle {
     font-weight: bold;
     display: inline-block;
+  }
+  &__description {
+    text-align: justify;
   }
   &__image {
     width: 100%;
@@ -331,6 +344,8 @@
 .our_services {
   &__featured {
     height: auto;
+    background: white url("../../svg/desenhando.svg") no-repeat;
+    background-size: 100%;
     &__cube {
       width: 80px;
       animation-name: rotate-center;
@@ -358,7 +373,7 @@
     width: 95%;
     &__illustration {
       width: 100%;
-      background: #2f2f2f
+      background: #2f2f2f;
     }
   }
 }
@@ -381,7 +396,7 @@
       left: 10%;
       width: 90%;
       height: 90%;
-      background:#2f2f2f url("../../images/capa_dna.jpg");
+      background: #2f2f2f url("../../images/capa_dna.jpg");
       background-size: cover;
       position: absolute;
       z-index: -1;
@@ -500,7 +515,7 @@
         width: 10px;
         height: 1px;
         background-color: $color-green;
-        content: '';
+        content: "";
         position: absolute;
       }
     }
@@ -519,7 +534,7 @@
         width: 10px;
         height: 1px;
         background-color: $color-amber;
-        content: '';
+        content: "";
         position: absolute;
       }
     }
@@ -546,7 +561,8 @@
       top: 5%;
       right: 0;
       height: 90%;
-      background: #2f2f2f url("../../images/photo5104943560922343408.jpg") no-repeat center center;
+      background: #2f2f2f url("../../images/photo5104943560922343408.jpg")
+        no-repeat center center;
       background-size: cover;
       position: absolute;
       z-index: -1;
@@ -580,4 +596,3 @@
     @extend %container;
   }
 }
-
