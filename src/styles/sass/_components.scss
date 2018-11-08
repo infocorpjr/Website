@@ -6,7 +6,13 @@
 
 // Infocorp brand
 
-.i, .n, .f, .o, .co, .r, .p {
+.i,
+.n,
+.f,
+.o,
+.co,
+.r,
+.p {
   fill: lighten($secondary-color, 0%);
 }
 
@@ -17,7 +23,7 @@
   padding-right: 5%;
   padding-left: 5%;
   width: 100%;
-  background-color: rgba(255,255,255,0.90);
+  background-color: rgba(255, 255, 255, 0.9);
   // Flexbox
   flex-direction: row;
   flex-wrap: wrap;
@@ -48,7 +54,7 @@
         width: 10px;
         height: 1px;
         background-color: $color-black;
-        content: '';
+        content: "";
         position: absolute;
       }
       &__link:active {
@@ -76,7 +82,7 @@
         width: 10px;
         height: 1px;
         background-color: $color-black;
-        content: '';
+        content: "";
         position: absolute;
       }
       &__link:active {
@@ -123,7 +129,7 @@
   right: 0;
   width: 90%;
   height: 90%;
-  content: '';
+  content: "";
   position: absolute;
   z-index: -2;
 }
@@ -136,7 +142,7 @@
   color: white;
   &__about {
     &__brand {
-      font-size: 1.4em
+      font-size: 1.4em;
     }
   }
 }
@@ -200,10 +206,12 @@
 }
 
 .is__hidden .arrow__down {
-  -webkit-animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
-	        animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+  -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .is__visible .arrow__down {
-  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  --webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
