@@ -17,6 +17,7 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "parcel-plugin-imagemin": "^2.1.1",
     "cssnano": "^4.1.7",
     "parcel": "^1.10.3",
     "rimraf": "^2.6.2",

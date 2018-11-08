@@ -374,11 +374,24 @@
 
 .our_dna {
   &__featured {
-    height: 75%;
-    min-height: 600px;
-    &__box_middle:before {
+    height: 70%;
+    min-height: 550px;
+    &__bg {
+      top: 5%;
+      left: 10%;
+      width: 90%;
+      height: 90%;
       background:#2f2f2f url("../../images/capa_dna.jpg");
       background-size: cover;
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      &__layer {
+        top: 0;
+        left: 0;
+        height: 100%;
+        position: absolute;
+      }
     }
     &__illustration {
       top: 5%;
