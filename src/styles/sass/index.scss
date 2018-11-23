@@ -203,8 +203,8 @@
 
 .services {
   margin: 5% auto;
-  padding: 2% 5%;
-  width: 100%;
+  padding: 3% 5%;
+  width: 98%;
   background-color: lighten($color-black, 98%);
   &__illustration {
     margin-right: auto;
@@ -241,7 +241,6 @@
     margin: 0;
     font-weight: bold;
     font-size: 2.5em;
-    display: inline-block;
     position: relative;
   }
   &__subtitle {
@@ -262,7 +261,8 @@
 // Seção de contato e rodapé da página incial
 
 .contact {
-  padding: 6% 5%;
+  margin: 1% 1%;
+  padding: 5% 4%;
   background-color: #2e2e2e;
   color: white;
   &__title {
@@ -330,9 +330,6 @@
 .about {
   height: 100%;
   text-align: right;
-  flex-direction: column;
-  justify-content: space-between;
-  display: flex;
   &__brand {
     margin-top: 0;
     margin-bottom: 0;
