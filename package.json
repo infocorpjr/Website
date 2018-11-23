@@ -25,6 +25,6 @@
   },
   "scripts": {
     "build": "rimraf public && rimraf dist && parcel build src/index.html --out-dir public --public-url ./",
-    "server": "rimraf public && rimraf dist && parcel src/index.html"
+    "serve": "rimraf public && rimraf dist && parcel src/index.html"
   }
 }
