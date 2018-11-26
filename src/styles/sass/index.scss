@@ -236,7 +236,7 @@
 
 .team {
   margin: 5% auto;
-  width: 90%;
+  width: 70%;
   &__title {
     margin: 0;
     font-weight: bold;
@@ -251,10 +251,16 @@
     text-align: justify;
   }
   &__image {
+    margin:2%;
     width: 100%;
+    display: inline-block;
     filter: contrast(200%) brightness(100%);
-    opacity: 0.8;
-    display: block;
+    &__smaller {
+      width: 25%
+    }
+    &__bigger {
+      width: 40%
+    }
   }
 }
 
