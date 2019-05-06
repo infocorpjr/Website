@@ -11,7 +11,7 @@ As instruções abaixo farão com que você tenha uma cópia do projeto em execu
 As ferramentas necessárias para o desenvolvimento do website são:
 
 * [NodeJS](https://nodejs.org/en/) versão 8 ou superior
-* npm ou [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
+* NPM
 * [Parcel](https://parceljs.org/getting_started.html)
 * Git
 
@@ -23,13 +23,13 @@ Exemplo usando a linha de comando:
 
 * HTTP:
 ```
-git clone https://github.com/infocorpjr/website.git
+git clone https://github.com/infocorpjr/website.git website
 ```
 **ou**
 
 * SSH
 ```
-git clone git@github.com:infocorpjr/Infocorp-website.git
+git clone git@github.com:infocorpjr/Infocorp-website.git website
 ```
 
 Depois, mude para o diretório do projeto:
@@ -39,27 +39,15 @@ cd website
 
 No diretório execute um dos comandos abaixo para instalar as dependências:
 ```
-yarn
-```
-**ou**
-```
 npm install
 ```
 
 Então, execute o comando abaixo para iniciar o servidor embutido:
 ```
-yarn run server
-```
-**ou**
-```
-npm run server
+npm run dev
 ```
 
 Caso queira gerar uma build de produção do site, execute o comando abaixo:
-```
-yarn run build
-```
-**ou**
 ```
 npm run build
 ```

@@ -1,0 +1,32 @@
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+    $index: str_index($string, $search);
+    @if $index {
+      @return str_slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+  }
+  
+  /// Define o nome da animação com base no nome do seletor
+  /// @author Jorge Rodrigues
+  /// @param {String} $selector - Nome do seletor
+  /// @return {String} - Nome atualizado com o nome da animação
+  @function animation-name($name) {
+    @return str-replace($name, '.', '_');
+  }
+  
+  /// Retorna preto ou branco de acordo com a luminosidade da cor.
+  /// @author Jorge Rodrigues
+  /// @param {String} $color - A cor em hexadecimal
+  /// @return {String} - preta ou branca
+  @function opposite($color) {
+    @if (lightness($color) < 75%) {
+      @return white;
+    }
+    @return black;
+  }

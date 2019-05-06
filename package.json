@@ -1,30 +1,21 @@
 {
-  "name": "infocorp-website",
-  "description": "Website da Infocorp, empresa Júnior do Instituto de Computação, UFMT",
-  "license": "MIT",
-  "version": "2.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:infocorpjr/Infocorp-website.git"
+  "name": "infocorp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html --open ",
+    "build": "parcel build src/index.html"
   },
-  "bugs": {
-    "url": "https://github.com/infocorpjr/Infocorp-website/issues"
-  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
-    "bootstrap": "^4.1.3",
-    "scrollreveal": "^4.0.5",
-    "vue": "^2.5.17"
+    "bootstrap": "^4.3.1",
+    "in-view": "^0.6.1",
+    "parcel-bundler": "^1.12.3"
   },
   "devDependencies": {
-    "cssnano": "^4.1.7",
-    "parcel": "^1.10.3",
-    "parcel-plugin-imagemin": "^2.1.1",
-    "rimraf": "^2.6.2",
-    "sass": "^1.15.1"
-  },
-  "scripts": {
-    "build": "rimraf public && rimraf dist && parcel build src/index.html --out-dir public --public-url ./",
-    "serve": "rimraf public && rimraf dist && parcel src/index.html"
+    "sass": "^1.19.0"
   }
 }
