@@ -214,11 +214,28 @@ body {
     &__who {
         height: 60%;
 
+        &__square {
+            position: relative;
+
+            &:before {
+                top: 0;
+                right: -10%;
+                width: 100%;
+                height: 140%;
+                background: url("../../images/dots-small.svg") repeat center bottom;
+                // border: 5px solid lighten(opposite($theme-default-primary), 95%);
+                content: '';
+                position: absolute;
+                z-index: -1;
+            }
+        }
+
         &__title,
         &__subtitle,
         &__description {
-            margin: .2rem;
+            margin: 0;
             padding: .2rem;
+            background: white;
         }
 
         &__title {
@@ -240,8 +257,9 @@ body {
         &__title,
         &__subtitle,
         &__description {
-            margin: .2rem;
+            margin: 0;
             padding: .2rem;
+            background: white;
         }
 
         &__title {
