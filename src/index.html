@@ -21,12 +21,12 @@
         (function () {
             'use strict';
             // Begin
-            // const time = new Date().getTime();
-            // console.log(time);
+            const time = new Date().getTime();
+            console.log(time);
 
             function loaded() {
-                // const finish = new Date().getTime();
-                // console.log(finish, (finish - time), 'loaded');
+                const finish = new Date().getTime();
+                console.log(finish, (finish - time), 'loaded');
                 const bodyClasses = document.body.getAttribute('class') || '';
                 document.body.setAttribute('class', `${bodyClasses} loaded`);
             }

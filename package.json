@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html --open ",
+    "dev": "parcel src/index.html src/team/index.html --open",
     "build": "parcel build src/index.html"
   },
   "author": "",
@@ -16,6 +16,6 @@
     "parcel-bundler": "^1.12.3"
   },
   "devDependencies": {
-    "sass": "^1.19.0"
+    "sass": "^1.20.1"
   }
 }
