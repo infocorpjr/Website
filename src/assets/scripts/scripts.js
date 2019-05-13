@@ -29,6 +29,7 @@ for (var i = 0; i < width; ++i) {
 
 // PARTICLES ///////////////////////////////////////////////////////////////////////////////////////////
 
+
 var canvas = document.getElementById('particles');
 canvas.width = canvas.parentNode.clientWidth || canvas.parentNode.offsetWidth || canvas.parentNode.scrollWidth || 0;
 canvas.height = canvas.parentNode.clientHeight || canvas.parentNode.offsetHeight || canvas.parentNode.scrollHeight || 0;
@@ -135,3 +136,7 @@ function particles() {
     mouse.y = (canvas.parentNode.clientHeight || canvas.parentNode.offsetHeight || canvas.parentNode.scrollHeight || 0) / 2;
     drawCircles();
 }
+
+
+/// 
+
