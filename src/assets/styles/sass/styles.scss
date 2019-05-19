@@ -410,3 +410,71 @@ body {
     }
   }
 }
+
+// PÁGINA SOBRE
+
+.about {
+  &__header {
+    &__title,
+    &__subtitle {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    &__title {
+      padding: .5rem;
+      background: $default-red;
+      font-size: 1.2rem;
+      display: inline-block;
+    }
+
+    &__subtitle {
+      font-size: 4rem;
+      text-transform: uppercase
+    }
+  }
+
+  &__description {
+    padding: 4rem 0;
+    min-height: 600px;
+    background: lighten($default-red, 28%);
+
+    &__box {
+      &__row {
+        align-items: stretch;
+      }
+    }
+
+    &__begin,
+    &__we {
+      padding: 3rem;
+      min-height: calc(100% - 6rem);
+    }
+
+    &__begin {
+      background: black;
+      line-height: 2.5;
+      color: opposite(black);
+
+      > b {
+        padding:.3rem;
+        background: $default-red;
+        color: opposite($default-red);
+      }
+    }
+
+    &__we {
+      background: $default-red;
+      line-height: 2.5;
+      color: opposite($default-red);
+
+      > b {
+        padding:.3rem;
+        background: black;
+        color: opposite(black);
+      }
+    }
+
+    
+  }
+}
