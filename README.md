@@ -47,6 +47,9 @@ Então, execute o comando abaixo para iniciar o servidor embutido:
 npm run dev
 ```
 
+**Atenção!** Para acessar as páginas é necessário digitar o caminho completo no navegador ex: `http://localhost:1234/about/index.html`
+
+
 Caso queira gerar uma build de produção do site, execute o comando abaixo:
 ```
 npm run build
