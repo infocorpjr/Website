@@ -1,4 +1,4 @@
-import inView from "../../../node_modules/in-view";
+import inView from "in-view";
 
 // in-view supports all modern browsers and IE9+.
 inView.threshold(0.5);
@@ -12,7 +12,7 @@ inView('.begin')
         initCanvas();
     });
 
-
+//
 var canvas = document.getElementById('canvas');
 var width = 300;
 var height = 300;
@@ -38,7 +38,7 @@ var frame = 0;
 var mouse = {
     x: undefined,
     y: undefined
-}
+};
 var circleArray = [];
 var colorArray = [
     '0,0,0',
@@ -53,7 +53,7 @@ window.addEventListener('resize', function () {
     canvas.width = canvas.parentNode.clientWidth || canvas.parentNode.offsetWidth || canvas.parentNode.scrollWidth || 0;
     canvas.height = canvas.parentNode.clientHeight || canvas.parentNode.offsetHeight || canvas.parentNode.scrollHeight || 0;
     initCanvas();
-})
+});
 
 function Circle(x, y, radius, vx, vy, rgb, opacity, birth, life) {
     this.x = x;
@@ -71,7 +71,7 @@ function Circle(x, y, radius, vx, vy, rgb, opacity, birth, life) {
         c.arc(this.x, this.y, this.radius, Math.PI * 2, false);
         c.fillStyle = 'rgba(' + rgb + ',' + this.opacity + ')';
         c.fill();
-    }
+    };
 
     this.update = function () {
         if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
@@ -136,7 +136,3 @@ function particles() {
     mouse.y = (canvas.parentNode.clientHeight || canvas.parentNode.offsetHeight || canvas.parentNode.scrollHeight || 0) / 2;
     drawCircles();
 }
-
-
-/// 
-

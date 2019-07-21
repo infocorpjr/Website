@@ -1,6 +1,7 @@
 # Infocorp Website
 
-Aqui, lhe ajudaremos com os primeiros passos para poder ajudar a desenvolver o website da Infocorp, a empresa Júnior do Instituto de Computação da UFMT.
+Website da Infocorp.
+Aqui, lhe ajudaremos com os primeiros passos para poder ajudar a desenvolver.
 
 ## Começando 🔥
 
@@ -12,7 +13,6 @@ As ferramentas necessárias para o desenvolvimento do website são:
 
 * [NodeJS](https://nodejs.org/en/) versão 8 ou superior
 * NPM
-* [Parcel](https://parceljs.org/getting_started.html)
 * Git
 
 ### Instalando :computer:
@@ -23,13 +23,13 @@ Exemplo usando a linha de comando:
 
 * HTTP:
 ```
-git clone https://github.com/infocorpjr/website.git website
+git clone https://github.com/infocorpjr/Website.git website
 ```
 **ou**
 
 * SSH
 ```
-git clone git@github.com:infocorpjr/Infocorp-website.git website
+git clone git@github.com:infocorpjr/Website.git website
 ```
 
 Depois, mude para o diretório do projeto:
@@ -44,17 +44,14 @@ npm install
 
 Então, execute o comando abaixo para iniciar o servidor embutido:
 ```
-npm run dev
+npm start
 ```
-
-**Atenção!** Para acessar as páginas é necessário digitar o caminho completo no navegador ex: `http://localhost:1234/about/index.html`
-
 
 Caso queira gerar uma build de produção do site, execute o comando abaixo:
 ```
 npm run build
 ```
-Com isso, a build será gerada dentro da pasta `public`
+Com isso, a build será gerada dentro da pasta `dist`
 
 ## Você quer contribuir com o projeto?
 
