@@ -86,6 +86,11 @@ module.exports = {
             filename: "team/index.html",
             template: './src/team/index.html'
         }),
+        new HtmlWebpackPlugin({
+            base: 'about',
+            filename: "about/index.html",
+            template: './src/about/index.html'
+        }),
         // Configuração para geração de favicon ...
         new FaviconWebpackPlugin({
             logo: './src/assets/favicon/brand.png',
