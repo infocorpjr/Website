@@ -5,7 +5,7 @@ import inView from "in-view";
 
 inView.threshold(0.5);
 
-inView('.begin')
+inView('.home__header')
     .on('enter', (el) => {
         el.setAttribute('data-on', true);
         particles();
@@ -25,17 +25,19 @@ inView('section, header')
 
 // PARTICLES ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var canvas = document.getElementById('particles');
+let canvas = document.getElementById('particles');
 canvas.width = canvas.parentNode.clientWidth || canvas.parentNode.offsetWidth || canvas.parentNode.scrollWidth || 0;
 canvas.height = canvas.parentNode.clientHeight || canvas.parentNode.offsetHeight || canvas.parentNode.scrollHeight || 0;
-var c = canvas.getContext('2d');
-var frame = 0;
-var mouse = {
+
+let c = canvas.getContext('2d');
+let frame = 0;
+let mouse = {
     x: undefined,
     y: undefined
 };
-var circleArray = [];
-var colorArray = [
+
+let circleArray = [];
+let colorArray = [
     '0,0,0',
     '118,225,244',
     '242,89,114',
@@ -94,6 +96,7 @@ function Circle(x, y, radius, vx, vy, rgb, opacity, birth, life) {
         }
     }
 }
+
 
 function initCanvas() {
     circleArray = [];

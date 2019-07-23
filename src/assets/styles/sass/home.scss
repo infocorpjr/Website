@@ -1,12 +1,5 @@
 @import "common";
 
-#particles {
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -999;
-}
-
 // Seção da barra superior ...
 .beyond {
   padding: .2rem 0;
@@ -17,53 +10,58 @@
   z-index: -9;
 }
 
-// Seção inicial da página
-.begin {
-  height: 100%;
-  color: $theme-default-secondary;
-  position: relative;
-
-  &:before {
-    top: 0;
-    left: 0;
-    width: 95%;
-    height: 100%;
-    background: transparent url('../../images/undraw_bookmarks_r6up.svg') no-repeat bottom right;
-    background-size: 50%;
-    content: '';
-    position: absolute;
-    opacity: .5;
-  }
-
-  &__title {
-    padding: .5rem;
-    background: rgba(opposite($theme-default-primary), .99);
-    border: 5px solid $theme-default-primary;
-    font-size: 2.5rem;
-    color: $theme-default-primary;
-  }
-
-  &__subtitle {
-    padding: .5rem;
-    font-size: 1rem;
-    background: white;
-  }
-
-  .arrow {
-    .arrow__down {
-      margin-bottom: 1rem;
-    }
-  }
-
-  &[data-on] .arrow {
-    .arrow__down {
-      animation: arrow__down__pulse 2s linear 0s infinite normal none;
-    }
-  }
-}
-
-
 .home {
+  &__header {
+    height: 100%;
+    color: $theme-default-secondary;
+    position: relative;
+
+    &:before {
+      top: 0;
+      left: 0;
+      width: 95%;
+      height: 100%;
+      background: transparent url('../../images/undraw_bookmarks_r6up.svg') no-repeat bottom right;
+      background-size: 50%;
+      content: '';
+      position: absolute;
+      opacity: .5;
+    }
+
+    &__particles {
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: -999;
+    }
+
+    &__title {
+      padding: .5rem;
+      background: rgba(opposite($theme-default-primary), .99);
+      border: 5px solid $theme-default-primary;
+      font-size: 2.5rem;
+      color: $theme-default-primary;
+    }
+
+    &__subtitle {
+      padding: .5rem;
+      font-size: 1rem;
+      background: white;
+    }
+
+    .arrow {
+      .arrow__down {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &[data-on] .arrow {
+      .arrow__down {
+        animation: arrow__down__pulse 2s linear 0s infinite normal none;
+      }
+    }
+  }
+
   &__services {
     height: 70%;
     // background: $theme-default-primary;
