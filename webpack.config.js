@@ -2,15 +2,21 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconWebpackPlugin = require('favicons-webpack-plugin');
-const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
+// const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
 module.exports = {
     mode: 'development',
     entry: {
         // Styles
-        styles: './src/assets/styles/sass/styles.scss',
+        styles: [
+            './src/assets/styles/sass/home.scss',
+            './src/assets/styles/sass/team.scss'
+        ],
         // Scripts
-        app: './src/assets/js/scripts.js'
+        app: [
+            './src/assets/js/home.js',
+            './src/assets/js/team.js'
+        ]
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -76,15 +82,20 @@ module.exports = {
         // Configuração de template para a página inicial ...
         new HtmlWebpackPlugin({
             template: 'src/index.html',
-            meta: {
-                // viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+            chunks: {
+                head: {
+                    entry: './src/assets/js/home.js',
+                    css: ' /src/assets/styles/sass/home.scss'
+                }
             },
             hash: true
         }),
         new HtmlWebpackPlugin({
             base: 'team',
             filename: "team/index.html",
-            template: './src/team/index.html'
+            template: './src/team/index.html',
+            chunks: ['team'],
+            hash: true
         }),
         new HtmlWebpackPlugin({
             base: 'about',

@@ -1,107 +1,4 @@
-@import "functions";
-@import "variables";
-@import "bootstrap";
-
-html,
-body {
-  margin: 0;
-  height: 100%;
-}
-
-a {
-  color: opposite($theme-default-primary);
-}
-
-a:active,
-a:hover {
-  color: lighten(blue, 10%) !important;
-}
-
-body {
-  font-family: 'Roboto Mono', monospace;
-  color: opposite($theme-default-primary);
-  position: relative;
-}
-
-.box {
-  width: 100%;
-  height: 100%;
-  table-layout: fixed;
-  display: table;
-
-  &__top,
-  &__middle,
-  &__bottom {
-    display: table-row;
-
-    &__content {
-      display: table-cell;
-    }
-  }
-
-  &__middle {
-    height: 100%;
-
-    &__content {
-      vertical-align: middle;
-    }
-  }
-}
-
-.navbar {
-  margin: 2rem 0;
-  font-size: 1.2rem;
-
-  &__infocorp {
-    padding: 0 2px;
-    width: 80px;
-    background: opposite($theme-default-primary);
-
-    > path {
-      fill: $theme-default-primary;
-    }
-  }
-
-  &__title {
-    margin: 0;
-  }
-
-  &__row {
-    align-items: center;
-
-    &__right {
-      text-align: right;
-    }
-  }
-
-  &__links {
-    padding: 0rem;
-    list-style-type: none;
-
-    &__link {
-      margin: 0 .2rem;
-      display: inline-block;
-    }
-  }
-}
-
-@keyframes arrow__down__pulse {
-  50% {
-    transform: translateY(15px);
-  }
-}
-
-.arrow {
-  display: inline-block;
-
-  &__down {
-    width: 50px;
-
-    & > path {
-      fill: opposite($theme-default-primary);
-    }
-  }
-}
+@import "common";
 
 #particles {
   top: 0;
@@ -113,17 +10,11 @@ body {
 // Seção da barra superior ...
 .beyond {
   padding: .2rem 0;
-  background-color: rgba(opposite($theme-default-primary), .9);
+  background-color: rgba(opposite($theme-default-primary), .99);
   text-align: right;
   color: $theme-default-primary;
   position: relative;
   z-index: -9;
-}
-
-#canvas {
-  width: 100%;
-  height: 3px;
-  z-index: -5;
 }
 
 // Seção inicial da página
@@ -170,6 +61,7 @@ body {
     }
   }
 }
+
 
 .home {
   &__services {
@@ -278,73 +170,5 @@ body {
     min-height: 300px;
     background-color: opposite($theme-default-primary);
     color: $theme-default-primary;
-  }
-}
-
-
-
-// PÁGINA SOBRE
-
-.about {
-  &__header {
-    &__title,
-    &__subtitle {
-      margin: 0;
-      font-weight: bold;
-    }
-
-    &__title {
-      padding: .5rem;
-      background: $default-red;
-      font-size: 1.2rem;
-      display: inline-block;
-    }
-
-    &__subtitle {
-      font-size: 4rem;
-      text-transform: uppercase
-    }
-  }
-
-  &__description {
-    padding: 4rem 0;
-    min-height: 600px;
-    background: lighten($default-red, 28%);
-
-    &__box {
-      &__row {
-        align-items: stretch;
-      }
-    }
-
-    &__begin,
-    &__we {
-      padding: 3rem;
-      min-height: calc(100% - 6rem);
-    }
-
-    &__begin {
-      background: black;
-      line-height: 2.5;
-      color: opposite(black);
-
-      > b {
-        padding: .3rem;
-        background: $default-red;
-        color: opposite($default-red);
-      }
-    }
-
-    &__we {
-      background: $default-red;
-      line-height: 2.5;
-      color: opposite($default-red);
-
-      > b {
-        padding: .3rem;
-        background: black;
-        color: opposite(black);
-      }
-    }
   }
 }

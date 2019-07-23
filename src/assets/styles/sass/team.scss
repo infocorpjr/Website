@@ -1,0 +1,229 @@
+@import "functions";
+@import "variables";
+@import "bootstrap";
+
+// PÁGINA NOSSO TIME
+
+.team {
+  overflow-x: hidden;
+
+  &__header {
+    $parent: &;
+
+    &__box__middle,
+    &__box__bottom {
+      background: lighten($default-red, 45%);
+    }
+
+    &__badge {
+      margin: 0;
+      padding: .5rem;
+      background: $default-red;
+      font-size: 1rem;
+      color: opposite($default-red);
+      display: inline-block;
+    }
+
+    &__subtitle {
+      width: 350px;
+      height: 200px;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+
+      @media(min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          width: 580px;
+          height: 350px;
+        }
+      }
+
+      &:before {
+        top: 100%;
+        width: 100%;
+        content: 'Alunos, profissionais  e professores';
+        letter-spacing: 8px;
+        font-weight: bold;
+        color: $default-red;
+        position: absolute;
+
+        @media(min-width: map_get($grid-breakpoints, 'md')) and (max-width: map_get($grid-breakpoints, 'lg')) {
+          & {
+            width: 60%;
+          }
+        }
+
+        @media(min-width: map_get($grid-breakpoints, 'lg') + 1) and (max-width: map_get($grid-breakpoints, 'xl')) {
+          top: auto;
+          bottom: 0;
+          left: 101%;
+          width: 40%;
+        }
+
+        @media(min-width: map_get($grid-breakpoints, 'xl') + 1) {
+          & {
+            top: auto;
+            bottom: 0;
+            left: 101%;
+            width: 40%;
+          }
+        }
+      }
+
+      &:after {
+        bottom: 100%;
+        width: 100%;
+        content: 'Quem faz farte do time da Infocorp?';
+        font-size: 1rem;
+        font-weight: bold;
+        position: absolute;
+        transition: all 0.2s ease-in-out;
+
+        @media(min-width: map_get($grid-breakpoints, 'md')) and (max-width: map_get($grid-breakpoints, 'lg')) {
+          & {
+            font-size: 2rem;
+          }
+        }
+
+        @media(min-width: map_get($grid-breakpoints, 'lg') + 1) and (max-width: map_get($grid-breakpoints, 'xl')) {
+          & {
+            width: 150%;
+            font-size: 3rem;
+          }
+        }
+
+        @media(min-width: map_get($grid-breakpoints, 'xl') + 1) {
+          & {
+            top: 10%;
+            width: 150%;
+            right: -100%;
+            font-size: 5rem;
+          }
+        }
+      }
+
+      &__image {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../../images/members.jpg") no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        opacity: .7;
+        transition: transform 0.5s;
+      }
+    }
+  }
+
+  &__description {
+    margin: 5rem 0;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  &__advantage {
+    margin: 5rem 0;
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 1.1rem 0;
+      background: white;
+      border-bottom: 1px solid #eee;
+
+      &:last-child {
+        border: none;
+      }
+
+      b {
+        letter-spacing: 4px;
+      }
+    }
+  }
+
+  &__opportunity {
+    margin: 5rem 0;
+    padding: 5rem 0;
+    background: url("../../images/dots-large.svg") repeat center center;
+
+    &__row {
+      align-items: center;
+    }
+
+    &__title {
+      background: white;
+      font-size: 2.5rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 1.5rem 0;
+      background: white;
+      border-bottom: 1px solid #eee;
+
+      &:last-child {
+        border: none;
+      }
+
+      b {
+        letter-spacing: 4px;
+        color: $default-red;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+
+    &:after {
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: black;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      background: black;
+      text-align: right;
+      color: white;
+
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          padding-left: 2rem;
+        }
+      }
+
+      &__row {
+        align-items: center;
+      }
+    }
+
+    &__infocorp,
+    &__description,
+    &__email {
+      @media (max-width: map_get($grid-breakpoints, 'md')) {
+        padding-right: .5rem;
+        padding-left: .5rem;
+      }
+    }
+
+    &__links {
+      &__link {
+        &__action {
+          color: white;
+        }
+      }
+    }
+  }
+}

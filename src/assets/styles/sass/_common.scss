@@ -1,0 +1,104 @@
+@import "functions";
+@import "variables";
+@import "bootstrap";
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  color: opposite($theme-default-primary);
+}
+
+a:active,
+a:hover {
+  color: lighten(blue, 10%) !important;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: opposite($theme-default-primary);
+  position: relative;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  display: table;
+
+  &__top,
+  &__middle,
+  &__bottom {
+    display: table-row;
+
+    &__content {
+      display: table-cell;
+    }
+  }
+
+  &__middle {
+    height: 100%;
+
+    &__content {
+      vertical-align: middle;
+    }
+  }
+}
+
+.navbar {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+
+  &__infocorp {
+    padding: 0 2px;
+    width: 80px;
+    background: opposite($theme-default-primary);
+
+    > path {
+      fill: $theme-default-primary;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__row {
+    align-items: center;
+
+    &__right {
+      text-align: right;
+    }
+  }
+
+  &__links {
+    padding: 0rem;
+    list-style-type: none;
+
+    &__link {
+      margin: 0 .2rem;
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes arrow__down__pulse {
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+.arrow {
+  display: inline-block;
+
+  &__down {
+    width: 50px;
+
+    & > path {
+      fill: opposite($theme-default-primary);
+    }
+  }
+}
