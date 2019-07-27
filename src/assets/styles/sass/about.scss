@@ -1,0 +1,204 @@
+@import "common";
+
+.about {
+  &__header {
+    &__row {
+      align-items: center
+    }
+
+    &:before {
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 80%;
+      background: url("../../images/dots-large.svg") repeat center bottom;
+      content: "";
+      position: absolute;
+    }
+
+    &__title,
+    &__subtitle {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+      padding: .5rem;
+      background: $default-red;
+      letter-spacing: 15px;
+      font-size: 1.2rem;
+      display: inline-block;
+    }
+
+    &__subtitle {
+      font-size: 4rem;
+      line-height: 0.9;
+      text-transform: uppercase
+    }
+
+    &__description {
+      &__image {
+        width: 100%;
+      }
+    }
+  }
+
+  // A seta para baixo, hehe
+  .arrow {
+    margin: auto;
+    width: 50px;
+    display: block;
+
+    .arrow__down {
+      padding-bottom: 25px
+    }
+  }
+
+  &__description {
+    padding: 4rem 0;
+    min-height: 600px;
+
+    &__box {
+      &__row {
+        align-items: stretch;
+
+        > div {
+          // Não gosto de usar px, porém neste caso tem que ter.
+          margin-bottom: 100px;
+        }
+      }
+    }
+
+    &__begin,
+    &__we,
+    &__as_we_think,
+    &__how_we_work,
+    &__mission,
+    &__vision {
+      padding: 3rem;
+      height: calc(100% - 6rem);
+    }
+
+    &__begin {
+      background: black;
+      line-height: 1.5;
+      color: opposite(black);
+
+      > a {
+        font-weight: bold;
+        color: $default-red;
+      }
+
+      > b {
+        padding: .2rem;
+        background: $default-red;
+        color: opposite($default-red);
+      }
+    }
+
+    &__we {
+      line-height: 2.5;
+      border: 1px solid $default-red;
+
+      > .box {
+        height: 100%;
+      }
+
+      b {
+        padding: .3rem;
+        background: black;
+        color: opposite(black);
+      }
+    }
+
+    &__as_we_think {
+      line-height: 3;
+      border: 1px solid $default-blue;
+
+      p {
+        padding: .8rem;
+        background: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 1.5;
+        color: opposite(white);
+        display: inline-block
+      }
+    }
+
+    &__how_we_work {
+      line-height: 1.5;
+      background: #eee;
+
+      > .box {
+        height: 100%;
+      }
+
+      p {
+        padding: .8rem;
+        background: #111;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: opposite(#111);
+        display: inline-block
+      }
+    }
+
+    &__mission {
+      background: #eee;
+      color: opposite(white);
+
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: opposite(white);
+        display: inline-block
+      }
+    }
+
+    &__vision {
+      background: $default-yellow;
+      line-height: 1.5;
+      color: opposite(white);
+
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: opposite(white);
+        display: inline-block
+      }
+    }
+  }
+
+  &__footer {
+    overflow: hidden;
+
+    &__container {
+      position: relative;
+
+      &:before {
+        top: 0;
+        right: -50%;
+        width: 50%;
+        height: 100%;
+        background: black;
+        content: "";
+        position: absolute;
+      }
+
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      background: black;
+      color: white;
+    }
+
+    &__row {
+      align-items: center;
+    }
+
+    &__contact {
+      text-align: center;
+    }
+  }
+}

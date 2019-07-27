@@ -7,18 +7,20 @@ const FaviconWebpackPlugin = require('favicons-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        // Styles
-        styles: [
+        home: [
             './src/assets/styles/sass/home.scss',
-            './src/assets/styles/sass/team.scss'
+            './src/assets/js/home.js'
         ],
-        // Scripts
-        app: [
-            './src/assets/js/home.js',
+        team: [
+            './src/assets/styles/sass/team.scss',
             './src/assets/js/team.js'
+        ],
+        about: [
+            './src/assets/styles/sass/about.scss',
+            './src/assets/js/about.js'
         ]
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
@@ -82,12 +84,7 @@ module.exports = {
         // Configuração de template para a página inicial ...
         new HtmlWebpackPlugin({
             template: 'src/index.html',
-            chunks: {
-                head: {
-                    entry: './src/assets/js/home.js',
-                    css: ' /src/assets/styles/sass/home.scss'
-                }
-            },
+            chunks: ['home'],
             hash: true
         }),
         new HtmlWebpackPlugin({
@@ -100,7 +97,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             base: 'about',
             filename: "about/index.html",
-            template: './src/about/index.html'
+            template: './src/about/index.html',
+            chunks: ['about'],
+            hash: true
         }),
         // Configuração para geração de favicon ...
         new FaviconWebpackPlugin({

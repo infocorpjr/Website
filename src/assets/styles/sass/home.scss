@@ -64,7 +64,6 @@
 
   &__services {
     height: 70%;
-    // background: $theme-default-primary;
     position: relative;
 
     &::before {
@@ -96,6 +95,14 @@
     &__subtitle {
       font-size: 2.5rem;
       font-weight: bold;
+    }
+
+    &__description {
+      transition: all 0.4s ease-in-out;
+    }
+
+    &[on] &__description {
+
     }
   }
 
@@ -160,6 +167,14 @@
     &__subtitle {
       font-size: 2.5rem;
       font-weight: bold;
+    }
+
+    &__description {
+      transition: all 0.4s ease-in-out;
+    }
+
+    &[on] &__description {
+
     }
   }
 
