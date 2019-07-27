@@ -2,7 +2,6 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconWebpackPlugin = require('favicons-webpack-plugin');
-// const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
 module.exports = {
     mode: 'development',
@@ -10,6 +9,10 @@ module.exports = {
         home: [
             './src/assets/styles/sass/home.scss',
             './src/assets/js/home.js'
+        ],
+        service: [
+            './src/assets/styles/sass/service.scss',
+            './src/assets/js/service.js'
         ],
         member: [
             './src/assets/styles/sass/member.scss',
@@ -88,15 +91,22 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
+            base: 'service',
+            filename: 'service/index.html',
+            template: './src/service/index.html',
+            chunks: ['service'],
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
             base: 'member',
-            filename: "member/index.html",
+            filename: 'member/index.html',
             template: './src/member/index.html',
             chunks: ['member'],
             hash: true
         }),
         new HtmlWebpackPlugin({
             base: 'about',
-            filename: "about/index.html",
+            filename: 'about/index.html',
             template: './src/about/index.html',
             chunks: ['about'],
             hash: true
@@ -104,7 +114,7 @@ module.exports = {
         // Configuração para geração de favicon ...
         new FaviconWebpackPlugin({
             logo: './src/assets/favicon/brand.png',
-            title: 'Webpack App',
+            title: 'Infocorp',
             icons: {
                 android: true,
                 appleIcon: true,
@@ -118,7 +128,5 @@ module.exports = {
                 windows: false
             }
         }),
-        // Permite a inclusão de SVG inline por meio do arquivo
-        // new HtmlWebpackInlineSVGPlugin()
     ]
 };
