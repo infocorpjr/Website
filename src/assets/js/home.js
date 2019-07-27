@@ -24,7 +24,6 @@ inView('section, header')
     });
 
 // PARTICLES ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 let canvas = document.getElementById('particles');
 canvas.width = canvas.parentNode.clientWidth || canvas.parentNode.offsetWidth || canvas.parentNode.scrollWidth || 0;
 canvas.height = canvas.parentNode.clientHeight || canvas.parentNode.offsetHeight || canvas.parentNode.scrollHeight || 0;
@@ -103,7 +102,7 @@ function initCanvas() {
 }
 
 function drawCircles() {
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < 90; i++) {
         let radius = 12;
         let vx = (Math.random() * 4) - ((Math.random() * 2) + 1);
         let vy = (Math.random() * 4) - ((Math.random() * 2) + 1);

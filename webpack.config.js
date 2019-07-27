@@ -11,9 +11,9 @@ module.exports = {
             './src/assets/styles/sass/home.scss',
             './src/assets/js/home.js'
         ],
-        team: [
-            './src/assets/styles/sass/team.scss',
-            './src/assets/js/team.js'
+        member: [
+            './src/assets/styles/sass/member.scss',
+            './src/assets/js/member.js'
         ],
         about: [
             './src/assets/styles/sass/about.scss',
@@ -88,10 +88,10 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            base: 'team',
-            filename: "team/index.html",
-            template: './src/team/index.html',
-            chunks: ['team'],
+            base: 'member',
+            filename: "member/index.html",
+            template: './src/member/index.html',
+            chunks: ['member'],
             hash: true
         }),
         new HtmlWebpackPlugin({
