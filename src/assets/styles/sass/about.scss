@@ -3,7 +3,7 @@
 .about {
   &__header {
     &__row {
-      align-items: center
+      align-items: center;
     }
 
     &:before {
@@ -32,14 +32,18 @@
     }
 
     &__subtitle {
-      font-size: 4rem;
+      font-size: 3rem;
       line-height: 0.9;
-      text-transform: uppercase
+      text-transform: uppercase;
+
+      &__infocorp {
+        width: 100%;
+      }
     }
 
     &__description {
       &__image {
-        width: 100%;
+        width: 80%;
       }
     }
   }
