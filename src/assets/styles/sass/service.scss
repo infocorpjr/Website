@@ -18,7 +18,7 @@
     padding: 10rem 0;
 
     &__service {
-      margin: 5rem 0;
+      margin: 15rem 0;
 
       &:first-child {
         margin-top: 0;
@@ -27,27 +27,28 @@
       &__title {
         font-size: 2rem;
         font-weight: bold;
-        color: lighten(black, 40%);
+        color: lighten(black, 50%);
+        position: relative;
+
+        &:before {
+          top: -5rem;
+          left: 0;
+          font-size: 10rem;
+          white-space: nowrap;
+          color: lighten(black, 95%);
+          content: attr(title);
+          position: absolute;
+          z-index: -1;
+        }
       }
 
       &__box {
         position: relative;
 
         &__image {
-          padding: 2rem;
+          padding: 1rem;
           width: 100%;
-          background: white;
-        }
-
-        &:before {
-          top: 50%;
-          right: 0;
-          width: 1200%;
-          height: 1px;
-          content: '';
-          background: lighten(black, 50%);
-          position: absolute;
-          z-index: -1;
+          //background: white;
         }
 
         &:after {
@@ -56,14 +57,64 @@
           width: 100%;
           height: 80%;
           content: '';
-          background: url("../../images/dots-small.svg");
+          background: url("../../images/dots-large.svg");
           position: absolute;
           z-index: -1;
         }
       }
 
       &__description {
-        padding: 0 2rem 0 5rem;
+        padding: 0 2rem 0 2rem;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+
+    &:after {
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: black;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      background: black;
+      text-align: right;
+      color: white;
+
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          padding-left: 2rem;
+        }
+      }
+
+      &__row {
+        align-items: center;
+      }
+    }
+
+    &__infocorp,
+    &__description,
+    &__email {
+      @media (max-width: map_get($grid-breakpoints, 'md')) {
+        padding-right: .5rem;
+        padding-left: .5rem;
+      }
+    }
+
+    &__links {
+      &__link {
+        &__action {
+          color: white;
+        }
       }
     }
   }
