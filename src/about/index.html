@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Infocorp - Sobre nós</title>
-
     <script>
         // Este polyfill adiciona suporte para todos os navegadores, suportando ES5.
         if (window.NodeList && !NodeList.prototype.forEach) {
@@ -40,12 +39,10 @@
             }
         }());
     </script>
-
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap"
           rel="stylesheet">
-
     <!-- Google Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734158-1"></script>
@@ -118,14 +115,14 @@
         <div class="box__middle__content">
             <div class="container">
                 <div class="row about__header__row">
-                    <div class="col-12 col-md col-lg col-xl">
+                    <div class="col-12 col-md-8 col-lg-8 col-xl-8">
                         <p class="about__header__description">
                             <img class="about__header__description__image"
                                  src="/svg/undraw_art_museum_8or42.svg" alt="Sobre nós"
                                  title="Sobre nós">
                         </p>
                     </div>
-                    <div class="col-12 col-md-auto col-lg-auto col-xl-auto">
+                    <div class="col-12 col-md-4 col-lg-4 col-xl-4">
                         <p class="about__header__title">Um pouco +</p>
                         <p class="about__header__subtitle">
                             Sobre a<br/>
@@ -165,7 +162,7 @@
 <section class="about__description">
     <div class="container">
         <div class="row about__description__box__row">
-            <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-12 col-md-5 col-lg-5 col-xl-5">
                 <div class="about__description__begin">
                     A <b>Infocorp</b> foi fundada em 2009 no Instituto de Computação da Universidade Federal de Mato
                     Grosso, como uma instituição sem fins lucrativos e com fins educativos, regida pela Lei
@@ -192,7 +189,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-7 col-lg-7 col-xl-7">
+            <div class="col-12 col-md-12 col-lg-7 col-xl-7">
                 <div class="about__description__as_we_think">
                     <div class="box">
                         <div class="box__top">
@@ -222,16 +219,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-12 col-md-12 col-lg-5 col-xl-5">
                 <div class="about__description__how_we_work">
-                    <p>Como trabalhamos ?</p> <br/> <!-- Simmmm, pode deixar esse <br> aqui mesmo ... -->
-                    Ouvimos suas ideias para entender seus objetivos
-                    e ideações, buscando garantir a integração entre o produto e sua necessidade e respeitar a
-                    cultura e diversidade da sua empresa ou instituição. Desenvolvemos o produto em forma de
-                    entregas, seja um protótipo ou as funcionalidades individuais, até entregarmos o produto como um
-                    todo, provendo manutenção e suporte.
-                    Durante o processo de desenvolvimento até a entrega da solução do problema, procuramos
-                    estabelecer uma relação de confiança e agir de forma simples e transparente com o cliente.
+                    <div class="box">
+                        <div class="box__top">
+                            <div class="box__top__content"><p>Como trabalhamos ?</p></div>
+                        </div>
+                        <div class="box__middle">
+                            <div class="box__middle__content">
+                                Ouvimos suas ideias para entender seus objetivos
+                                e ideações, buscando garantir a integração entre o produto e sua necessidade e respeitar
+                                a
+                                cultura e diversidade da sua empresa ou instituição. Desenvolvemos o produto em forma de
+                                entregas, seja um protótipo ou as funcionalidades individuais, até entregarmos o produto
+                                como um
+                                todo, provendo manutenção e suporte.
+                                Durante o processo de desenvolvimento até a entrega da solução do problema, procuramos
+                                estabelecer uma relação de confiança e agir de forma simples e transparente com o
+                                cliente.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Missão e Visão da Infocorp -->
@@ -244,7 +252,7 @@
                     e impulsionar o marketing. A satisfação plena dos clientes é o nosso objetivo.
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-12 col-md-5 col-lg-5 col-xl-5">
                 <div class="about__description__vision">
                     <p>Visão</p>
                     <br/>
@@ -255,22 +263,33 @@
     </div>
 </section>
 
+<!-- RODAPÉ -->
 <section class="about__footer">
-    <div class="container about__footer__container">
-        <div class="row about__footer__row">
-            <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="about__footer__contact">
-                    contato@infocorp.ic.ufmt.br <br>
-                    suporte@infocorp.ic.ufmt.br
-                </div>
+    <div class="about__footer__container container">
+        <div class="row about__footer__container__row">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+                <h3 class="about__footer__infocorp">Infocorp</h3>
+                <p class="about__footer__description">
+                    Empresa Júnior do Instituto de Computação<br> da Universidade Federal de Mato Grosso
+                </p>
+                <p class="about__footer__email">contato@infocorp.ic.ufmt.br</p>
             </div>
-
-            <div class="col-12 col-md-5 col-lg-5 col-xl-5">
-                Infocorp sala 77, Instituto de Computação, UFMT
+            <div class="col-12 col-md-4 col-lg-6 col-xl-6">
+                <ul class="about__footer__links">
+                    <li class="about__footer__links__link">
+                        <a class="about__footer__links__link__action" href="/">Home</a>
+                    </li>
+                    <li class="about__footer__links__link">
+                        <a class="about__footer__links__link__action" href="/service">Nossos serviços</a>
+                    </li>
+                    <li class="about__footer__links__link">
+                        <a class="about__footer__links__link__action" href="/member">O membro</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
-</body>
 
+</body>
 </html>

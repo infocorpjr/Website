@@ -69,7 +69,7 @@
 
         > div {
           // Não gosto de usar px, porém neste caso tem que ter.
-          margin-bottom: 100px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -80,8 +80,9 @@
     &__how_we_work,
     &__mission,
     &__vision {
+      margin: 5px;
       padding: 3rem;
-      height: calc(100% - 6rem);
+      height: 100%
     }
 
     &__begin {
@@ -162,7 +163,8 @@
     }
 
     &__vision {
-      background: $default-yellow;
+      background: $default-yellow url("../../svg/undraw_Mobile_app_p3ts.svg") no-repeat 95% 95%;
+      background-size: 10%;
       line-height: 1.5;
       color: opposite(white);
 
@@ -176,33 +178,52 @@
   }
 
   &__footer {
-    overflow: hidden;
+    position: relative;
+
+    &:after {
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: black;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
 
     &__container {
-      position: relative;
-
-      &:before {
-        top: 0;
-        right: -50%;
-        width: 50%;
-        height: 100%;
-        background: black;
-        content: "";
-        position: absolute;
-      }
-
       padding-top: 2rem;
       padding-bottom: 2rem;
       background: black;
+      text-align: right;
       color: white;
+
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          padding-left: 2rem;
+        }
+      }
+
+      &__row {
+        align-items: center;
+      }
     }
 
-    &__row {
-      align-items: center;
+    &__infocorp,
+    &__description,
+    &__email {
+      @media (max-width: map_get($grid-breakpoints, 'md')) {
+        padding-right: .5rem;
+        padding-left: .5rem;
+      }
     }
 
-    &__contact {
-      text-align: center;
+    &__links {
+      &__link {
+        &__action {
+          color: white;
+        }
+      }
     }
   }
 }
