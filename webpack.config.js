@@ -2,6 +2,7 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -75,7 +76,10 @@ module.exports = {
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {},
+                        options: {
+                            name: '[path][name].[ext]',
+                            outputPath: 'images',
+                        },
                     },
                 ],
             },
@@ -128,5 +132,9 @@ module.exports = {
                 windows: false
             }
         }),
+        new CopyWebpackPlugin([
+            {from: './src/assets/images', to: 'images'},
+            {from: './src/assets/svg', to: 'svg'}
+        ]),
     ]
 };

@@ -1,2 +1,16 @@
 @import "common";
 
+.service {
+  &__header {
+    height: 98%;
+    position: relative;
+
+    &__title {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__services {
+    padding: 10rem 0;
+  }
+}
