@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
+        // print: './src/print.js',
         home: [
             './src/assets/styles/sass/home.scss',
             './src/assets/js/home.js'
@@ -22,6 +23,9 @@ module.exports = {
         about: [
             './src/assets/styles/sass/about.scss',
             './src/assets/js/about.js'
+        ],
+        animation: [
+            './src/assets/styles/sass/animation.scss'
         ]
     },
     devtool: 'eval',
@@ -32,6 +36,7 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
+        chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -113,6 +118,13 @@ module.exports = {
             filename: 'about/index.html',
             template: './src/about/index.html',
             chunks: ['about'],
+            hash: true
+        }),
+        new HtmlWebpackPlugin({
+            base: 'animation',
+            filename: 'animation/index.html',
+            template: './src/animation/index.html',
+            chunks: ['animation'],
             hash: true
         }),
         // Configuração para geração de favicon ...

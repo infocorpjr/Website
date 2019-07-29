@@ -1,0 +1,14 @@
+@keyframes one__eye {
+  0% {
+
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.one {
+  &__eye {
+    animation: one__eye 1s ease-in-out infinite forwards alternate;
+  }
+}

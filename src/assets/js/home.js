@@ -3,7 +3,7 @@ import inView from "in-view";
 // IN VIEW /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // in-view supports all modern browsers and IE9+ ///////////////////////////////////////////////////////////////////////
 
-inView.threshold(0.8);
+inView.threshold(0.5);
 
 inView('.home__header')
     .on('enter', (el) => {
@@ -102,13 +102,13 @@ function initCanvas() {
 }
 
 function drawCircles() {
-    for (let i = 0; i < 90; i++) {
-        let radius = 12;
+    for (let i = 0; i < 80; i++) {
+        let radius = 15;
         let vx = (Math.random() * 4) - ((Math.random() * 2) + 1);
         let vy = (Math.random() * 4) - ((Math.random() * 2) + 1);
         let spawnFrame = frame;
         let rgb = colorArray[Math.floor(Math.random() * colorArray.length)];
-        let life = 1000;
+        let life = 800;
         circleArray.push(new Circle(mouse.x, mouse.y, radius, vx, vy, rgb, 1, spawnFrame, life));
 
     }

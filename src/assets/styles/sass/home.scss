@@ -21,11 +21,11 @@
       left: 0;
       width: 95%;
       height: 100%;
-      background: transparent url('../../images/undraw_bookmarks_r6up.svg') no-repeat bottom right;
+      background: transparent url('../../svg/undraw_Business_analytics_64el2.svg') no-repeat 95% 95%;
       background-size: 50%;
       content: '';
       position: absolute;
-      opacity: .5;
+      opacity: .7;
     }
 
     &__particles {
@@ -33,10 +33,11 @@
       left: 0;
       position: absolute;
       z-index: -999;
+      opacity: 1;
     }
 
     &__title {
-      padding: .5rem;
+      padding: 1rem;
       background: rgba(opposite($theme-default-primary), .99);
       border: 5px solid $theme-default-primary;
       font-size: 2rem;
@@ -118,7 +119,7 @@
         padding: 5px;
         width: 100%;
         height: 140%;
-        background: url("../../images/dots-small.svg");
+        background: url("../../images/dots-large.svg");
         content: '';
         position: absolute;
         z-index: -1;
