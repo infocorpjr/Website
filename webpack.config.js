@@ -97,35 +97,60 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html',
             chunks: ['home'],
-            hash: true
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            }
         }),
         new HtmlWebpackPlugin({
             base: 'service',
             filename: 'service/index.html',
             template: './src/service/index.html',
             chunks: ['service'],
-            hash: true
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            }
         }),
         new HtmlWebpackPlugin({
             base: 'member',
             filename: 'member/index.html',
             template: './src/member/index.html',
             chunks: ['member'],
-            hash: true
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            }
         }),
         new HtmlWebpackPlugin({
             base: 'about',
             filename: 'about/index.html',
             template: './src/about/index.html',
             chunks: ['about'],
-            hash: true
-        }),
-        new HtmlWebpackPlugin({
-            base: 'animation',
-            filename: 'animation/index.html',
-            template: './src/animation/index.html',
-            chunks: ['animation'],
-            hash: true
+            hash: true,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            }
         }),
         // Configuração para geração de favicon ...
         new FaviconWebpackPlugin({
