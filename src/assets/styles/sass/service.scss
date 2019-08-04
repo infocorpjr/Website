@@ -1,9 +1,14 @@
 @import "common";
+@import "animation";
 
 .service {
   &__header {
     height: 98%;
     position: relative;
+
+    &__cube {
+      animation: service_header_cube 3s ease-in-out 0s infinite;
+    }
 
     &__title {
       font-size: 3.5rem;

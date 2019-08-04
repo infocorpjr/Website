@@ -1,14 +1,8 @@
-@keyframes one__eye {
-  0% {
-
+@keyframes service_header_cube {
+  80% {
+    transform: rotate(0deg);
   }
   100% {
-      opacity: 0;
-  }
-}
-
-.one {
-  &__eye {
-    animation: one__eye 1s ease-in-out infinite forwards alternate;
+    transform: rotate(359deg);
   }
 }
