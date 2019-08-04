@@ -17,6 +17,10 @@
     &__image {
       width: 100%;
     }
+
+    [on] &__arrow {
+      animation: arrow_down 3s ease-in-out 0s infinite;
+    }
   }
 
   &__services {
@@ -53,7 +57,6 @@
         &__image {
           padding: 1rem;
           width: 100%;
-          //background: white;
         }
 
         &:after {

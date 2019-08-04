@@ -1,3 +1,20 @@
+@keyframes arrow_down {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
 @keyframes service_header_cube {
   80% {
     transform: rotate(0deg);
