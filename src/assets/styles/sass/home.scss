@@ -125,11 +125,16 @@
   }
 
   &__who {
-    height: 60%;
+    height: 40%;
 
     &__square {
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
       position: relative;
 
+      /*
       &:before {
         top: 0;
         right: -10%;
@@ -141,6 +146,7 @@
         position: absolute;
         z-index: -1;
       }
+      */
     }
 
     &__title,
@@ -161,6 +167,11 @@
     &__subtitle {
       font-size: 2.5rem;
       font-weight: bold;
+    }
+
+    &__link {
+      font-weight: bold;
+      color:  #ff5c73;
     }
   }
 
