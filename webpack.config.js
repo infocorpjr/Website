@@ -10,6 +10,7 @@ module.exports = {
         // print: './src/print.js',
         home: [
             './src/assets/styles/sass/home.scss',
+            './src/assets/js/common.js',
             './src/assets/js/home.js'
         ],
         service: [

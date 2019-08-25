@@ -198,7 +198,13 @@
   }
 
   &__footer {
+    text-align: center;
     position: relative;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        text-align: left;
+      }
+    }
 
     &:before {
       top: 0;
@@ -226,7 +232,7 @@
       padding-top: 2rem;
       padding-bottom: 2rem;
       background: black;
-      text-align: left;
+      text-align: inherit;
       color: white;
 
       &__row {
@@ -239,8 +245,10 @@
     &__email {
       margin: 0;
       @media (max-width: map_get($grid-breakpoints, 'md')) {
-        padding-right: .5rem;
-        padding-left: .5rem;
+        & {
+          padding-right: .5rem;
+          padding-left: .5rem;
+        }
       }
     }
 
@@ -252,8 +260,15 @@
     }
 
     &__links {
+      margin-top: 2rem;
       list-style-type: none;
-      text-align: right;
+      text-align: center;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          margin-top: 0;
+          text-align: right;
+        }
+      }
 
       &__link {
         &__action {
