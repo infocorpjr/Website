@@ -171,6 +171,7 @@ module.exports = {
             }
         }),
         new CopyWebpackPlugin([
+            {from: './public', to: '.'},
             {from: './src/assets/images', to: 'images'},
             {from: './src/assets/svg', to: 'svg'}
         ]),

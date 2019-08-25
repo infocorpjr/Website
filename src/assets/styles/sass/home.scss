@@ -11,7 +11,7 @@
       left: 0;
       width: 95%;
       height: 100%;
-      background: transparent url('../../svg/undraw_Business_analytics_64el2.svg') no-repeat 95% 95%;
+      background: transparent url('/svg/undraw_Business_analytics_64el2.svg') no-repeat 95% 95%;
       background-size: 80%;
       content: '';
       position: absolute;
@@ -72,7 +72,7 @@
       left: 0;
       width: 100%;
       height: 60%;
-      background: url("../../images/dots-large.svg") repeat center center;
+      background: url("/images/dots-large.svg") repeat center center;
       content: '';
       position: absolute;
       z-index: -99;
@@ -117,20 +117,6 @@
       border-right: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
       position: relative;
-
-      /*
-      &:before {
-        top: 0;
-        right: -10%;
-        padding: 5px;
-        width: 100%;
-        height: 140%;
-        background: url("../../images/dots-large.svg");
-        content: '';
-        position: absolute;
-        z-index: -1;
-      }
-      */
     }
 
     &__title,
