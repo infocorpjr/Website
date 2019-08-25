@@ -15,6 +15,7 @@ module.exports = {
         ],
         service: [
             './src/assets/styles/sass/service.scss',
+            './src/assets/js/common.js',
             './src/assets/js/service.js'
         ],
         member: [
@@ -24,9 +25,6 @@ module.exports = {
         about: [
             './src/assets/styles/sass/about.scss',
             './src/assets/js/about.js'
-        ],
-        animation: [
-            './src/assets/styles/sass/animation.scss'
         ]
     },
     devtool: 'eval',
