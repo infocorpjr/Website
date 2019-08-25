@@ -4,10 +4,16 @@
 .beyond {
   padding: .2rem 0;
   background-color: rgba(opposite($theme-default-primary), .99);
+  font-size: .8rem;
   text-align: right;
   color: $theme-default-primary;
   position: relative;
   z-index: -9;
+  @media (min-width: map_get($grid-breakpoints, 'md')) {
+    & {
+      font-size: 1rem;
+    }
+  }
 }
 
 .home {
@@ -22,10 +28,15 @@
       width: 95%;
       height: 100%;
       background: transparent url('../../svg/undraw_Business_analytics_64el2.svg') no-repeat 95% 95%;
-      background-size: 50%;
+      background-size: 80%;
       content: '';
       position: absolute;
       opacity: .7;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          background-size: 50%;
+        }
+      }
     }
 
     &__particles {
@@ -40,8 +51,13 @@
       padding: 1rem;
       background: rgba(opposite($theme-default-primary), .99);
       border: 5px solid $theme-default-primary;
-      font-size: 2rem;
+      font-size: 1.2rem;
       color: $theme-default-primary;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          font-size: 2rem;
+        }
+      }
     }
 
     &__subtitle {

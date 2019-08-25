@@ -1,6 +1,7 @@
 @import "functions";
 @import "variables";
 @import "bootstrap";
+@import "hamburgers";
 
 html,
 body {
@@ -50,12 +51,18 @@ body {
 
 .navbar {
   margin: 2rem 0;
+  padding: 0 .5rem;
   font-size: 1.2rem;
 
   &__infocorp {
     padding: 0 2px;
-    width: 80px;
+    width: 110px;
     background: opposite($theme-default-primary);
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        width: 80px;
+      }
+    }
 
     > path {
       fill: $theme-default-primary;
@@ -64,6 +71,12 @@ body {
 
   &__title {
     margin: 0;
+    display: none;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        display: block;
+      }
+    }
   }
 
   &__row {
@@ -75,13 +88,28 @@ body {
   }
 
   &__links {
-    padding: 0rem;
+    padding: 0;
     list-style-type: none;
+    display: none;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        display: inline-block;
+      }
+    }
 
     &__link {
       margin: 0 .2rem;
-      display: inline-block;
+      display: none;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          display: inline-block;
+        }
+      }
     }
+  }
+
+  &__menu {
+    display: none;
   }
 }
 

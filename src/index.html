@@ -7,7 +7,22 @@
     <title>Infocorp - Empresa Júnior do Instituto de Computação da UFMT</title>
     <!-- Eu quero estar aqui ... Qual o problema ? -->
     <script>
-        window.NodeList&&!NodeList.prototype.forEach&&(NodeList.prototype.forEach=function(c,b){b=b||window;for(var a=0;a<this.length;a++)c.call(b,this[a],a,this)});(function(){function c(){var a=(new Date).getTime();console.log(a,a-b,"loaded");a=document.body.getAttribute("class")||"";document.body.setAttribute("class",a+" loaded")}var b=(new Date).getTime();console.log(b);window.addEventListener?window.addEventListener("load",c,!1):window.attachEvent?window.attachEvent("onload",c):window.onload=c})();
+        window.NodeList && !NodeList.prototype.forEach && (NodeList.prototype.forEach = function (c, b) {
+            b = b || window;
+            for (var a = 0; a < this.length; a++) c.call(b, this[a], a, this)
+        });
+        (function () {
+            function c() {
+                var a = (new Date).getTime();
+                console.log(a, a - b, "loaded");
+                a = document.body.getAttribute("class") || "";
+                document.body.setAttribute("class", a + " loaded")
+            }
+
+            var b = (new Date).getTime();
+            console.log(b);
+            window.addEventListener ? window.addEventListener("load", c, !1) : window.attachEvent ? window.attachEvent("onload", c) : window.onload = c
+        })();
     </script>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
@@ -15,7 +30,16 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734158-1"></script>
     <script>
-        if(window.location.host === "infocorpjr.com") {window.dataLayer = window.dataLayer || [];function gtag() {dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-141734158-1');}
+        if (window.location.host === "infocorpjr.com") {
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-141734158-1');
+        }
     </script>
 </head>
 <body class="home">
@@ -69,6 +93,18 @@
                                         <a class="navbar__links__link__action" href="/about">Sobre</a>
                                     </li>
                                 </ul>
+                                <div class="navbar__hamburger">
+                                    <button id="hamburger" class="hamburger hamburger--collapse" type="button">
+                                      <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                      </span>
+                                    </button>
+                                </div>
+                                <ul class="navbar__menu">
+                                    <li class="navbar__menu__link">
+                                        <a class="navbar__menu__link__action" href="#">poaskdpoksa</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -80,7 +116,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-8 col-lg-7 col-xl-7">
-                            <h1 class="home__header__title">Implementando soluções para obter melhores resultados</h1>
+                            <h1 class="home__header__title">Implementando soluções para obter os melhores
+                                resultados</h1>
                             <p class="home__header__subtitle">
                                 Descubra qual a melhor solução se encaixa nas necessidades do seu negócio.
                             </p>
