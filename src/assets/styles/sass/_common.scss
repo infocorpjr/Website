@@ -201,9 +201,15 @@ body {
 // Seção da barra superior ...
 .beyond {
   padding: .2rem 0;
-  background-color: rgba(opposite($theme-default-primary), .9);
+  background-color: rgba(opposite($theme-default-primary), .99);
+  font-size: .8rem;
   text-align: right;
   color: $theme-default-primary;
   position: relative;
-  z-index: 999;
+  z-index: -9;
+  @media (min-width: map_get($grid-breakpoints, 'md')) {
+    & {
+      font-size: 1rem;
+    }
+  }
 }

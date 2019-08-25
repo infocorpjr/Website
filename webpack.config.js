@@ -20,10 +20,12 @@ module.exports = {
         ],
         member: [
             './src/assets/styles/sass/member.scss',
+            './src/assets/js/common.js',
             './src/assets/js/member.js'
         ],
         about: [
             './src/assets/styles/sass/about.scss',
+            './src/assets/js/common.js',
             './src/assets/js/about.js'
         ]
     },

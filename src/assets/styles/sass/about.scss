@@ -8,7 +8,7 @@
 
     &:before {
       top: 0;
-      left: 50%;
+      left: 49%;
       width: 50%;
       height: 80%;
       background: url("../../images/dots-large.svg") repeat center bottom;
@@ -37,13 +37,20 @@
       text-transform: uppercase;
 
       &__infocorp {
-        width: 100%;
+        width: 99%;
       }
     }
 
     &__description {
       &__image {
+        margin: auto;
         width: 80%;
+        display: block;
+        @media (min-width: map_get($grid-breakpoints, 'md')) {
+          & {
+            display: inline-block;
+          }
+        }
       }
     }
   }
@@ -65,8 +72,12 @@
 
     &__box {
       &__row {
-        margin: 0 -5px;
         align-items: stretch;
+        @media (min-width: map_get($grid-breakpoints, 'md')) {
+          & {
+            margin: 0 -5px;
+          }
+        }
 
         > div {
           // Não gosto de usar px, porém neste caso tem que ter.
@@ -164,7 +175,7 @@
     }
 
     &__vision {
-      background: $default-yellow url("../../svg/undraw_Mobile_app_p3ts.svg") no-repeat 95% 95%;
+      background:$default-yellow url("../../svg/undraw_Mobile_app_p3ts.svg") no-repeat 95% 95%;
       background-size: 10%;
       line-height: 1.5;
       color: opposite(white);
