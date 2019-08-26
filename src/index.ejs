@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Infocorp - Empresa Júnior do Instituto de Computação da UFMT</title>
+
+    <title><%= htmlWebpackPlugin.options.title || '' %></title>
+
     <!-- Eu quero estar aqui ... Qual o problema ? -->
     <script>
         window.NodeList && !NodeList.prototype.forEach && (NodeList.prototype.forEach = function (c, b) {
@@ -24,13 +26,12 @@
             window.addEventListener ? window.addEventListener("load", c, !1) : window.attachEvent ? window.attachEvent("onload", c) : window.onload = c
         })();
     </script>
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
-    <!-- Google Analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141734158-1"></script>
-    <script>
-        if (window.location.host === "infocorpjr.com") {
+
+    <% if (process.env.APP_ENV && process.env.APP_ENV === 'production') { %>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=<%= process.env.GOOGLE_ANALYTICS %>"></script>
+        <script>
             window.dataLayer = window.dataLayer || [];
 
             function gtag() {
@@ -38,9 +39,29 @@
             }
 
             gtag('js', new Date());
-            gtag('config', 'UA-141734158-1');
-        }
-    </script>
+            gtag('config', '<%= process.env.GOOGLE_ANALYTICS %>');
+        </script>
+    <% } %>
+
+    <% if (process.env.APP_ENV && process.env.APP_ENV === 'production') { %>
+        <!-- Hotjar Tracking Code for https://infocorpjr.com/ -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj = h.hj || function () {
+                    (h.hj.q = h.hj.q || []).push(arguments)
+                };
+                h._hjSettings = {hjid:<%= process.env.HOTJAR %>, hjsv: 6};
+                a = o.getElementsByTagName('head')[0];
+                r = o.createElement('script');
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
+    <% } %>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
 </head>
 <body class="home">
 <!-- O INÍCIO -->
@@ -192,7 +213,7 @@
                                 Nosso foco é na melhor experiência para o usuário. Somo uma equipe curiosa por
                                 inovação, de pensadores originais e comprometidos, loucos por inovar e tornar a sua
                                 experiência excepcional, <a class="home__services__link" href="/service">conheça nossas
-                                soluções</a>.
+                                    soluções</a>.
                             </p>
                         </div>
                     </div>

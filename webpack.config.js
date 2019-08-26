@@ -1,12 +1,11 @@
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const FaviconWebpackPlugin = require('favicons-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = env => {
-    console.log('Production: ', env);
     return {
         mode: 'development',
         entry: {
@@ -32,7 +31,7 @@ module.exports = env => {
                 './src/assets/js/about.js'
             ]
         },
-        devtool: env.APP_ENV === 'local' ? 'eval' : 'source-map',
+        devtool: process.env === 'local' ? 'eval' : 'source-map',
         devServer: {
             contentBase: path.join(__dirname, 'dist'),
             compress: true,
@@ -99,9 +98,13 @@ module.exports = env => {
             new CleanWebpackPlugin(),
             // Configuração de template para a página inicial ...
             new HtmlWebpackPlugin({
-                template: 'src/index.html',
+                title: 'Infocorp - Empresa Júnior do Instituto de Computação, UFMT',
+                template: 'src/index.ejs',
                 chunks: ['home'],
                 hash: true,
+                googleAnalytics: {
+                    trackingId: ''
+                },
                 minify: {
                     collapseWhitespace: true,
                     removeComments: true,
@@ -113,8 +116,8 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 base: 'service',
-                filename: 'service/index.html',
-                template: './src/service/index.html',
+                filename: 'service/index.ejs',
+                template: './src/service/index.ejs',
                 chunks: ['service'],
                 hash: true,
                 minify: {
@@ -128,8 +131,8 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 base: 'member',
-                filename: 'member/index.html',
-                template: './src/member/index.html',
+                filename: 'member/index.ejs',
+                template: './src/member/index.ejs',
                 chunks: ['member'],
                 hash: true,
                 minify: {
@@ -143,8 +146,8 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 base: 'about',
-                filename: 'about/index.html',
-                template: './src/about/index.html',
+                filename: 'about/index.ejs',
+                template: './src/about/index.ejs',
                 chunks: ['about'],
                 hash: true,
                 minify: {
@@ -173,14 +176,12 @@ module.exports = env => {
                     windows: false
                 }
             }),
-            new HtmlWebpackPartialsPlugin({
-                path: './path/to/partials/body.html'
-            }),
             new CopyWebpackPlugin([
                 {from: './public', to: '.'},
                 {from: './src/assets/images', to: 'images'},
                 {from: './src/assets/svg', to: 'svg'}
             ]),
+            new Dotenv()
         ]
     }
 };

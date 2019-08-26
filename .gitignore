@@ -18,3 +18,7 @@ yarn-error.log*
 # Editor
 .idea
 .vscode
+
+# Variáveis de ambiente
+.env
+.env.production
