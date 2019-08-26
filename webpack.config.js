@@ -5,10 +5,8 @@ const FaviconWebpackPlugin = require('favicons-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-module.exports = env => {
-    console.log('env ', env);
-    console.log('process.env ', process.env);
-    return {
+module.exports = (env, arg) => {
+    const config = {
         mode: 'development',
         entry: {
             // print: './src/print.js',
@@ -51,7 +49,12 @@ module.exports = env => {
                     use: {
                         loader: 'html-loader',
                         options: {
-                            attrs: [':data-src']
+                            attrs: ["img:src"],
+                            minimize: arg.mode === "production",
+                            removeComments: arg.mode === "production",
+                            collapseWhitespace: arg.mode === "production",
+                            minifyJS: arg.mode === "production",
+                            removeRedundantAttributes: arg.mode === "production"
                         }
                     }
                 },
@@ -96,8 +99,6 @@ module.exports = env => {
             ]
         },
         plugins: [
-            // Limpa o diretório de saída ...
-            new CleanWebpackPlugin(),
             // Configuração de template para a página inicial ...
             new HtmlWebpackPlugin({
                 title: 'Infocorp - Empresa Júnior do Instituto de Computação, UFMT',
@@ -108,12 +109,12 @@ module.exports = env => {
                     trackingId: ''
                 },
                 minify: {
-                    collapseWhitespace: true,
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    removeScriptTypeAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    useShortDoctype: true
+                    collapseWhitespace: arg.mode === "production",
+                    removeComments: arg.mode === "production",
+                    removeRedundantAttributes: arg.mode === "production",
+                    removeScriptTypeAttributes: arg.mode === "production",
+                    removeStyleLinkTypeAttributes: arg.mode === "production",
+                    useShortDoctype: arg.mode === "production"
                 }
             }),
             new HtmlWebpackPlugin({
@@ -123,12 +124,12 @@ module.exports = env => {
                 chunks: ['service'],
                 hash: true,
                 minify: {
-                    collapseWhitespace: true,
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    removeScriptTypeAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    useShortDoctype: true
+                    collapseWhitespace: arg.mode === "production",
+                    removeComments: arg.mode === "production",
+                    removeRedundantAttributes: arg.mode === "production",
+                    removeScriptTypeAttributes: arg.mode === "production",
+                    removeStyleLinkTypeAttributes: arg.mode === "production",
+                    useShortDoctype: arg.mode === "production"
                 }
             }),
             new HtmlWebpackPlugin({
@@ -138,12 +139,12 @@ module.exports = env => {
                 chunks: ['member'],
                 hash: true,
                 minify: {
-                    collapseWhitespace: true,
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    removeScriptTypeAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    useShortDoctype: true
+                    collapseWhitespace: arg.mode === "production",
+                    removeComments: arg.mode === "production",
+                    removeRedundantAttributes: arg.mode === "production",
+                    removeScriptTypeAttributes: arg.mode === "production",
+                    removeStyleLinkTypeAttributes: arg.mode === "production",
+                    useShortDoctype: arg.mode === "production"
                 }
             }),
             new HtmlWebpackPlugin({
@@ -153,12 +154,12 @@ module.exports = env => {
                 chunks: ['about'],
                 hash: true,
                 minify: {
-                    collapseWhitespace: true,
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    removeScriptTypeAttributes: true,
-                    removeStyleLinkTypeAttributes: true,
-                    useShortDoctype: true
+                    collapseWhitespace: arg.mode === "production",
+                    removeComments: arg.mode === "production",
+                    removeRedundantAttributes: arg.mode === "production",
+                    removeScriptTypeAttributes: arg.mode === "production",
+                    removeStyleLinkTypeAttributes: arg.mode === "production",
+                    useShortDoctype: arg.mode === "production"
                 }
             }),
             // Configuração para geração de favicon ...
@@ -187,5 +188,11 @@ module.exports = env => {
                 systemvars: true
             })
         ]
+    };
+    if (arg.mode === 'production') {
+        config.plugins = config.plugins.concat([
+            new CleanWebpackPlugin(),  // Limpa o diretório de saída ...
+        ])
     }
+    return config;
 };
