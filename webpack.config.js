@@ -6,6 +6,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = env => {
+    console.log('env ', env);
+    console.log('process.env ', process.env);
     return {
         mode: 'development',
         entry: {
@@ -116,7 +118,7 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 base: 'service',
-                filename: 'service/index.ejs',
+                filename: 'service/index.html',
                 template: './src/service/index.ejs',
                 chunks: ['service'],
                 hash: true,
@@ -131,7 +133,7 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 base: 'member',
-                filename: 'member/index.ejs',
+                filename: 'member/index.html',
                 template: './src/member/index.ejs',
                 chunks: ['member'],
                 hash: true,
@@ -146,7 +148,7 @@ module.exports = env => {
             }),
             new HtmlWebpackPlugin({
                 base: 'about',
-                filename: 'about/index.ejs',
+                filename: 'about/index.html',
                 template: './src/about/index.ejs',
                 chunks: ['about'],
                 hash: true,
@@ -181,7 +183,9 @@ module.exports = env => {
                 {from: './src/assets/images', to: 'images'},
                 {from: './src/assets/svg', to: 'svg'}
             ]),
-            new Dotenv()
+            new Dotenv({
+                systemvars: true
+            })
         ]
     }
 };
