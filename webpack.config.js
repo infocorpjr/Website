@@ -1,53 +1,52 @@
-const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconWebpackPlugin = require('favicons-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+const path = require("path");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconWebpackPlugin = require("favicons-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = (env, arg) => {
     const config = {
-        mode: 'development',
+        mode: "development",
         entry: {
-            // print: './src/print.js',
             home: [
-                './src/assets/styles/sass/home.scss',
-                './src/assets/js/common.js',
-                './src/assets/js/home.js'
+                "./src/assets/styles/sass/home.scss",
+                "./src/assets/js/common.js",
+                "./src/assets/js/home.js"
             ],
             service: [
-                './src/assets/styles/sass/service.scss',
-                './src/assets/js/common.js',
-                './src/assets/js/service.js'
+                "./src/assets/styles/sass/service.scss",
+                "./src/assets/js/common.js",
+                "./src/assets/js/service.js"
             ],
             member: [
-                './src/assets/styles/sass/member.scss',
-                './src/assets/js/common.js',
-                './src/assets/js/member.js'
+                "./src/assets/styles/sass/member.scss",
+                "./src/assets/js/common.js",
+                "./src/assets/js/member.js"
             ],
             about: [
-                './src/assets/styles/sass/about.scss',
-                './src/assets/js/common.js',
-                './src/assets/js/about.js'
+                "./src/assets/styles/sass/about.scss",
+                "./src/assets/js/common.js",
+                "./src/assets/js/about.js"
             ]
         },
-        devtool: process.env === 'local' ? 'eval' : 'source-map',
+        devtool: process.env === "local" ? "eval" : "source-map",
         devServer: {
-            contentBase: path.join(__dirname, 'dist'),
+            contentBase: path.join(__dirname, "dist"),
             compress: true,
             port: 9000
         },
         output: {
-            filename: '[name].bundle.js',
-            chunkFilename: '[name].bundle.js',
-            path: path.resolve(__dirname, 'dist')
+            filename: "[name].[chunkhash:8].js",
+            chunkFilename: "[name].[chunkhash:8].js",
+            path: path.resolve(__dirname, "dist")
         },
         module: {
             rules: [
                 {
                     test: /\.(html)$/,
                     use: {
-                        loader: 'html-loader',
+                        loader: "html-loader",
                         options: {
                             attrs: ["img:src"],
                             minimize: arg.mode === "production",
@@ -77,10 +76,10 @@ module.exports = (env, arg) => {
                     test: /\.m?js$/,
                     exclude: /(node_modules|bower_components)/,
                     use: {
-                        loader: 'babel-loader',
+                        loader: "babel-loader",
                         options: {
-                            presets: ['@babel/preset-env'],
-                            plugins: ['@babel/plugin-proposal-object-rest-spread']
+                            presets: ["@babel/preset-env"],
+                            plugins: ["@babel/plugin-proposal-object-rest-spread"]
                         }
                     }
                 },
@@ -88,10 +87,10 @@ module.exports = (env, arg) => {
                     test: /\.(png|jpe?g|gif|svg)$/,
                     use: [
                         {
-                            loader: 'file-loader',
+                            loader: "file-loader",
                             options: {
-                                name: '[path][name].[ext]',
-                                outputPath: 'images',
+                                name: "[path][name].[ext]",
+                                outputPath: "images",
                             },
                         },
                     ],
@@ -101,12 +100,11 @@ module.exports = (env, arg) => {
         plugins: [
             // Configuração de template para a página inicial ...
             new HtmlWebpackPlugin({
-                title: 'Infocorp - Empresa Júnior do Instituto de Computação, UFMT',
-                template: 'src/index.ejs',
-                chunks: ['home'],
-                hash: true,
+                title: "Infocorp - Empresa Júnior do Instituto de Computação, UFMT",
+                template: "src/index.ejs",
+                chunks: ["home"],
                 googleAnalytics: {
-                    trackingId: ''
+                    trackingId: ""
                 },
                 minify: {
                     collapseWhitespace: arg.mode === "production",
@@ -118,11 +116,10 @@ module.exports = (env, arg) => {
                 }
             }),
             new HtmlWebpackPlugin({
-                base: 'service',
-                filename: 'service/index.html',
-                template: './src/service/index.ejs',
-                chunks: ['service'],
-                hash: true,
+                base: "service",
+                filename: "service/index.html",
+                template: "./src/service/index.ejs",
+                chunks: ["service"],
                 minify: {
                     collapseWhitespace: arg.mode === "production",
                     removeComments: arg.mode === "production",
@@ -133,11 +130,10 @@ module.exports = (env, arg) => {
                 }
             }),
             new HtmlWebpackPlugin({
-                base: 'member',
-                filename: 'member/index.html',
-                template: './src/member/index.ejs',
-                chunks: ['member'],
-                hash: true,
+                base: "member",
+                filename: "member/index.html",
+                template: "./src/member/index.ejs",
+                chunks: ["member"],
                 minify: {
                     collapseWhitespace: arg.mode === "production",
                     removeComments: arg.mode === "production",
@@ -148,11 +144,10 @@ module.exports = (env, arg) => {
                 }
             }),
             new HtmlWebpackPlugin({
-                base: 'about',
-                filename: 'about/index.html',
-                template: './src/about/index.ejs',
-                chunks: ['about'],
-                hash: true,
+                base: "about",
+                filename: "about/index.html",
+                template: "./src/about/index.ejs",
+                chunks: ["about"],
                 minify: {
                     collapseWhitespace: arg.mode === "production",
                     removeComments: arg.mode === "production",
@@ -164,8 +159,8 @@ module.exports = (env, arg) => {
             }),
             // Configuração para geração de favicon ...
             new FaviconWebpackPlugin({
-                logo: './src/assets/favicon/brand.png',
-                title: 'Infocorp',
+                logo: "./src/assets/favicon/brand.png",
+                title: "Infocorp",
                 icons: {
                     android: true,
                     appleIcon: true,
@@ -180,16 +175,16 @@ module.exports = (env, arg) => {
                 }
             }),
             new CopyWebpackPlugin([
-                {from: './public', to: '.'},
-                {from: './src/assets/images', to: 'images'},
-                {from: './src/assets/svg', to: 'svg'}
+                {from: "./public", to: "."},
+                {from: "./src/assets/images", to: "images"},
+                {from: "./src/assets/svg", to: "svg"}
             ]),
             new Dotenv({
                 systemvars: true
             })
         ]
     };
-    if (arg.mode === 'production') {
+    if (arg.mode === "production") {
         config.plugins = config.plugins.concat([
             new CleanWebpackPlugin(),  // Limpa o diretório de saída ...
         ])
