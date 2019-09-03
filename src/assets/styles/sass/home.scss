@@ -104,7 +104,7 @@
 
     &__link {
       font-weight: bold;
-      color: #76e1f4;
+      color: darken(#76e1f4, 40%);
     }
   }
 
@@ -141,7 +141,7 @@
 
     &__link {
       font-weight: bold;
-      color:  #ff5c73;
+      color: darken(#ff5c73, 30%);
     }
   }
 
@@ -174,7 +174,7 @@
 
     &__link {
       font-weight: bold;
-      color: #5fa1f4;
+      color: darken(#5fa1f4, 30%);
     }
   }
 
