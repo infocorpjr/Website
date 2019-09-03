@@ -168,7 +168,7 @@
 
       b {
         letter-spacing: 4px;
-        color: $default-red;
+        color: darken($default-red, 30%);
       }
     }
   }
