@@ -37,14 +37,14 @@
     }
 
     &__title {
-      padding: 1rem;
-      background: #6b95f8;
-      border: 5px solid $theme-default-primary;
+      padding: .5rem 1rem;
+      //background: #6b95f8;
+      border: 10px solid $theme-default-primary;
       font-size: 1.2rem;
-      color: $theme-default-primary;
+      color: #6b95f8;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
-          font-size: 2rem;
+          font-size: 3rem;
         }
       }
     }
