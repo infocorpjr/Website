@@ -7,6 +7,7 @@ html,
 body {
   margin: 0;
   height: 100%;
+  border-top: 5px solid black;
 }
 
 a {
@@ -60,15 +61,15 @@ body {
   &__infocorp {
     padding: 0 2px;
     width: 110px;
-    background: opposite($theme-default-primary);
+    // background: opposite($theme-default-primary);
     @media (min-width: map_get($grid-breakpoints, 'md')) {
       & {
-        width: 80px;
+        width: 180px;
       }
     }
 
     &__brand {
-      fill: $theme-default-primary;
+      fill: #007AFF;
     }
   }
 
@@ -101,7 +102,8 @@ body {
     }
 
     &__link {
-      margin: 0 .2rem;
+      margin: 0 .3rem;
+      letter-spacing: -1px;
       display: none;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {

@@ -3,6 +3,11 @@
 .home {
   &__header {
     height: 100%;
+    background: transparent {
+      image: url("../../images/banner-4.86a86274.png");
+      repeat: repeat-x;
+      position: center top;
+    };
     color: $theme-default-secondary;
     position: relative;
 
@@ -11,7 +16,7 @@
       left: 0;
       width: 95%;
       height: 100%;
-      background: transparent url('/svg/undraw_Business_analytics_64el2.svg') no-repeat 95% 95%;
+      background: transparent url('../../svg/undraw_statistic_chart_38b6.svg') no-repeat 95% 95%;
       background-size: 80%;
       content: '';
       position: absolute;
@@ -72,7 +77,7 @@
       left: 0;
       width: 100%;
       height: 60%;
-      background: url("/images/dots-large.svg") repeat center center;
+      background: url("/../../images/dots-large.svg") repeat center center;
       content: '';
       position: absolute;
       z-index: -99;
