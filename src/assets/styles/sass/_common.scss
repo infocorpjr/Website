@@ -20,7 +20,8 @@ a {
 }
 
 body {
-  font-family: 'Roboto Mono', monospace;
+  //font-family: 'Roboto Mono', monospace;
+  font-family: 'Lato', sans-serif;
   color: opposite($theme-default-primary);
   position: relative;
   &[menu] {

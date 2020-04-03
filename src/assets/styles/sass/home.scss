@@ -38,7 +38,7 @@
 
     &__title {
       padding: 1rem;
-      background: rgba(opposite($theme-default-primary), .99);
+      background: #6b95f8;
       border: 5px solid $theme-default-primary;
       font-size: 1.2rem;
       color: $theme-default-primary;
@@ -69,18 +69,32 @@
   }
 
   &__services {
-    height: 70%;
+    margin: 5rem 0;
+    padding: 8rem 0;
     position: relative;
 
     &::before {
-      top: 20%;
-      left: 0;
-      width: 100%;
-      height: 60%;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
       background: url("/../../images/dots-large.svg") repeat center center;
       content: '';
       position: absolute;
       z-index: -99;
+    }
+
+    &__box {
+      padding: 4rem 4rem;
+      width: 100%;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          width: 60%;
+        }
+      }
     }
 
     &__title,
@@ -92,6 +106,7 @@
     }
 
     &__title {
+      padding: .1rem .5rem;
       background: #76e1f4;
       font-size: 1.1rem;
       font-weight: bold;
@@ -104,6 +119,7 @@
     }
 
     &__description {
+      line-height: 2;
       transition: all 0.4s ease-in-out;
     }
 
@@ -114,14 +130,23 @@
   }
 
   &__who {
-    height: 40%;
+    background: white {
+      image: url("../../svg/service-bg.d0e67e81.svg");
+      position: center top;
+      size: 200%;
+    };
+
+    @media (min-width: map_get($grid-breakpoints, 'lg')) {
+      & {
+        background-size: 100%;
+      }
+    }
 
     &__square {
-      padding-right: 1rem;
-      padding-bottom: 1rem;
-      border-right: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      position: relative;
+      padding: 4rem 4rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
     }
 
     &__title,
@@ -151,6 +176,7 @@
   }
 
   &__member {
+    background: #f7faff;
     height: 50%;
 
     &__title,
@@ -158,7 +184,6 @@
     &__description {
       margin: 0;
       padding: .2rem;
-      background: white;
     }
 
     &__title {
