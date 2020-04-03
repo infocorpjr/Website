@@ -1,6 +1,7 @@
 const path = require("path");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconWebpackPlugin = require("favicons-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
@@ -60,14 +61,14 @@ module.exports = (env, arg) => {
                 {
                     test: /\.css$/i,
                     use: [
-                        "style-loader",
+                        MiniCssExtractPlugin.loader,
                         "css-loader"
                     ],
                 },
                 {
                     test: /\.scss$/,
                     use: [
-                        "style-loader",
+                        MiniCssExtractPlugin.loader,
                         "css-loader",
                         "sass-loader"
                     ]
@@ -157,6 +158,7 @@ module.exports = (env, arg) => {
                     useShortDoctype: arg.mode === "production"
                 }
             }),
+            new MiniCssExtractPlugin(),
             // Configuração para geração de favicon ...
             new FaviconWebpackPlugin({
                 logo: "./src/assets/favicon/brand.png",

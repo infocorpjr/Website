@@ -127,13 +127,20 @@
 
   &__who {
     background: white {
-      image: url("../../svg/service-bg.d0e67e81.svg");
+      image: url("../../images/shape_1.png");
       position: center top;
       size: 200%;
     };
 
-    @media (min-width: map_get($grid-breakpoints, 'lg')) {
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
       & {
+        padding: 4rem 0;
+      }
+    }
+
+    @media (min-width: map_get($grid-breakpoints, 'xl')) {
+      & {
+        padding: 10rem 0;
         background-size: 100%;
       }
     }
@@ -179,7 +186,7 @@
 
   &__member {
     background: #f7faff;
-    height: 50%;
+    height: 40%;
 
     &__title,
     &__subtitle,
