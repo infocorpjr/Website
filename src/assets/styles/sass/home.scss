@@ -3,11 +3,6 @@
 .home {
   &__header {
     height: 100%;
-    background: transparent {
-      image: url("../../images/banner-4.86a86274.png");
-      repeat: repeat-x;
-      position: center top;
-    };
     color: $theme-default-secondary;
     position: relative;
 
@@ -44,14 +39,14 @@
       color: #6b95f8;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
-          font-size: 3rem;
+          font-size: 4rem;
         }
       }
     }
 
     &__subtitle {
       padding: .5rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       background: white;
     }
 
@@ -108,7 +103,7 @@
     &__title {
       padding: .1rem .5rem;
       background: #76e1f4;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       display: inline-block;
     }
@@ -120,6 +115,7 @@
 
     &__description {
       line-height: 2;
+      font-size: 1.2rem;
       transition: all 0.4s ease-in-out;
     }
 
@@ -155,11 +151,13 @@
       margin: 0;
       padding: .2rem;
       background: white;
+      font-size: 1.2rem;
     }
 
     &__title {
+      padding: .1rem .5rem;
       background: #ff5c73;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       display: inline-block;
     }
@@ -167,6 +165,10 @@
     &__subtitle {
       font-size: 2.5rem;
       font-weight: bold;
+    }
+
+    &__description {
+      line-height: 2;
     }
 
     &__link {
@@ -187,8 +189,9 @@
     }
 
     &__title {
+      padding: .1rem .5rem;
       background: #5fa1f4;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       display: inline-block;
     }
@@ -199,6 +202,8 @@
     }
 
     &__description {
+      line-height: 2;
+      font-size: 1.6rem;
       transition: all 0.4s ease-in-out;
     }
 

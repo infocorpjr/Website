@@ -7,7 +7,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  border-top: 5px solid black;
+  font-size: 12px;
 }
 
 a {
@@ -20,6 +20,11 @@ a {
 }
 
 body {
+  background: {
+    image: url("../../images/banner-4.86a86274.png");
+    repeat: repeat-x;
+    position: center -10%;
+  };
   //font-family: 'Roboto Mono', monospace;
   font-family: 'Lato', sans-serif;
   color: opposite($theme-default-primary);
@@ -104,7 +109,7 @@ body {
 
     &__link {
       margin: 0 .3rem;
-      letter-spacing: -1px;
+      font-size: 1.6rem;
       display: none;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
@@ -209,7 +214,7 @@ body {
   text-align: right;
   color: $theme-default-primary;
   position: relative;
-  z-index: -9;
+  z-index: 999;
   @media (min-width: map_get($grid-breakpoints, 'md')) {
     & {
       font-size: 1rem;

@@ -25,7 +25,8 @@
     }
 
     &__description{
-      padding-right: 1rem;
+      font-size: 1.2rem;
+      padding-right: 2rem;
     }
 
     &__illustration {
@@ -111,6 +112,8 @@
 
       &__description {
         padding: 0 2rem 0 2rem;
+        line-height: 2;
+        font-size: 1.2rem;
       }
     }
   }
