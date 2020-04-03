@@ -23,23 +23,16 @@
       }
     }
 
-    &__particles {
-      top: 0;
-      left: 0;
-      position: absolute;
-      z-index: -999;
-      opacity: 1;
-    }
-
     &__title {
       padding: .5rem 1rem;
       background: rgba(242, 243, 247, 0.91);
       border: 10px solid $theme-default-primary;
       font-size: 1.2rem;
+      text-transform: uppercase;
       color: #6b95f8;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
       }
     }

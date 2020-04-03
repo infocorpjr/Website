@@ -29,6 +29,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: opposite($theme-default-primary);
   position: relative;
+
   &[menu] {
     overflow: hidden;
   }
@@ -67,7 +68,6 @@ body {
   &__infocorp {
     padding: 0 2px;
     width: 110px;
-    // background: opposite($theme-default-primary);
     @media (min-width: map_get($grid-breakpoints, 'md')) {
       & {
         width: 180px;
@@ -81,6 +81,8 @@ body {
 
   &__title {
     margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
     display: none;
     @media (min-width: map_get($grid-breakpoints, 'md')) {
       & {
@@ -90,11 +92,8 @@ body {
   }
 
   &__row {
+    justify-content: space-between;
     align-items: center;
-
-    &__right {
-      text-align: right;
-    }
   }
 
   &__links {
@@ -108,12 +107,32 @@ body {
     }
 
     &__link {
-      margin: 0 .3rem;
+      margin: 0 1rem;
       font-size: 1.6rem;
       display: none;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
           display: inline-block;
+        }
+      }
+
+      &__action {
+        transition: color 200ms ease-in-out;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &__description {
+          font-size: .8rem;
+          text-transform: uppercase;
+          display: none;
+
+          @media (min-width: map_get($grid-breakpoints, 'lg')) {
+            & {
+              display: block;
+            }
+          }
         }
       }
     }
