@@ -16,7 +16,7 @@
       left: 0;
       width: 95%;
       height: 100%;
-      background: transparent url('../../svg/undraw_statistic_chart_38b6.svg') no-repeat 95% 95%;
+      background: transparent url('../../svg/undraw_statistic_chart_38b6_2.svg') no-repeat 95% 95%;
       background-size: 80%;
       content: '';
       position: absolute;
@@ -38,7 +38,7 @@
 
     &__title {
       padding: .5rem 1rem;
-      //background: #6b95f8;
+      background: rgba(242, 243, 247, 0.91);
       border: 10px solid $theme-default-primary;
       font-size: 1.2rem;
       color: #6b95f8;
