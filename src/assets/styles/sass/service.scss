@@ -115,7 +115,26 @@
   }
 
   &__footer {
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
     position: relative;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        text-align: left;
+      }
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: black;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
 
     &:after {
       top: 0;
@@ -132,33 +151,81 @@
       padding-top: 2rem;
       padding-bottom: 2rem;
       background: black;
-      text-align: right;
+      text-align: inherit;
       color: white;
 
-      @media (min-width: map_get($grid-breakpoints, 'md')) {
-        & {
-          padding-left: 2rem;
-        }
-      }
-
       &__row {
-        align-items: center;
+
       }
     }
 
     &__infocorp,
     &__description,
     &__email {
+      margin: 0;
       @media (max-width: map_get($grid-breakpoints, 'md')) {
-        padding-right: .5rem;
-        padding-left: .5rem;
+        & {
+          padding-right: .5rem;
+          padding-left: .5rem;
+        }
+      }
+    }
+
+    &__infocorp {
+      &__brand {
+        margin-bottom: 1.5rem;
+        width: 200px;
+        fill: white;
       }
     }
 
     &__links {
+      margin: 0 {
+        top: 2rem
+      };
+      padding: 0;
+      list-style-type: none;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          margin-top: 0;
+        }
+      }
+
+      &__title {
+        margin-bottom: 2rem;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+
+      &__address,
+      &__phone {
+        margin: .5rem 0;
+        font-size: 1.1rem;
+      }
+
       &__link {
+        margin: .5rem 0;
+        font-size: 1.1rem;
         &__action {
           color: white;
+        }
+      }
+    }
+
+    &__created {
+      margin-bottom: 0;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+      color: white;
+
+      &__with {
+        &__love {
+          margin-left: .5rem;
+          font-size: 2rem;
         }
       }
     }
