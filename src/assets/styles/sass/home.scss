@@ -214,6 +214,8 @@
   }
 
   &__footer {
+    padding: 2rem 0;
+    font-size: 1rem;
     text-align: center;
     position: relative;
     @media (min-width: map_get($grid-breakpoints, 'md')) {
@@ -252,7 +254,7 @@
       color: white;
 
       &__row {
-        align-items: center;
+
       }
     }
 
@@ -270,23 +272,39 @@
 
     &__infocorp {
       &__brand {
+        margin-bottom: 1.5rem;
         width: 200px;
         fill: white;
       }
     }
 
     &__links {
-      margin-top: 2rem;
+      margin: 0 {
+        top: 2rem
+      };
+      padding: 0;
       list-style-type: none;
-      text-align: center;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
           margin-top: 0;
-          text-align: right;
         }
       }
 
+      &__title {
+        margin-bottom: 2rem;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+
+      &__address,
+      &__phone {
+        margin: .5rem 0;
+        font-size: 1.1rem;
+      }
+
       &__link {
+        margin: .5rem 0;
+        font-size: 1.1rem;
         &__action {
           color: white;
         }
