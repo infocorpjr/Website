@@ -1,15 +1,8 @@
 @import "common";
 
 .team {
-
-
   &__header {
     $parent: &;
-
-    &__box__middle,
-    &__box__bottom {
-      background: lighten($default-red, 45%);
-    }
 
     &__badge {
       margin: 0;
@@ -24,12 +17,12 @@
       width: 100%;
       height: 200px;
       position: relative;
-      transition: all 0.2s ease-in-out;
+      transition: all 1s ease-in-out;
 
       @media(min-width: map_get($grid-breakpoints, 'md')) {
         & {
-          width: 580px;
-          height: 350px;
+          width: 600px;
+          height: 380px;
         }
       }
 
@@ -39,6 +32,7 @@
         content: 'Alunos, profissionais  e professores';
         letter-spacing: 8px;
         font-weight: bold;
+        text-transform: uppercase;
         color: $default-red;
         position: absolute;
 
@@ -60,7 +54,8 @@
             top: auto;
             bottom: 0;
             left: 101%;
-            width: 40%;
+            width: 45%;
+            font-size: 1.5rem;
           }
         }
       }
@@ -69,16 +64,10 @@
         bottom: 100%;
         width: 100%;
         content: 'Quem faz farte do time da Infocorp?';
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: bold;
         position: absolute;
         transition: all 0.2s ease-in-out;
-
-        @media(min-width: map_get($grid-breakpoints, 'md')) and (max-width: map_get($grid-breakpoints, 'lg')) {
-          & {
-            font-size: 2rem;
-          }
-        }
 
         @media(min-width: map_get($grid-breakpoints, 'lg') + 1) and (max-width: map_get($grid-breakpoints, 'xl')) {
           & {
@@ -113,9 +102,15 @@
 
   &__description {
     margin: 5rem 0;
+    font-size: 1rem;
 
     &__title {
       font-size: 2rem;
+    }
+
+    &__member,
+    &__diversity {
+      font-size: 1.2rem;
     }
   }
 
@@ -131,6 +126,7 @@
       padding: 1.1rem 0;
       background: white;
       border-bottom: 1px solid #eee;
+      font-size: 1.2rem;
 
       &:last-child {
         border: none;
@@ -138,6 +134,7 @@
 
       b {
         letter-spacing: 4px;
+        text-transform: uppercase;
       }
     }
   }
@@ -161,6 +158,7 @@
       padding: 1.5rem 0;
       background: white;
       border-bottom: 1px solid #eee;
+      font-size: 1.2rem;
 
       &:last-child {
         border: none;
@@ -168,13 +166,33 @@
 
       b {
         letter-spacing: 4px;
+        text-transform: uppercase;
         color: darken($default-red, 30%);
       }
     }
   }
 
   &__footer {
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
     position: relative;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        text-align: left;
+      }
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: black;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
 
     &:after {
       top: 0;
@@ -191,33 +209,77 @@
       padding-top: 2rem;
       padding-bottom: 2rem;
       background: black;
-      text-align: right;
+      text-align: inherit;
       color: white;
-
-      @media (min-width: map_get($grid-breakpoints, 'md')) {
-        & {
-          padding-left: 2rem;
-        }
-      }
-
-      &__row {
-        align-items: center;
-      }
     }
 
     &__infocorp,
     &__description,
     &__email {
+      margin: 0;
       @media (max-width: map_get($grid-breakpoints, 'md')) {
-        padding-right: .5rem;
-        padding-left: .5rem;
+        & {
+          padding-right: .5rem;
+          padding-left: .5rem;
+        }
+      }
+    }
+
+    &__infocorp {
+      &__brand {
+        margin-bottom: 1.5rem;
+        width: 200px;
+        fill: white;
       }
     }
 
     &__links {
+      margin: 0 {
+        top: 2rem
+      };
+      padding: 0;
+      list-style-type: none;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          margin-top: 0;
+        }
+      }
+
+      &__title {
+        margin-bottom: 2rem;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+
+      &__address,
+      &__phone {
+        margin: .5rem 0;
+        font-size: 1.1rem;
+      }
+
       &__link {
+        margin: .5rem 0;
+        font-size: 1.1rem;
         &__action {
           color: white;
+        }
+      }
+    }
+
+    &__created {
+      margin-bottom: 0;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+      color: white;
+
+      &__with {
+        &__love {
+          margin-left: .5rem;
+          font-size: 2rem;
         }
       }
     }
