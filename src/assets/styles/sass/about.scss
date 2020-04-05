@@ -55,7 +55,6 @@
     }
   }
 
-  // A seta para baixo, hehe
   .arrow {
     margin: auto;
     width: 50px;
@@ -67,7 +66,8 @@
   }
 
   &__description {
-    padding: 4rem 0;
+    padding: 10rem 0;
+    font-size: 1.2rem;
     min-height: 600px;
 
     &__box {
@@ -81,7 +81,7 @@
 
         > div {
           // Não gosto de usar px, porém neste caso tem que ter.
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
       }
     }
@@ -115,7 +115,7 @@
 
     &__we {
       line-height: 2.5;
-      border: 1px solid $default-red;
+      border-right: 1px solid $default-red;
 
       > .box {
         height: 100%;
@@ -130,7 +130,7 @@
 
     &__as_we_think {
       line-height: 3;
-      border: 1px solid $default-blue;
+      border-left: 1px solid $default-blue;
 
       p {
         padding: .8rem;
@@ -145,7 +145,7 @@
 
     &__how_we_work {
       line-height: 1.5;
-      background: #eee;
+      border: 1px solid #aaaaaa;
 
       > .box {
         height: 100%;
@@ -162,7 +162,8 @@
     }
 
     &__mission {
-      background: #eee;
+      border-top: 1px solid #aaaaaa;
+      border-left: 1px solid #aaaaaa;
       color: opposite(white);
 
       p {
@@ -174,8 +175,9 @@
     }
 
     &__vision {
-      background:$default-yellow url("/images/undraw_Mobile_app_p3ts.svg") no-repeat 95% 95%;
+      background:transparent url("/images/undraw_Mobile_app_p3ts.svg") no-repeat 95% 95%;
       background-size: 10%;
+      border: 1px solid yellow;
       line-height: 1.5;
       color: opposite(white);
 
@@ -189,14 +191,31 @@
   }
 
   &__footer {
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
     position: relative;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        text-align: left;
+      }
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
 
     &:after {
       top: 0;
       right: 0;
       width: 50%;
       height: 100%;
-      background: black;
       content: '';
       position: absolute;
       z-index: -1;
@@ -205,34 +224,77 @@
     &__container {
       padding-top: 2rem;
       padding-bottom: 2rem;
-      background: black;
-      text-align: right;
-      color: white;
-
-      @media (min-width: map_get($grid-breakpoints, 'md')) {
-        & {
-          padding-left: 2rem;
-        }
-      }
-
-      &__row {
-        align-items: center;
-      }
+      text-align: inherit;
     }
 
     &__infocorp,
     &__description,
     &__email {
+      margin: 0;
       @media (max-width: map_get($grid-breakpoints, 'md')) {
-        padding-right: .5rem;
-        padding-left: .5rem;
+        & {
+          padding-right: .5rem;
+          padding-left: .5rem;
+        }
+      }
+    }
+
+    &__infocorp {
+      &__brand {
+        margin-bottom: 1.5rem;
+        width: 80%;
+        fill: black;
       }
     }
 
     &__links {
+      margin: 0 {
+        top: 2rem
+      };
+      padding: 0;
+      list-style-type: none;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          margin-top: 0;
+          text-align: right;
+        }
+      }
+
+      &__title {
+        margin-bottom: 2rem;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+
+      &__address,
+      &__phone {
+        margin: .5rem 0;
+        font-size: 1.1rem;
+      }
+
       &__link {
+        margin: .5rem 0;
+        font-size: 1.1rem;
         &__action {
-          color: white;
+
+        }
+      }
+    }
+
+    &__created {
+      margin-bottom: 0;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+      color: white;
+
+      &__with {
+        &__love {
+          margin-left: .5rem;
+          font-size: 2rem;
         }
       }
     }
