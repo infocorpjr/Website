@@ -63,6 +63,13 @@ body {
   padding: 0 .5rem;
   font-size: 1.2rem;
 
+  &__container {
+    padding: {
+      right: 2rem;
+      left: 2rem;
+    };
+  }
+
   &__infocorp {
     padding: 0 2px;
     width: 180px;
