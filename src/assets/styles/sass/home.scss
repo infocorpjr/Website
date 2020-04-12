@@ -2,32 +2,42 @@
 
 .home {
   &__header {
-    height: 100%;
-    color: $theme-default-secondary;
+    padding: {
+      left: 2rem;
+      right: 2rem;
+    };
+    height: 90%;
     position: relative;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        padding: {
+          left: 0;
+          right: 0;
+        };
+      }
+    }
 
     &:before {
       top: 0;
       left: 0;
-      width: 95%;
+      width: 100%;
       height: 100%;
-      background: transparent url('../../svg/undraw_statistic_chart_38b6_2.svg') no-repeat 95% 95%;
+      background: url('../../svg/home.svg') no-repeat bottom center;
       background-size: 80%;
       content: '';
       position: absolute;
       opacity: .7;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
+          width: 95%;
           background-size: 50%;
+          background-position: center right;
         }
       }
     }
 
     &__title {
-      padding: .5rem 1rem;
-      background: rgba(242, 243, 247, 0.91);
-      border: 10px solid $theme-default-primary;
-      font-size: 1.2rem;
+      font-size: 2.2rem;
       text-transform: uppercase;
       color: #6b95f8;
       @media (min-width: map_get($grid-breakpoints, 'md')) {
@@ -38,12 +48,25 @@
     }
 
     &__subtitle {
+      margin-bottom: 10rem;
       padding: .5rem;
       font-size: 1.2rem;
-      background: white;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          margin-bottom: 0;
+          font-size: 1.5rem;
+        }
+      }
     }
 
     .arrow {
+      display: none;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          display: block;
+        }
+      }
+
       .arrow__down {
         margin-bottom: 1rem;
       }
@@ -57,9 +80,16 @@
   }
 
   &__services {
-    margin: 5rem 0;
     padding: 8rem 0;
     position: relative;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        margin: {
+          top: 5rem;
+          bottom: 1rem;
+        };
+      }
+    }
 
     &::before {
       top: 0;
@@ -73,29 +103,24 @@
     }
 
     &__box {
-      padding: 4rem 4rem;
+      padding: {
+        right: 2rem;
+        left: 2rem;
+      };
       width: 100%;
-      background: white;
       border-radius: 20px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
       @media (min-width: map_get($grid-breakpoints, 'md')) {
         & {
+          padding: 4rem;
           width: 60%;
+          background: white;
         }
       }
     }
 
-    &__title,
-    &__subtitle,
-    &__description {
-      margin: .2rem;
-      padding: .2rem;
-      background: white;
-    }
-
     &__title {
       padding: .1rem .5rem;
-      background: #76e1f4;
+      background: lighten(#76e1f4, 20%);
       font-size: 1.2rem;
       font-weight: bold;
       display: inline-block;
@@ -108,7 +133,6 @@
 
     &__description {
       line-height: 2;
-      font-size: 1.2rem;
       transition: all 0.4s ease-in-out;
     }
 
@@ -139,24 +163,22 @@
     }
 
     &__square {
-      padding: 4rem 4rem;
-      background: white;
+      padding: {
+        right: 2rem;
+        left: 2rem;
+      };
       border-radius: 20px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-    }
-
-    &__title,
-    &__subtitle,
-    &__description {
-      margin: 0;
-      padding: .2rem;
-      background: white;
-      font-size: 1.2rem;
+      @media (min-width: map_get($grid-breakpoints, 'md')) {
+        & {
+          padding: 4rem;
+          background: white;
+        }
+      }
     }
 
     &__title {
       padding: .1rem .5rem;
-      background: #ff5c73;
+      background: lighten(#ff5c73, 20%);
       font-size: 1.2rem;
       font-weight: bold;
       display: inline-block;
@@ -178,19 +200,20 @@
   }
 
   &__member {
+    padding: 5rem 2rem;
     background: #f7faff;
-    height: 40%;
 
-    &__title,
-    &__subtitle,
-    &__description {
-      margin: 0;
-      padding: .2rem;
+    @media (min-width: map_get($grid-breakpoints, 'md')) {
+      & {
+        padding: 0 {
+          bottom: 5rem;
+        };
+      }
     }
 
     &__title {
       padding: .1rem .5rem;
-      background: #5fa1f4;
+      background: lighten(#5fa1f4, 20%);
       font-size: 1.2rem;
       font-weight: bold;
       display: inline-block;
@@ -203,7 +226,6 @@
 
     &__description {
       line-height: 2;
-      font-size: 1.6rem;
       transition: all 0.4s ease-in-out;
     }
 
@@ -215,6 +237,7 @@
 
   &__footer {
     padding: 2rem 0;
+    background: black;
     font-size: 1rem;
     text-align: center;
     position: relative;
@@ -222,28 +245,6 @@
       & {
         text-align: left;
       }
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background: black;
-      content: '';
-      position: absolute;
-      z-index: -1;
-    }
-
-    &:after {
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 100%;
-      background: black;
-      content: '';
-      position: absolute;
-      z-index: -1;
     }
 
     &__container {
@@ -305,6 +306,7 @@
       &__link {
         margin: .5rem 0;
         font-size: 1.1rem;
+
         &__action {
           color: white;
         }

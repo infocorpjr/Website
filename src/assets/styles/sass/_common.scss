@@ -23,12 +23,10 @@ body {
   background: {
     image: url("../../images/banner-1.png");
     repeat: repeat-x;
-    position: center -10%;
+    position: bottom center;
   };
-  //font-family: 'Roboto Mono', monospace;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Miriam Libre', sans-serif;
   color: opposite($theme-default-primary);
-  position: relative;
 
   &[menu] {
     overflow: hidden;
